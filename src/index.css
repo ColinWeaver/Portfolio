@@ -1,13 +1,140 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+html {
+  height: 100%;
+  /* font-family: helvetica; */
+  font-family: Sans-serif;
+  color: white;
+  line-height: 25px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  min-height: 100vh;
+  margin: 5%;
+  background-color: #393a44;
 }
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh
+}
+
+
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+
+/*layout  items */
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+header div {
+line-height: 10px;
+/* border: 1px solid white; */
+width: 20%;
+/* text-align: center; */
+}
+
+
+
+
+
+
+/*main items--------------------------------------------------------------------------------------*/
+.intro {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  padding: auto;
+  margin-top: 10%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.projects {
+  display: flex;
+  width: 0%;
+  /* font-size: 0; */
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  padding: auto;
+  margin-top: 10%;
+  margin-left: 50px;
+  margin-right: 50px;
+  
+}
+
+
+/*intro items---------------------------------------------------------------------------------------------- */
+.intro div button {
+  display: flex;
+  justify-content: center;
+  padding: auto;
+  width: 150px;
+  background-color: #393a44;
+  border: 1px solid white;
+  color: white;
+  margin: auto;
+ 
+}
+
+.intro div button:hover {
+ width: 200px;
+ /* border: 5px solid #9BF6FF;  */
+ background-color: #9BF6FF; 
+ 
+}
+
+.intro div button:active {
+background-color: #48CAE4;
+}
+
+
+/* .intro div button h3 span:hover {
+ font-size: 20px;
+ color: white;
+} */
+
+
+
+
+
+
+
+/* .button-column-right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+  width: 20%;
+}
+
+.button-column-right button {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: pink;
+  width: 50px;
+  height: 20px;
+} */
+
+
+/* @media screen and (min-width: 650px){
+  .intro {
+    flex-direction: row;
+
+  }
+  .intro div button {
+    margin-top: 150px;
+  }
+} */
