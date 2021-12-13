@@ -14,7 +14,7 @@ a {
 body {
   min-height: 100vh;
   
-  position: fixed;
+  position: absolute;
   background-image: url('./media/ilya-pavlov-OqtafYT5kTw-unsplash.jpg');
   /* background-image: url('./media/felix-besombes-EzrHLVd83h0-unsplash.jpg'); */
   /* background-image: url('./media/sincerely-media-HoEYgBL_Gcs-unsplash.jpg'); */
@@ -116,7 +116,6 @@ nav ul a:active {
   display: flex;
   width: 0%;
   flex-direction: column;
-
   text-align: center;
   padding: auto;
   margin-top: 10%;
