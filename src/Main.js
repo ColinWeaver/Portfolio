@@ -57,7 +57,7 @@ useEffect(() => {
   console.log(introWidth, projectsWidth, 'intro and project width')
   }
   widthSet();
-}, .05)
+}, .1)
 return () => clearTimeout(timer);
   }
 }, [projectsWidth, page])

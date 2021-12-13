@@ -13,7 +13,10 @@ a {
 }
 body {
   min-height: 100vh;
-  background-color: #393a44;
+  background-color: #393a44; 
+  /* opacity: 0.2; */
+  /* background-image: url('./media/ocean-picture.png'), #393a44; */
+ 
   margin: auto;
 }
 
