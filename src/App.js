@@ -1,9 +1,9 @@
-// import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import Layout from "./Layout";
 import { Route, Routes} from 'react-router-dom';
-
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 
 function App() {
@@ -12,8 +12,9 @@ function App() {
   <Routes>
   
   
-    <Route exact path="/" element={<Layout/>}/>
-    <Route path="/projects" element={<Layout/>}/>
+    <Route path="/" element={<Layout/>}/>
+     <Route path="/about" element={<Layout/>}/>
+  
      
     
      </Routes>

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link, useNavigate}  from 'react-router-dom'
 
-function Projects({}){
+function About({setPage, viewAboutHandler}){
     const navigate = useNavigate();
 
         function TitleOne(){
-            return <h2 style={{ color: 'white'}}>Projects</h2>
+            return <h2 style={{ color: 'white'}}>Background</h2>
         }
         
         function ParagraphOne(){
@@ -29,6 +29,9 @@ function Projects({}){
             <ParagraphOne/>
             </div>
             <div>
+        <Link to={'/'} style={{ textDecoration: 'none' }}>
+            <button onClick={viewAboutHandler} ><h3 style={{display: null}}>{`< Back`}</h3></button>
+            </Link>
             </div>
             </>
         )
@@ -39,4 +42,4 @@ function Projects({}){
 
 }
 
-export default Projects;
+export default About;

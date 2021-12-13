@@ -104,7 +104,6 @@ nav ul a:active {
   display: flex;
   width: 100%;
   flex-direction: column;
-  /* min-height: 100vh; */
   text-align: center;
   padding: auto;
   margin-top: 10%;
@@ -113,11 +112,11 @@ nav ul a:active {
   padding-left: 0px;
  
 }
-.projects {
+.about {
   display: flex;
   width: 0%;
   flex-direction: column;
-  /* min-height: 100vh; */
+
   text-align: center;
   padding: auto;
   margin-top: 10%;

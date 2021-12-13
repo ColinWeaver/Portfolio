@@ -1,12 +1,12 @@
 import React, {useEffect, useState } from "react";
 import Intro from "./Intro";
-import Projects from "./Projects";
+import About from "./About";
 import {useLocation} from "react-router-dom"
 
 function Main(){
-  const [projectsWidth, setProjectsWidth] = useState(0);
+  const [aboutWidth, setAboutWidth] = useState(0);
   const [introWidth, setIntroWidth] = useState(100);
-  const [projectsDisplay, setProjectsDisplay] = useState('none');
+  const [aboutDisplay, setAboutDisplay] = useState('none');
   const [introDisplay, setIntroDisplay] = useState(null);
   const [page, setPage] = useState(null);
   const [buttonDisplay, setButtonDisplay] = useState(null);
@@ -15,14 +15,14 @@ function Main(){
   const address = location.pathname;
   
 if (!page) setPage(address);
-if (page === '/projects'){
-  if (projectsDisplay === 'none'){
-  setProjectsDisplay('inline');
+if (page === '/about'){
+  if (aboutDisplay === 'none'){
+  setAboutDisplay('inline');
   }
 }
 
 
-function viewProjectsHandler(){
+function viewAboutHandler(){
       setPage('/');
       setReload(true)
 }
@@ -30,9 +30,9 @@ function viewProjectsHandler(){
 useEffect(() => {
   if (reload) {
 async function reload(){
-await setProjectsWidth(0);
+await setAboutWidth(0);
 await setIntroWidth(100);
-await setProjectsDisplay('none');
+await setAboutDisplay('none');
 await setIntroDisplay(null);
 await setButtonDisplay(null);
 await window.location.reload(true)
@@ -45,22 +45,22 @@ reload()
 
 useEffect(() => {
   
-  if ((page === '/projects') && projectsWidth < 100){
+  if ((page === '/about') && aboutWidth < 100){
  const timer = setTimeout(() => {
   async function widthSet(){
   await setIntroWidth((width) => width - 1)
-  await setProjectsWidth((width) => width + 1)
+  await setAboutWidth((width) => width + 1)
   if (introWidth === 1){
  await setIntroDisplay('none');
  await setButtonDisplay('none');
 }
-  console.log(introWidth, projectsWidth, 'intro and project width')
+  console.log(introWidth, aboutWidth, 'intro and project width')
   }
   widthSet();
 }, 5)
 return () => clearTimeout(timer);
   }
-}, [projectsWidth, page])
+}, [aboutWidth, page])
 
 
  return (
@@ -71,8 +71,8 @@ return () => clearTimeout(timer);
 </div>
 
 
-<div style={{ width: `${projectsWidth}%`, display: `${projectsDisplay}`}} className="projects">
-<Projects viewProjectsHandler={viewProjectsHandler} setPage={setPage}/>
+<div style={{ width: `${aboutWidth}%`, display: `${aboutDisplay}`}} className="about">
+<About viewAboutHandler={viewAboutHandler} setPage={setPage}/>
 </div>
 
 </>

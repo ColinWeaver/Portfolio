@@ -5,8 +5,8 @@ import { Link, useNavigate}  from 'react-router-dom'
 function Intro({setPage, buttonDisplay}){
     const navigate = useNavigate();
 
-function viewProjectsHandler(){
-setPage('/projects');
+function viewAboutHandler(){
+setPage('/about');
 navigate({pathname: '/'});
 }
 
@@ -33,8 +33,8 @@ return (
     <Paragraph/>
     </div>
     <div>
-<Link to={'/projects'} style={{ textDecoration: 'none' }}>
-    <button onClick={viewProjectsHandler} style={{display: {buttonDisplay}}}><h3 style={{display: null}}>{`About Me > `}</h3></button>
+<Link to={'/about'} style={{ textDecoration: 'none' }}>
+    <button onClick={viewAboutHandler} style={{display: {buttonDisplay}}}><h3 style={{display: null}}>{`About Me > `}</h3></button>
     </Link>
     </div>
     </>

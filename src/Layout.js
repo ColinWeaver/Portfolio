@@ -1,11 +1,13 @@
 import React from "react";
 import Main from "./Main";
 import Navigation from "./Navigation";
-import {Link} from "react-router-dom"
+import {Link, Route, Routes} from "react-router-dom"
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 function Layout() {
   
-  
+  //force re render if address changes 
   return (
     <div className="image">
       <div className="layout">
@@ -22,12 +24,19 @@ function Layout() {
           </header>
 
           <div className="main">
+          <Routes>
             
-         <Main/>
+          <Route exact path="/" element={<Main/>}/>
+          <Route path="/about" element={<Main/>}/>
+          <Route path="/projects" element={<Projects/>}/>
+          <Route exact path="/contact" element={<Contact/>}/>
+          
+          </Routes>
+        
          </div>
        
          <footer style={{color: 'white'}}>
-         <a> GitHub </a>
+           <a> GitHub </a>
            <a > Email </a>
            <a>LinkedIn</a>
          </footer>

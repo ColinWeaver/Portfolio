@@ -52,19 +52,19 @@ function Navigation() {
           </li>
 
           <li >
-            <Link to="/">
+            <Link to="/about">
              
               &nbsp;About
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/projects">
             
               &nbsp;Projects
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/contact">
             
               &nbsp;Contact
             </Link>
