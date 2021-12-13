@@ -8,7 +8,7 @@ import { Route, Routes} from 'react-router-dom';
 
 function App() {
   return (
-    // <div className="app">
+    <div className="app">
   <Routes>
   
   
@@ -17,7 +17,7 @@ function App() {
      
     
      </Routes>
-     
+     </div>
      
   
   )

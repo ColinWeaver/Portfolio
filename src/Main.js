@@ -6,20 +6,19 @@ import {useLocation} from "react-router-dom"
 function Main(){
   const [projectsWidth, setProjectsWidth] = useState(0);
   const [introWidth, setIntroWidth] = useState(100);
-  const [projectsFontSize, setProjectsFontSize] = useState(null);
-  const [introFontSize, setIntroFontSize] = useState(null);
+  const [projectsDisplay, setProjectsDisplay] = useState('none');
+  const [introDisplay, setIntroDisplay] = useState(null);
   const [page, setPage] = useState(null);
+  const [buttonDisplay, setButtonDisplay] = useState(null);
   const location = useLocation();
   const address = location.pathname;
+  
 if (!page) setPage(address);
-
-
-
-// if ((page ==='/projects') &&  ) {
-//   setProjectsFontSize(null)
-// }
-
-
+if (page === '/projects'){
+  if (projectsDisplay === 'none'){
+  setProjectsDisplay('inline');
+  }
+}
 
 
 useEffect(() => {
@@ -30,12 +29,13 @@ useEffect(() => {
   await setIntroWidth((width) => width - 1)
   await setProjectsWidth((width) => width + 1)
   if (introWidth === 1){
- await setIntroFontSize(0);
+ await setIntroDisplay('none');
+ await setButtonDisplay('none');
 }
   console.log(introWidth, projectsWidth, 'intro and project width')
   }
   widthSet();
-}, 15)
+}, 10)
 return () => clearTimeout(timer);
   }
 }, [projectsWidth, page])
@@ -43,12 +43,12 @@ return () => clearTimeout(timer);
 
  return (
 <>
-<div style={{ width: `${introWidth}%`, fontSize: introFontSize }} className="intro">
-<Intro setPage={setPage}/>
+<div style={{ width: `${introWidth}%`, display: `${introDisplay}`}} className="intro">
+<Intro setPage={setPage} buttonDisplay={buttonDisplay}/>
 </div>
 
 
-<div style={{ width: `${projectsWidth}%`, fontSize: projectsFontSize}} className="projects">
+<div style={{ width: `${projectsWidth}%`, display: `${projectsDisplay}`}} className="projects">
 <Projects/>
 </div>
 </>

@@ -1,7 +1,7 @@
 import React from "react";
 import Main from "./Main";
-
-
+import Navigation from "./Navigation";
+import {Link} from "react-router-dom"
 
 function Layout() {
   
@@ -9,9 +9,14 @@ function Layout() {
   return (
       <div className="layout">
         <header>
-          <div>
-          <h3 style={{ color: 'white'}}>Colin Weaver</h3>
-          <h5 style={{color: 'white' }}>Web Developer</h5>
+          
+          <div className='header-title'>
+          <Link to="/">
+          <h3 style={{ color: 'white'}}>Colin Weaver <span style={{fontWeight: '500'}}>- Web Developer</span></h3>
+          </Link>
+          <div className="navigation">
+          <Navigation/>
+          </div>
           </div>
           </header>
           <div className="main">

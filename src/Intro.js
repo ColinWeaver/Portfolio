@@ -1,17 +1,14 @@
 import React from "react"
-import {Link} from 'react-router-dom'
+import { Link, useNavigate}  from 'react-router-dom'
 
 
-function Intro({setPage}){
-    
+function Intro({setPage, buttonDisplay}){
+    const navigate = useNavigate();
 
 function viewProjectsHandler(){
 setPage('/projects');
-
+navigate({pathname: '/'});
 }
-
-
-
 
 function Title(){
     return <h2 style={{ color: 'white'}}>Hi, I'm Colin.</h2>
@@ -39,8 +36,8 @@ return (
     <Paragraph/>
     </div>
     <div>
-        <Link to={'/projects'} style={{ textDecoration: 'none' }}>
-    <button onClick={viewProjectsHandler}><h3 style={{textDecoration: 'none'}}>View Projects </h3></button>
+<Link to={'/projects'} style={{ textDecoration: 'none' }}>
+    <button onClick={viewProjectsHandler} style={{display: {buttonDisplay}}}><h3 style={{display: null}}>{`About Me > `}</h3></button>
     </Link>
     </div>
     </>
