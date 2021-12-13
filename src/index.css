@@ -1,11 +1,11 @@
 
 html {
   height: 100%;
-  /* font-family: helvetica; */
   font-family: Sans-serif;
-  color: white;
+  color: #9BF6FF;
   line-height: 25px;
-  font-weight: 300;
+  font-weight: 500;
+  padding-left: 0px;
 }
 
 a {
@@ -13,30 +13,38 @@ a {
 }
 body {
   min-height: 100vh;
-  background-color: #393a44; 
-  /* opacity: 0.2; */
-  /* background-image: url('./media/ocean-picture.png'), #393a44; */
- 
+  
+  position: fixed;
+  background-image: url('./media/ilya-pavlov-OqtafYT5kTw-unsplash.jpg');
+  /* background-image: url('./media/felix-besombes-EzrHLVd83h0-unsplash.jpg'); */
+  /* background-image: url('./media/sincerely-media-HoEYgBL_Gcs-unsplash.jpg'); */
+  background-image: url('./media/background-pic.jpg');
+ background-size: cover;
   margin: auto;
+  padding-left: 0px;
 }
 
 #root {
   min-height: 100vh;
+  
+  padding-left: 0px;
 }
 
 .app {
-  min-height: 100vh
+  min-height: 100vh;
+ 
+  padding-left: 0px;
 }
-
 
 
 .layout {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
+ 
+  /* height: 2000px; */
+  padding-left: 0px;
 }
-
 
 
 /*layout  items */
@@ -44,12 +52,13 @@ body {
   display: flex;
   flex-direction: row;
   margin: 5%;
+  padding-left: 0px;
 }
 
 header {
-  /* background-color: grey; */
   width: 100%;
   height: 100px;
+  padding-left: 0px;
  
 }
 .header-title {
@@ -61,10 +70,7 @@ nav ul {
   display: flex;
   flex-direction: row;
   list-style: none;
-  padding-right: 40px;
-  
-  
- 
+  padding-left: 0px;
 
 }
 
@@ -72,31 +78,25 @@ nav ul {
 nav {
   display: flex;
   justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
   
- 
-  
-
 }
 nav ul a {
   color: white;
   text-decoration: none;
-  padding: 10px;
- 
+  /* padding: 5px; */
 }
 
 nav ul a:hover {
   color: #9BF6FF;
+  font-weight: bold;
 }
 
 nav ul a:active {
   color: grey;
+  font-weight: bold;
 }
-
-
-
-
-
-
 
 
 /*main items--------------------------------------------------------------------------------------*/
@@ -104,19 +104,20 @@ nav ul a:active {
   display: flex;
   width: 100%;
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   text-align: center;
   padding: auto;
   margin-top: 10%;
   margin-left: 50px;
   margin-right: 50px;
+  padding-left: 0px;
+ 
 }
 .projects {
   display: flex;
   width: 0%;
-  /* font-size: 0; */
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   text-align: center;
   padding: auto;
   margin-top: 10%;
@@ -132,55 +133,40 @@ button  {
   justify-content: center;
   padding: auto;
   width: 150px;
-  background-color: #393a44;
+  background-color: transparent;
   border: 2px solid white;
   color: white;
   margin: auto;
- 
 }
 
  button:hover {
  width: 200px;
- background-color: #9BF6FF; 
- 
+ background-color: #9BF6FF;
 }
 
 button:active {
 background-color: #48CAE4;
 }
 
-
-/* .intro div button h3 span:hover {
- font-size: 20px;
- color: white;
-} */
-
-
-
-
-
-
-
-/* .button-column-right {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20%;
-  width: 20%;
+footer {
+  top: 0;
+  margin-bottom: 0px;
+  /* background-color: grey; */
+  height: 100px;
+  text-align: center;
+  padding-top: 40px;
+  padding-left: 0px;
+  
 }
-
-.button-column-right button {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: pink;
-  width: 50px;
-  height: 20px;
-} */
 
 
 @media screen and (min-width: 650px){
   nav {
     justify-content: left;
 
+  }
+  nav ul {
+    padding-left: 40px;
   }
  
 

@@ -63,6 +63,12 @@ function Navigation() {
               &nbsp;Projects
             </Link>
           </li>
+          <li>
+            <Link to="/">
+            
+              &nbsp;Contact
+            </Link>
+          </li>
           
           
         </ul>

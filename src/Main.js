@@ -57,7 +57,7 @@ useEffect(() => {
   console.log(introWidth, projectsWidth, 'intro and project width')
   }
   widthSet();
-}, 1)
+}, 5)
 return () => clearTimeout(timer);
   }
 }, [projectsWidth, page])
@@ -65,6 +65,7 @@ return () => clearTimeout(timer);
 
  return (
 <>
+
 <div style={{ width: `${introWidth}%`, display: `${introDisplay}`}} className="intro">
 <Intro setPage={setPage} buttonDisplay={buttonDisplay}/>
 </div>
@@ -73,6 +74,7 @@ return () => clearTimeout(timer);
 <div style={{ width: `${projectsWidth}%`, display: `${projectsDisplay}`}} className="projects">
 <Projects viewProjectsHandler={viewProjectsHandler} setPage={setPage}/>
 </div>
+
 </>
 )
 
