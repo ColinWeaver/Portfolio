@@ -5,7 +5,7 @@ html {
   font-family: Sans-serif;
   color: white;
   line-height: 25px;
-  font-weight: 250;
+  font-weight: 300;
 }
 
 a {
@@ -44,7 +44,7 @@ body {
 }
 
 header {
-  background-color: grey;
+  /* background-color: grey; */
   width: 100%;
   height: 100px;
  
@@ -54,15 +54,41 @@ header {
   text-align: center;
 }
 
-.navigation ul {
+nav ul {
   display: flex;
   flex-direction: row;
   list-style: none;
+  padding-right: 40px;
+  
+  
+ 
+
 }
-.navigation ul a {
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  
+ 
+  
+
+}
+nav ul a {
   color: white;
   text-decoration: none;
+  padding: 10px;
+ 
 }
+
+nav ul a:hover {
+  color: #9BF6FF;
+}
+
+nav ul a:active {
+  color: grey;
+}
+
 
 
 
@@ -98,26 +124,25 @@ header {
 
 
 /*intro items---------------------------------------------------------------------------------------------- */
-.intro div button {
+button  {
   display: flex;
   justify-content: center;
   padding: auto;
   width: 150px;
   background-color: #393a44;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   margin: auto;
  
 }
 
-.intro div button:hover {
+ button:hover {
  width: 200px;
- /* border: 5px solid #9BF6FF;  */
  background-color: #9BF6FF; 
  
 }
 
-.intro div button:active {
+button:active {
 background-color: #48CAE4;
 }
 
@@ -149,12 +174,11 @@ background-color: #48CAE4;
 } */
 
 
-/* @media screen and (min-width: 650px){
-  .intro {
-    flex-direction: row;
+@media screen and (min-width: 650px){
+  nav {
+    justify-content: left;
 
   }
-  .intro div button {
-    margin-top: 150px;
-  }
-} */
+ 
+
+} 

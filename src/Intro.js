@@ -26,9 +26,6 @@ function Paragraph(){
          )
 }
 
-
-// let buttonText = "View Projects   "
-// let buttonArrow = ">"
 return (
     <>
     <div >

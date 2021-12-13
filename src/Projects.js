@@ -1,15 +1,9 @@
 import React from "./Projects";
 import { Link, useNavigate}  from 'react-router-dom'
 
-function Projects(){
-    //right column in main component
+function Projects({setPage, viewProjectsHandler}){
     const navigate = useNavigate();
 
-    function viewProjectsHandler(){
-        // setPage('/projects');
-        navigate({pathname: '/'});
-        }
-        
         function TitleOne(){
             return <h2 style={{ color: 'white'}}>Background</h2>
         }
@@ -27,8 +21,7 @@ function Projects(){
         }
         
         
-        // let buttonText = "View Projects   "
-        // let buttonArrow = ">"
+    
         return (
             <>
             <div >
@@ -36,8 +29,8 @@ function Projects(){
             <ParagraphOne/>
             </div>
             <div>
-        <Link to={'/projects'} style={{ textDecoration: 'none' }}>
-            <button onClick={viewProjectsHandler} style={{display: null}}><h3 style={{display: null}}>{`< back`}</h3></button>
+        <Link to={'/'} style={{ textDecoration: 'none' }}>
+            <button onClick={viewProjectsHandler} ><h3 style={{display: null}}>{`< Back`}</h3></button>
             </Link>
             </div>
             </>

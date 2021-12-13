@@ -11,6 +11,7 @@ function Main(){
   const [page, setPage] = useState(null);
   const [buttonDisplay, setButtonDisplay] = useState(null);
   const location = useLocation();
+  const [reload, setReload] = useState(false)
   const address = location.pathname;
   
 if (!page) setPage(address);
@@ -19,6 +20,27 @@ if (page === '/projects'){
   setProjectsDisplay('inline');
   }
 }
+
+
+function viewProjectsHandler(){
+      setPage('/');
+      setReload(true)
+}
+
+useEffect(() => {
+  if (reload) {
+async function reload(){
+await setProjectsWidth(0);
+await setIntroWidth(100);
+await setProjectsDisplay('none');
+await setIntroDisplay(null);
+await setButtonDisplay(null);
+await window.location.reload(true)
+}
+reload()
+  }
+}, [reload])
+
 
 
 useEffect(() => {
@@ -35,7 +57,7 @@ useEffect(() => {
   console.log(introWidth, projectsWidth, 'intro and project width')
   }
   widthSet();
-}, 10)
+}, .05)
 return () => clearTimeout(timer);
   }
 }, [projectsWidth, page])
@@ -49,7 +71,7 @@ return () => clearTimeout(timer);
 
 
 <div style={{ width: `${projectsWidth}%`, display: `${projectsDisplay}`}} className="projects">
-<Projects/>
+<Projects viewProjectsHandler={viewProjectsHandler} setPage={setPage}/>
 </div>
 </>
 )

@@ -44,22 +44,22 @@ function Navigation() {
    <> 
     <nav >
         <ul >
-          <li className={dashboardClass}>
-            <Link to="/dashboard">
-              <span />
+          <li >
+            <Link to="/">
+              
               &nbsp;Home
             </Link>
           </li>
 
-          <li className={searchClass}>
-            <Link to="/search">
-              <span />
+          <li >
+            <Link to="/">
+             
               &nbsp;About
             </Link>
           </li>
-          <li className={addReservationClass}>
-            <Link  to="/reservations/new">
-              <span  />
+          <li>
+            <Link to="/">
+            
               &nbsp;Projects
             </Link>
           </li>

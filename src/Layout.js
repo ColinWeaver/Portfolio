@@ -14,9 +14,9 @@ function Layout() {
           <Link to="/">
           <h3 style={{ color: 'white'}}>Colin Weaver <span style={{fontWeight: '500'}}>- Web Developer</span></h3>
           </Link>
-          <div className="navigation">
+        
           <Navigation/>
-          </div>
+        
           </div>
           </header>
           <div className="main">
