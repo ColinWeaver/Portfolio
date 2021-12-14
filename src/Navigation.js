@@ -11,6 +11,7 @@ function Navigation({setReload}) {
 function navHandler(){
   setReload(true);
 }
+
   let address;
   if (location) address = location.pathname;
   //------------------------------------SETTING STATE VARIABLES FOR STYLING MENU LINKS--------------------------------------------
