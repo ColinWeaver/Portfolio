@@ -3,15 +3,25 @@ import Intro from "./Intro";
 import About from "./About";
 import {useLocation} from "react-router-dom"
 
-function Main(){
-  const [aboutWidth, setAboutWidth] = useState(0);
-  const [introWidth, setIntroWidth] = useState(100);
-  const [aboutDisplay, setAboutDisplay] = useState('none');
-  const [introDisplay, setIntroDisplay] = useState(null);
-  const [page, setPage] = useState(null);
-  const [buttonDisplay, setButtonDisplay] = useState(null);
+function Main(props){
+  const {
+    viewAboutHandler,
+    page, 
+    setPage, 
+    aboutWidth, 
+    introWidth, 
+    aboutDisplay, 
+    introDisplay, 
+    buttonDisplay, 
+    setAboutWidth, 
+    setAboutDisplay, 
+    setIntroWidth, 
+    setIntroDisplay, 
+    setButtonDisplay
+  } = props;
+  
+  
   const location = useLocation();
-  const [reload, setReload] = useState(false)
   const address = location.pathname;
   
 if (!page) setPage(address);
@@ -22,24 +32,6 @@ if (page === '/about'){
 }
 
 
-function viewAboutHandler(){
-      setPage('/');
-      setReload(true)
-}
-
-useEffect(() => {
-  if (reload) {
-async function reload(){
-await setAboutWidth(0);
-await setIntroWidth(100);
-await setAboutDisplay('none');
-await setIntroDisplay(null);
-await setButtonDisplay(null);
-await window.location.reload(true)
-}
-reload()
-  }
-}, [reload])
 
 
 

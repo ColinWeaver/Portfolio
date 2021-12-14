@@ -13,13 +13,12 @@ a {
 }
 body {
   min-height: 100vh;
-  
   position: absolute;
   background-image: url('./media/ilya-pavlov-OqtafYT5kTw-unsplash.jpg');
   /* background-image: url('./media/felix-besombes-EzrHLVd83h0-unsplash.jpg'); */
   /* background-image: url('./media/sincerely-media-HoEYgBL_Gcs-unsplash.jpg'); */
   background-image: url('./media/background-pic.jpg');
- background-size: cover;
+  background-size: cover;
   margin: auto;
   padding-left: 0px;
 }
@@ -89,13 +88,15 @@ nav ul a {
 }
 
 nav ul a:hover {
-  color: #9BF6FF;
-  font-weight: bold;
+  color: grey;
 }
 
 nav ul a:active {
   color: grey;
-  font-weight: bold;
+}
+
+.clicked-menu-nav a {
+  color: grey;
 }
 
 
