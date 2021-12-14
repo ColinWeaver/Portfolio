@@ -17,7 +17,11 @@ function Layout() {
 
   function viewAboutHandler(){
     setPage('/');
-    setReload(true)
+    setReload(true);
+}
+
+function linkHandler(event){
+setReload(true);
 }
 
 useEffect(() => {
@@ -35,14 +39,16 @@ reload()
 }, [reload])
 
 
+
+
   return (
     <div className="image">
       <div className="layout">
         
         <header>
           <div className='header-title'>
-          <Link to="/">
-          <h3 style={{ color: '#9BF6FF'}}>Colin Weaver <span style={{fontWeight: '500'}}>- Web Developer</span></h3>
+          <Link onClick={linkHandler} to="/">
+          <h3 style={{ color: 'white'}}>Colin Weaver <span style={{fontWeight: '500'}}>- Web Developer</span></h3>
           </Link>
         
           <Navigation setReload={setReload}/>
@@ -95,9 +101,9 @@ reload()
          </div>
        
          <footer style={{color: 'white'}}>
-           <a> GitHub </a>
-           <a > Email </a>
-           <a>LinkedIn</a>
+           <a href="https://github.com/ColinWeaver"> GitHub </a>
+           <a href="mailto:composerman11@gmail.com"> Email </a>
+           <a href="https://www.linkedin.com/in/colin-weaver-969505217/"> LinkedIn</a>
          </footer>
         
       </div>

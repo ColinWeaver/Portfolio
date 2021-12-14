@@ -4,6 +4,7 @@ import About from "./About";
 import {useLocation} from "react-router-dom"
 
 function Main(props){
+  const [opacity, setOpacity] = useState(.1)
   const {
     viewAboutHandler,
     page, 
@@ -40,7 +41,12 @@ useEffect(() => {
   if ((page === '/about') && aboutWidth < 100){
  const timer = setTimeout(() => {
   async function widthSet(){
-  await setIntroWidth((width) => width - 1)
+  if (introWidth > 1) {
+    await setIntroWidth(1);
+  };
+  if (aboutWidth > 25){
+  await setOpacity((opacity) => opacity + .1)
+  }
   await setAboutWidth((width) => width + 1)
   if (introWidth === 1){
  await setIntroDisplay('none');
@@ -55,6 +61,8 @@ return () => clearTimeout(timer);
 }, [aboutWidth, page])
 
 
+
+
  return (
 <>
 
@@ -63,7 +71,7 @@ return () => clearTimeout(timer);
 </div>
 
 
-<div style={{ width: `${aboutWidth}%`, display: `${aboutDisplay}`}} className="about">
+<div style={{ width: `${aboutWidth}%`, display: `${aboutDisplay}`, opacity: opacity}} className="about">
 <About viewAboutHandler={viewAboutHandler} setPage={setPage}/>
 </div>
 

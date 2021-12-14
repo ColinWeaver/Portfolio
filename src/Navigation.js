@@ -8,12 +8,11 @@ function Navigation({setReload}) {
   const [projectsClass, setProjectsClass] = useState(null);
   const [contactClass, setContactClass] = useState(null);
   
-function navHandler(event){
-  event.preventDefault()
+function navHandler(){
   setReload(true);
 }
   let address;
-  if (location) address = location.pathname
+  if (location) address = location.pathname;
   //------------------------------------SETTING STATE VARIABLES FOR STYLING MENU LINKS--------------------------------------------
   useEffect(() => {
     if (address){
