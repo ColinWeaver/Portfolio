@@ -3,23 +3,52 @@ import Intro from "./Intro";
 import About from "./About";
 import {useLocation} from "react-router-dom"
 
-function Main(props){
-  const [opacity, setOpacity] = useState(.1)
-  const {
-    viewAboutHandler,
-    page, 
-    setPage, 
-    aboutWidth, 
-    introWidth, 
-    aboutDisplay, 
-    introDisplay, 
-    buttonDisplay, 
-    setAboutWidth, 
-    setAboutDisplay, 
-    setIntroWidth, 
-    setIntroDisplay, 
-    setButtonDisplay
-  } = props;
+function Main({reload, setReload}){
+  const [opacity, setOpacity] = useState(.1);
+  // const [reload, setReload] = useState(false);
+  const [page, setPage] = useState(null);
+  const [aboutWidth, setAboutWidth] = useState(0);
+  const [introWidth, setIntroWidth] = useState(100);
+  const [aboutDisplay, setAboutDisplay] = useState('none');
+  const [introDisplay, setIntroDisplay] = useState(null);
+  const [buttonDisplay, setButtonDisplay] = useState(null);
+setReload(false);
+  // const {
+  //   viewAboutHandler,
+  //   page, 
+  //   setPage, 
+  //   aboutWidth, 
+  //   introWidth, 
+  //   aboutDisplay, 
+  //   introDisplay, 
+  //   buttonDisplay, 
+  //   setAboutWidth, 
+  //   setAboutDisplay, 
+  //   setIntroWidth, 
+  //   setIntroDisplay, 
+  //   setButtonDisplay
+  // } = props;
+  
+  function viewAboutHandler(){
+    setPage('/');
+    setReload(true);
+}
+
+useEffect(() => {
+  if (reload) {
+  async function reload(){
+  await setAboutWidth(aboutWidth);
+  await setIntroWidth(introWidth);
+  await setAboutDisplay(aboutDisplay);
+  await setIntroDisplay(introDisplay);
+  await setButtonDisplay(buttonDisplay);
+  await window.location.reload(true);
+  
+  
+  }
+  reload()
+  }
+  }, [reload])
   
   
   const location = useLocation();

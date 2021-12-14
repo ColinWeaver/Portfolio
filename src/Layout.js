@@ -1,47 +1,56 @@
 import React, { useEffect, useState } from "react";
 import Main from "./Main";
 import Navigation from "./Navigation";
-import {Link, Route, Routes} from "react-router-dom"
+import {Link, Route, Routes, useNavigate} from "react-router-dom"
 import Projects from "./Projects";
 import Contact from "./Contact";
 
 function Layout() {
   const [reload, setReload] = useState(false);
-  const [page, setPage] = useState(null);
-  const [aboutWidth, setAboutWidth] = useState(0);
-  const [introWidth, setIntroWidth] = useState(100);
-  const [aboutDisplay, setAboutDisplay] = useState('none');
-  const [introDisplay, setIntroDisplay] = useState(null);
-  const [buttonDisplay, setButtonDisplay] = useState(null);
+  const [navSignal, setNavSignal] = useState(false)
+  // const [page, setPage] = useState(null);
+  // const [aboutWidth, setAboutWidth] = useState(0);
+  // const [introWidth, setIntroWidth] = useState(100);
+  // const [aboutDisplay, setAboutDisplay] = useState('none');
+  // const [introDisplay, setIntroDisplay] = useState(null);
+  // const [buttonDisplay, setButtonDisplay] = useState(null);
+const navigate = useNavigate()
 
+useEffect(() => {
+  if (navSignal) setReload(true);
 
-  function viewAboutHandler(){
-    setPage('/');
-    setReload(true);
-}
+}, [navSignal])
 
-function linkHandler(event){
+//   function viewAboutHandler(){
+//     setPage('/');
+//     setReload(true);
+// }
+
+function linkHandler(){
 setReload(true);
 }
 
-useEffect(() => {
-if (reload) {
-async function reload(){
-await setAboutWidth(aboutWidth);
-await setIntroWidth(introWidth);
-await setAboutDisplay(aboutDisplay);
-await setIntroDisplay(introDisplay);
-await setButtonDisplay(buttonDisplay);
-await window.location.reload(true);
-}
-reload()
-}
-}, [reload])
+// useEffect(() => {
+// if (reload) {
+// async function reload(){
+// await setAboutWidth(aboutWidth);
+// await setIntroWidth(introWidth);
+// await setAboutDisplay(aboutDisplay);
+// await setIntroDisplay(introDisplay);
+// await setButtonDisplay(buttonDisplay);
+// await window.location.reload(true);
+
+
+// }
+// reload()
+// }
+// }, [reload])
 
 
 
 
-  return (
+
+   return  (
     <div className="image">
       <div className="layout">
         
@@ -51,7 +60,7 @@ reload()
           <h3 style={{ color: 'white'}}>Colin Weaver <span style={{fontWeight: '500'}}>- Web Developer</span></h3>
           </Link>
         
-          <Navigation setReload={setReload}/>
+          <Navigation setReload={setNavSignal}/>
         
           </div>
           </header>
@@ -61,36 +70,41 @@ reload()
             
           <Route exact path="/" element={
           <Main 
-          viewAboutHandler={viewAboutHandler} 
-          page={page} 
-          setPage={setPage}
-          introWidth={introWidth}
-          aboutWidth={aboutWidth}
-          introDisplay={introDisplay}
-          aboutDisplay={aboutDisplay}
-          buttonDisplay={buttonDisplay}
-          setIntroWidth={setIntroWidth}
-          setAboutWidth={setAboutWidth}
-          setIntroDisplay={setIntroDisplay}
-          setAboutDisplay={setAboutDisplay}
-          setButtonDisplay={setButtonDisplay}
+         reload={reload}
+         setReload={setReload}
+          // viewAboutHandler={viewAboutHandler} 
+          // page={page} 
+          // setPage={setPage}
+          // introWidth={introWidth}
+          // aboutWidth={aboutWidth}
+          // introDisplay={introDisplay}
+          // aboutDisplay={aboutDisplay}
+          // buttonDisplay={buttonDisplay}
+          // setIntroWidth={setIntroWidth}
+          // setAboutWidth={setAboutWidth}
+          // setIntroDisplay={setIntroDisplay}
+          // setAboutDisplay={setAboutDisplay}
+          // setButtonDisplay={setButtonDisplay}
           />}/>
 
           <Route path="/about" element={
           <Main 
-          viewAboutHandler={viewAboutHandler} 
-          page={page} 
-          setPage={setPage}
-          introWidth={introWidth}
-          aboutWidth={aboutWidth}
-          introDisplay={introDisplay}
-          aboutDisplay={aboutDisplay}
-          buttonDisplay={buttonDisplay}
-          setIntroWidth={setIntroWidth}
-          setAboutWidth={setAboutWidth}
-          setIntroDisplay={setIntroDisplay}
-          setAboutDisplay={setAboutDisplay}
-          setButtonDisplay={setButtonDisplay}
+          reload={reload}
+          setReload={setReload}
+
+          // viewAboutHandler={viewAboutHandler} 
+          // page={page} 
+          // setPage={setPage}
+          // introWidth={introWidth}
+          // aboutWidth={aboutWidth}
+          // introDisplay={introDisplay}
+          // aboutDisplay={aboutDisplay}
+          // buttonDisplay={buttonDisplay}
+          // setIntroWidth={setIntroWidth}
+          // setAboutWidth={setAboutWidth}
+          // setIntroDisplay={setIntroDisplay}
+          // setAboutDisplay={setAboutDisplay}
+          // setButtonDisplay={setButtonDisplay}
           />}/>
           
           <Route path="/projects" element={<Projects/>}/>
@@ -110,6 +124,8 @@ reload()
       </div>
    
   );
+          
+        
   
 }
 
