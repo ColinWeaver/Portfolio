@@ -1,13 +1,14 @@
 import React from "react";
 import { Link, useNavigate}  from 'react-router-dom'
 
-function Projects({}){
+function Projects(){
 
 
-//------------------------------------------------------------Slide in page-----------------------------
+//------------------------------------------------------------Slide in page----------------------------------
 function TitleOne(){
     return <h2 style={{ color: 'white'}}>Project</h2>
 }
+
 
 function BodyOne(){
     return (
