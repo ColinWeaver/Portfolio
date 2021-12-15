@@ -63,40 +63,63 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
             <div style={{ width: `${100}%`, display: null, opacity: 100}} className="about">
 
 
+
+
+               <div className="arrow-column" > 
+                    <Link to={'/'} style={{ textDecoration: 'none' }}>
+                    <div className='arrow'>{'<'}</div>
+                    </Link> 
+              </div>
+
+               <div className="paragraphs-container">
                 <div className="item-one">
-                    <div>
+                    
+                    <div className="item-one-paragraph">
                     <TitleOne/>
                     <BodyOne/>
                     </div>
                 </div>
-            
-
-                <div className="buttons-container">
+        
+                {/* <div className="buttons-container">
                     <Link to={'/'} style={{ textDecoration: 'none' }}>
                     <div className='arrow'>{'<'}</div>
                     </Link>
                     <Link to={'/projects'} style={{ textDecoration: 'none' }}>
                     <div className='arrow'>{'>'}</div>
                     </Link>
-                </div>
-
+                </div> */}
 
                 <div className="item-two">
-                <div>
+                <div className="item-two-paragraph">
                 <TitleTwo/>
                 <BodyTwo/>
                 </div>
                 </div>
 
+                
             <div className="item-three">
-            <div>
+            <div className="item-three-paragraph">
                 <TitleThree/>
                 <BodyThree/>
             </div>
             </div>
+            </div>
+
+
+            <div className="arrow-column">
+            <Link to={'/projects'} style={{ textDecoration: 'none' }}>
+                    <div className='arrow'>{'>'}</div>
+            </Link>
+            </div>
 
         
             </div>
+
+
+
+
+
+            
             </>
         )
         

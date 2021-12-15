@@ -13,11 +13,12 @@ a {
 }
 body {
   min-height: 100vh;
-  position: absolute;
-  background-image: url('./media/ilya-pavlov-OqtafYT5kTw-unsplash.jpg');
+ 
+  /* background-image: url('./media/ilya-pavlov-OqtafYT5kTw-unsplash.jpg'); */
   /* background-image: url('./media/felix-besombes-EzrHLVd83h0-unsplash.jpg'); */
   /* background-image: url('./media/sincerely-media-HoEYgBL_Gcs-unsplash.jpg'); */
-  background-image: url('./media/background-pic.jpg');
+  /* background-image: url('./media/background-pic.jpg'); */
+  background-color: grey;
   background-size: cover;
   margin: auto;
   padding-left: 0px;
@@ -64,6 +65,23 @@ header {
 }
 
 
+/*-----------------------------------POSITIONING----------------------------------------------------------------*/
+header {
+  position: fixed;
+  background-color: black;
+}
+
+main {
+  margin-top: 100px;
+  margin-bottom: 250px;
+}
+
+footer {
+  position: fixed;
+  margin-top: 625px;
+}
+
+
 
 /*----------------------------------------HEADER ITEMS------------------------------------------------------------*/
 nav {
@@ -103,24 +121,57 @@ nav ul a:active {
   flex-direction: column;
   text-align: center;
   padding: auto;
-  margin-top: 10%;
+
   margin-left: 50px;
   margin-right: 50px;
   padding-left: 0px;
 }
 .about {
   display: flex;
-  /* width: 0%; */
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   padding: auto;
-  margin-top: 10%;
-  margin-left: 50px;
-  margin-right: 50px;
+ 
+  /* margin-top: 10%; */
+  /* margin-left: 50px;
+  margin-right: 50px; add this for desktop not for mobie*/
+}
+/*----------------------------------------ABOUT ITEMS------------------------------------------------------------*/
+.item-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+ 
 }
 
 
+.item-one-paragraph {
+  flex: .7;
+  border: 1px solid white;
+}
 
+
+.item-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.item-two-paragraph {
+  flex: .7;
+  border: 2px solid white;
+}
+
+.item-three {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.item-three-paragraph {
+  flex: .7;
+  border: 2px solid white;
+}
 /*----------------------------------------BUTTON------------------------------------------------------------*/
 button  {
   display: flex;
@@ -146,9 +197,15 @@ background-color: #48CAE4;
 
 /*----------------------------------------FOOTER------------------------------------------------------------*/
 footer {
-  top: 0;
-  margin-bottom: 0px;
-  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+  bottom: 0px;
+  /* top: 0;
+  margin-bottom: 0px; */
+  /* height: 100px; */
   text-align: center;
   padding-top: 40px;
   padding-left: 0px;
@@ -156,6 +213,7 @@ footer {
 footer a {
   text-decoration: none;
   color: white;
+  margin: 5px;
 }
 footer a:hover {
   color: grey;
@@ -178,12 +236,30 @@ footer a:active {
   font-size: 60px;
   font-weight: 0;
   color: white;
+  position: fixed;
 }
+
+.item-one, .item-two {
+  margin-bottom: 20px;
+}
+
+
 .arrow:hover{
   color: grey;
 }
 .arrow:active {
   color: grey;
+}
+
+.arrow-column {
+display: flex;
+flex-direction: column;
+margin-top: 180px;
+padding-right: 35px;
+}
+
+.paragraphs-container {
+  margin: auto;
 }
 
 

@@ -28,11 +28,13 @@ setReload(true);
         
         <header>
           <div className='header-title'>
-          <Link onClick={linkHandler} to="/">
+          <Link to="/">
           <h3 style={{ color: 'white'}}>Colin Weaver <span style={{fontWeight: '500'}}>- Web Developer</span></h3>
           </Link>
-          <Navigation setReload={setNavSignal}/>
           </div>
+          <Navigation/>
+        
+          
           </header>
 
          <main>
