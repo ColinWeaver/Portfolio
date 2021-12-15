@@ -2,7 +2,11 @@ import React from "react";
 import { Link, useNavigate}  from 'react-router-dom'
 
 function Projects({}){
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
+
+
+//------------------------------------------------------------Slide in page-----------------------------
+
 
         function TitleOne(){
             return <h2 style={{ color: 'white'}}>Projects</h2>
@@ -20,16 +24,29 @@ function Projects({}){
                  )
         }
         
-        
     
         return (
             <>
+            {/* <div style={{ width: `${aboutWidth}%`, display: `${aboutDisplay}`, opacity: opacity}} className="about"> */}
             <div >
             <TitleOne/>
             <ParagraphOne/>
             </div>
+             
+            
+            <div className="buttons-container">
+            <Link to={'/about'} style={{ textDecoration: 'none' }}>
+            {/* <button><h3 style={{display: null}}>{`<`}</h3></button> */}
+            <div className='arrow'>{'<'}</div>
+            </Link>
+            <Link to={'/contact'} style={{ textDecoration: 'none' }}>
+           {/* <button ><h3 style={{display: null}}>{`>`}</h3></button> */}
+           <div className='arrow'>{'>'}</div>
+           </Link>
+            </div>
             <div>
             </div>
+            {/* </div> */}
             </>
         )
         
