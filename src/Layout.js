@@ -1,25 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Main from "./Main";
 import Navigation from "./Navigation";
-import {Link, Route, Routes, useNavigate, useRoutes} from "react-router-dom"
-import Projects from "./Projects";
-import Contact from "./Contact";
+import {Link} from "react-router-dom"
+
 
 function Layout() {
-  const [reload, setReload] = useState(false);
-  const [navSignal, setNavSignal] = useState(false);
-  const [renderMain, setRenderMain] = useState(true)
-// const navigate = useNavigate()
-
-
-useEffect(() => {
-  if (navSignal) setReload(true);
-}, [navSignal])
-
-
-function linkHandler(){
-setReload(true);
-}
 
 
    return  (
@@ -52,6 +37,9 @@ setReload(true);
            </p>
            <p>
            <a href="https://www.linkedin.com/in/colin-weaver-969505217/"> LinkedIn</a>
+           </p>
+           <p>
+            <a href="tel:6154385452">Mobile</a>
            </p>
          </footer>
         
