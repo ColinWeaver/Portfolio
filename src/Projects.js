@@ -2,18 +2,18 @@ import React from "react";
 import { Link, useNavigate}  from 'react-router-dom'
 
 function Projects(){
-
+    window.scrollTo(0,0);
 
 //------------------------------------------------------------Slide in page----------------------------------
 function TitleOne(){
-    return <h2 style={{ color: 'white'}}>Project</h2>
+    return <h3 style={{ color: null, textAlign: 'center'}}>Project</h3>
 }
 
 
 function BodyOne(){
     return (
         <>
-     <p style={{color: 'white' }}> 
+     <p style={{color: null}}> 
          I'm a web developer living in the greater Nashville area. 
          I am an idea person but also analytical which helps me in taking 
          complexity and identifying solutions through the right ideas. Let's collaborate.
@@ -23,13 +23,13 @@ function BodyOne(){
 }
 
 function TitleTwo(){
-    return <h2 style={{ color: 'white'}}>Movies</h2>
+    return <h3 style={{ color: null, textAlign: 'center'}}>Movies</h3>
 }
 
 function BodyTwo(){
     return (
         <>
-     <p style={{color: 'white' }}> 
+     <p style={{color: null}}> 
          I'm a web developer living in the greater Nashville area. 
          I am an idea person but also analytical which helps me in taking 
          complexity and identifying solutions through the right ideas. Let's collaborate.
@@ -39,13 +39,13 @@ function BodyTwo(){
 }
 
 function TitleThree(){
-    return <h2 style={{ color: 'white'}}>Flashcard app</h2>
+    return <h3 style={{ color: null, textAlign: 'center'}}>Flashcard app</h3>
 }
 
 function BodyThree(){
     return (
         <>
-     <p style={{color: 'white' }}> 
+     <p style={{color: null }}> 
          I'm a web developer living in the greater Nashville area. 
          I am an idea person but also analytical which helps me in taking 
          complexity and identifying solutions through the right ideas. Let's collaborate.
@@ -54,21 +54,17 @@ function BodyThree(){
          )
 }
 
-
-//for desktop: column with 3 rows. row 1 has 2 items, row 2 has arrows row three has third item in center
-//for mobile column with 4 rows 1 item per row diagonally left to right 
 return (
     <>
+    <h2 style={{textAlign: 'center', color: null}}>Projects</h2>
     <div style={{ width: `${100}%`, display: null, opacity: 100}} className="about">
 
 
-
-
-       <div className="arrow-column" > 
+       
             <Link to={'/about'} style={{ textDecoration: 'none' }}>
             <div className='arrow'>{'<'}</div>
             </Link> 
-      </div>
+    
 
        <div className="paragraphs-container">
         <div className="item-one">
@@ -96,11 +92,10 @@ return (
     </div>
 
 
-    <div className="arrow-column">
     <Link to={'/contact'} style={{ textDecoration: 'none' }}>
             <div className='arrow'>{'>'}</div>
     </Link>
-    </div>
+  
 
 
     </div>

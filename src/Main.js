@@ -35,7 +35,7 @@ function Main(){
   
    return (
 <>
-<div className="main">
+{/* <div className="main"> */}
 <Routes>
 <Route path="/" element={<Intro opacity={opacity} setOpacity={setOpacity} width={width} setWidth={setWidth} display={display} setDisplay={setDisplay} />}/>
 <Route path="about" element={<About opacity={opacity} setOpacity={setOpacity}  width={width} setWidth={setWidth} display={display} setDisplay={setDisplay}/>}/>
@@ -43,7 +43,7 @@ function Main(){
 <Route path="contact" element={<Contact />}/>
 
 </Routes>
-</div>
+{/* </div> */}
 </>
 )
    }

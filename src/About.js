@@ -2,19 +2,19 @@ import React, {useState} from "react";
 import { Link, useNavigate}  from 'react-router-dom'
 
 function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width, setWidth}){
-    // const navigate = useNavigate();
+    window.scrollTo(0,0);
 
 
 //------------------------------------------------------------Slide in page-----------------------------
 
         function TitleOne(){
-            return <h2 style={{ color: 'white'}}>Background</h2>
+            return <h3 style={{ color: null, textAlign: 'center'}}>Background</h3>
         }
         
         function BodyOne(){
             return (
                 <>
-             <p style={{color: 'white' }}> 
+             <p style={{color: null}}> 
                  I'm a web developer living in the greater Nashville area. 
                  I am an idea person but also analytical which helps me in taking 
                  complexity and identifying solutions through the right ideas. Let's collaborate.
@@ -24,13 +24,13 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
         }
 
         function TitleTwo(){
-            return <h2 style={{ color: 'white'}}>Experience</h2>
+            return <h3 style={{ color: null, textAlign: 'center' }}>Experience</h3>
         }
         
         function BodyTwo(){
             return (
                 <>
-             <p style={{color: 'white' }}> 
+             <p style={{color: null }}> 
                  I'm a web developer living in the greater Nashville area. 
                  I am an idea person but also analytical which helps me in taking 
                  complexity and identifying solutions through the right ideas. Let's collaborate.
@@ -40,13 +40,13 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
         }
 
         function TitleThree(){
-            return <h2 style={{ color: 'white'}}>Skills</h2>
+            return <h3 style={{ color: null, textAlign: 'center'}}>Skills</h3>
         }
         
         function BodyThree(){
             return (
                 <>
-             <p style={{color: 'white' }}> 
+             <p style={{color: null }}> 
                  I'm a web developer living in the greater Nashville area. 
                  I am an idea person but also analytical which helps me in taking 
                  complexity and identifying solutions through the right ideas. Let's collaborate.
@@ -56,38 +56,27 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
         }
 
 
-//for desktop: column with 3 rows. row 1 has 2 items, row 2 has arrows row three has third item in center
-//for mobile column with 4 rows 1 item per row diagonally left to right 
         return (
             <>
+           <h2 style={{textAlign: 'center', color: null}}>About Me</h2>
+
             <div style={{ width: `${100}%`, display: null, opacity: 100}} className="about">
-
-
-
-
-               <div className="arrow-column" > 
+            
                     <Link to={'/'} style={{ textDecoration: 'none' }}>
                     <div className='arrow'>{'<'}</div>
                     </Link> 
-              </div>
+             
+
 
                <div className="paragraphs-container">
                 <div className="item-one">
-                    
                     <div className="item-one-paragraph">
                     <TitleOne/>
                     <BodyOne/>
                     </div>
                 </div>
-        
-                {/* <div className="buttons-container">
-                    <Link to={'/'} style={{ textDecoration: 'none' }}>
-                    <div className='arrow'>{'<'}</div>
-                    </Link>
-                    <Link to={'/projects'} style={{ textDecoration: 'none' }}>
-                    <div className='arrow'>{'>'}</div>
-                    </Link>
-                </div> */}
+               
+
 
                 <div className="item-two">
                 <div className="item-two-paragraph">
@@ -106,11 +95,11 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
             </div>
 
 
-            <div className="arrow-column">
+           
             <Link to={'/projects'} style={{ textDecoration: 'none' }}>
                     <div className='arrow'>{'>'}</div>
             </Link>
-            </div>
+            
 
         
             </div>

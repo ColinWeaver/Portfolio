@@ -9,7 +9,7 @@ function Layout() {
   const [reload, setReload] = useState(false);
   const [navSignal, setNavSignal] = useState(false);
   const [renderMain, setRenderMain] = useState(true)
-const navigate = useNavigate()
+// const navigate = useNavigate()
 
 
 useEffect(() => {
@@ -29,7 +29,7 @@ setReload(true);
         <header>
           <div className='header-title'>
           <Link to="/">
-          <h3 style={{ color: 'white'}}>Colin Weaver <span style={{fontWeight: '500'}}>- Web Developer</span></h3>
+          <h3 style={{ color: null}}>Colin Weaver <span style={{fontWeight: '500'}}>- Web Developer</span></h3>
           </Link>
           </div>
           <Navigation/>
@@ -43,10 +43,16 @@ setReload(true);
      
          </main>
        
-         <footer style={{color: 'white'}}>
+         <footer style={{color: null}}>
+           <p>
            <a href="https://github.com/ColinWeaver"> GitHub </a>
+           </p>
+           <p>
            <a href="mailto:composerman11@gmail.com"> Email </a>
+           </p>
+           <p>
            <a href="https://www.linkedin.com/in/colin-weaver-969505217/"> LinkedIn</a>
+           </p>
          </footer>
         
       </div>
