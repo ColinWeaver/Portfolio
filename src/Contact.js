@@ -8,15 +8,15 @@ function Contact(){
         <>
         <div style={{textAlign: 'center', width: '100%', color: null}}>
         <h2>Contact Me</h2>
-         {/* <p>Please don't hesitate to reach out. </p>
-         <p>I would feel honored to hear from you.</p> */}
+         <span> Please don't hesitate to reach out. </span>
+         {/* <p>I would feel honored to hear from you.</p> */}
        </div>
 
         <Link to={'/projects'} style={{ textDecoration: 'none' }}>
         <div className='arrow'>{'<'}</div>
         </Link> 
          
-        <div style={{ width: `${100}%`, display: null, opacity: 100}} className="about">
+        <div style={{ width: `${100}%`, display: null, opacity: 100, textAlign: 'center'}} >
     
           
                <div className="contact-href-container">
