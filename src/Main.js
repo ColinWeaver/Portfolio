@@ -4,13 +4,15 @@ import About from "./About";
 import {useLocation, Route, Routes, useNavigate} from "react-router-dom"
 import Projects from "./Projects";
 import Contact from "./Contact"
+import NotFound from "./NotFound"
+
 
 
 function Main(){
   const [opacity, setOpacity] = useState(.1);
   const [width, setWidth] = useState(100);
   const [display, setDisplay] = useState(null);
-  const navigate = useNavigate();
+  
 
 
           // useEffect(() => {
@@ -35,15 +37,15 @@ function Main(){
   
    return (
 <>
-{/* <div className="main"> */}
+
 <Routes>
 <Route path="/" element={<Intro opacity={opacity} setOpacity={setOpacity} width={width} setWidth={setWidth} display={display} setDisplay={setDisplay} />}/>
-<Route path="about" element={<About opacity={opacity} setOpacity={setOpacity}  width={width} setWidth={setWidth} display={display} setDisplay={setDisplay}/>}/>
-<Route path="projects" element={<Projects />}/>
-<Route path="contact" element={<Contact />}/>
-
+<Route path="/about" element={<About opacity={opacity} setOpacity={setOpacity}  width={width} setWidth={setWidth} display={display} setDisplay={setDisplay}/>}/>
+<Route path="/projects" element={<Projects />}/>
+<Route path="/contact" element={<Contact />}/>
+<Route path="*" element={<NotFound/>}/>
 </Routes>
-{/* </div> */}
+
 </>
 )
    }

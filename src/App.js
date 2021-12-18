@@ -3,6 +3,7 @@ import './App.css';
 import Layout from "./Layout";
 import { Route, Routes} from 'react-router-dom';
 import NotFound from "./NotFound"
+// import RoutesContainer from "./RoutesContainer"
 
 
 function App() {
@@ -11,7 +12,6 @@ function App() {
     <div className="app">
     <Routes>
     <Route path="/*" element={<Layout/>}/>
-    <Route element={<NotFound/>}/>
      </Routes>
      </div>
      

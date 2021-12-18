@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Main from "./Main";
 import Navigation from "./Navigation";
-import {Link} from "react-router-dom"
+import {Link, Routes, Route} from "react-router-dom"
 
 
 function Layout() {
-
 
    return  (
     <div className="image">

@@ -62,7 +62,9 @@ return (
 
        
             <Link to={'/about'} style={{ textDecoration: 'none' }}>
-            <div className='arrow'>{'<'}</div>
+            <div className="arrow-container-left">
+                    <div className='arrow'>{'<'}</div>
+                </div>
             </Link> 
     
 
@@ -93,7 +95,9 @@ return (
 
 
     <Link to={'/contact'} style={{ textDecoration: 'none' }}>
-            <div className='arrow'>{'>'}</div>
+    <div className="arrow-container-right">
+      <div className='arrow'>{'>'}</div>
+    </div>
     </Link>
   
 

@@ -63,7 +63,10 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
             <div style={{ width: `${100}%`, display: null, opacity: 100}} className="about">
             
                     <Link to={'/'} style={{ textDecoration: 'none' }}>
-                    <div className='arrow'>{'<'}</div>
+
+                    <div className="arrow-container-left">
+                       <div className='arrow'>{'<'}</div>
+                    </div>
                     </Link> 
              
 
@@ -97,7 +100,10 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
 
            
             <Link to={'/projects'} style={{ textDecoration: 'none' }}>
+                
+            <div className="arrow-container-right">
                     <div className='arrow'>{'>'}</div>
+            </div>
             </Link>
             
 

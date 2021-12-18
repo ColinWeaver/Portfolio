@@ -54,25 +54,22 @@ return (
     
     <>
     <div style={{ opacity: null, width: `${100}%`, display: `${display}`}} className="about">
-
     <div style={{textAlign: "center", width: '100%'}}>
     <Title/>
-    {/* <Paragraph/> */}
-    <p>I'm a web developer living in the greater Nashville area.</p>
-    <p>I am an idea person...but also analytical</p>
+    <p><span> I'm a web developer living in the greater Nashville area.</span></p>
+      <p><span> I am an idea person... </span> <span>  but also analytical. </span></p>
+      <p> <span> The more ideas generated and the more effective the filtering of them.</span></p>
+    <p> <span> the faster high quality solutions can be discovered.</span></p>
+
      
-{/*        
-    <p>I think of problem solving as..</p>
-    <p>generation of ideas and then the filtering of them </p>
-     <p> through analysis and understanding of the logical needs of the current solution as you construct it   </p> */}
-       <p>The more ideas generated and the more effective the analysis and filtering of them..</p>
-       <p>the faster high quality solutions can be discovered. </p>
   
     <p>Let's collaborate.</p>
     </div>
 
             <Link to={'/about'} style={{ textDecoration: 'none' }}>
+                <div className="arrow-container-right">
                     <div className='arrow'>{'>'}</div>
+                </div>
             </Link>
 
     </div>

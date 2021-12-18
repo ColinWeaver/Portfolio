@@ -75,7 +75,9 @@ main {
 }
 footer {
   position: fixed;
-  margin-top: 750px;
+  margin-top: 1000px;
+
+
 }
 
 /*----------------------------------------COLORS----------------------------------------------------------------*/
@@ -94,12 +96,16 @@ header h3:hover {
   color: black;
 }
 
+header {
+  background-color: #D6D6D6;
+}
+
 nav ul li a {
   color: #393a44;
 }
 
 footer {
-  background-color: #D6D6D6;
+  background-color: #E0E0E0;
 }
 
 .about {
@@ -114,7 +120,6 @@ nav {
   justify-content: center;
   margin-left: 20px;
   margin-right: 20px;
-  
 }
 
 
@@ -180,16 +185,14 @@ footer a:active {
   font-size: 50px;
   font-weight: 0;
   color: white;
-  position: fixed;
-  top: 350px;
-  margin-left: -15px;
+  margin-top: 280px;
   text-shadow: 0 0 5px grey;
- 
 }
-.arrow:hover{
+.arrow-container-left:hover .arrow{
   color: grey;
 }
-.arrow:active {
+
+.arrow-container-right:hover .arrow{
   color: grey;
 }
 
@@ -200,35 +203,83 @@ footer a:active {
   margin-left: 20px;
 }
 
+.arrow-container-right {
+  position: fixed;
+  width: 35px;
+  text-align: left;
+  padding-left: 0px;
+  right: 0px;
+  height: 100%;
+  top:115px;
+}
+
+.arrow-container-left {
+  position: fixed;
+  width: 35px;
+  left: 0px;
+  text-align: right;
+  padding-right: 0px;
+  height: 100%;
+  top: 115px;
+}
+
   /*------------------------------------------------------------------------*/
 .contact-href-container a {
   color: #393a44;
-
 }
 .contact-href-container {
-  /* display: flex;
-  flex-direction: column; */
   flex: 1;
   line-height: 10px;
-  /* justify-content: center; */
   margin-top: 25px;
   margin-bottom: 50px;
   text-align: left;
+  margin-left: 28px;
 }
 
-.contact-href-container a:hover {
-  color: black;
-}
-
-.email-hover-message:hover {
-  color: black;
+.linkedin-container:hover .linkedin-hover-message {
   display: inline;
-  /* font-size: 16px; */
+}
+.linkedin-container:hover a{
+  color: black;
+}
+.linkedin-hover-message {
+  display: none;
+  color: black;
+}
+
+.github-container:hover .github-hover-message {
+  display: inline;
+}
+.github-container:hover a{
+  color: black;
+}
+.github-hover-message {
+  display: none;
+  color: black;
+}
+
+.email-container:hover .email-hover-message {
+  display: inline;
+}
+.email-container:hover a{
+  color: black;
 }
 .email-hover-message {
-  color: #E0E0E0;
+  display: none;
+  color: black;
 }
 
+
+.phone-container:hover .phone-hover-message {
+  display: inline;
+}
+.phone-container:hover a{
+  color: black;
+}
+.phone-hover-message {
+  display: none;
+  color: black;
+}
 
 @media screen and (min-width: 650px){
   nav {
@@ -273,7 +324,7 @@ footer a:active {
 
 } 
 
-@media screen and (min-width: 450px){
+@media screen and (min-width: 300px){
 
   nav ul li{
     margin-left: 12px;
