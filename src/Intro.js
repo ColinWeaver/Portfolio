@@ -32,38 +32,20 @@ function Intro({opacity, setOpacity, width, setWidth, display, setDisplay, nextP
 
 
 
-
-
-function Title(){
-    return <h2 style={{ color: null}}>Hi, I'm Colin.</h2>
-}
-
-function Paragraph(){
-    return (
-        <>
-     <p style={{color: null }}> 
-         I'm a web developer living in the greater Nashville area. 
-         I am an idea person but also analytical which helps me in taking 
-         complexity and identifying solutions through the right ideas. Let's collaborate.
-    </p>
-    </>
-         )
-}
-
 return (
     
     <>
     <div style={{ opacity: null, width: `${100}%`, display: `${display}`}} className="about">
-    <div style={{textAlign: "center", width: '100%'}}>
-    <Title/>
-    <p><span> I'm a web developer living in the greater Nashville area.</span></p>
-      <p><span> I am an idea person... </span> <span>  but also analytical. </span></p>
-      <p> <span> The more ideas generated and the more effective the filtering of them.</span></p>
-    <p> <span> the faster high quality solutions can be discovered.</span></p>
+    <div style={{textAlign: "left", width: '100%'}}>
+    <h3>Hi, I'm Colin.</h3>
+    <p><span> I'm a web developer </span><span>living in the greater Nashville area.</span></p>
 
-     
+    <p><span>I'm well trained </span> <span> and experienced </span></p>
+
+    <p><span>in using industry standard practices </span> <span>for full stack web development.</span></p>
   
-    <p>Let's collaborate.</p>
+
+    <p>Lets work together.</p>
     </div>
 
             <Link to={'/about'} style={{ textDecoration: 'none' }}>

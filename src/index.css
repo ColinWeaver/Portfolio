@@ -46,7 +46,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 5%;
-  height: 600px;
+  /* height: 800px; */
   position: static;
 
 }
@@ -72,10 +72,12 @@ main {
   margin-top: 125px;
   margin-bottom: 250px;
   display: static;
+
 }
 footer {
   position: fixed;
-  margin-top: 1000px;
+  margin-top: 2000px;
+  
 
 
 }
@@ -97,7 +99,7 @@ header h3:hover {
 }
 
 header {
-  background-color: #D6D6D6;
+  background-color: #E0E0E0;
 }
 
 nav ul li a {
@@ -185,7 +187,7 @@ footer a:active {
   font-size: 50px;
   font-weight: 0;
   color: white;
-  margin-top: 280px;
+  margin-top: 140px; 
   text-shadow: 0 0 5px grey;
 }
 .arrow-container-left:hover .arrow{
@@ -205,22 +207,30 @@ footer a:active {
 
 .arrow-container-right {
   position: fixed;
-  width: 35px;
-  text-align: left;
+  width: 50px;
+  text-align: center;
   padding-left: 0px;
   right: 0px;
   height: 100%;
-  top:115px;
+  top: 115px;
+  
 }
 
 .arrow-container-left {
   position: fixed;
-  width: 35px;
+  width: 50px;
   left: 0px;
-  text-align: right;
+  text-align: center;
   padding-right: 0px;
   height: 100%;
   top: 115px;
+}
+
+.skills-list-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 200px;
+
 }
 
   /*------------------------------------------------------------------------*/
@@ -236,50 +246,7 @@ footer a:active {
   margin-left: 28px;
 }
 
-.linkedin-container:hover .linkedin-hover-message {
-  display: inline;
-}
-.linkedin-container:hover a{
-  color: black;
-}
-.linkedin-hover-message {
-  display: none;
-  color: black;
-}
 
-.github-container:hover .github-hover-message {
-  display: inline;
-}
-.github-container:hover a{
-  color: black;
-}
-.github-hover-message {
-  display: none;
-  color: black;
-}
-
-.email-container:hover .email-hover-message {
-  display: inline;
-}
-.email-container:hover a{
-  color: black;
-}
-.email-hover-message {
-  display: none;
-  color: black;
-}
-
-
-.phone-container:hover .phone-hover-message {
-  display: inline;
-}
-.phone-container:hover a{
-  color: black;
-}
-.phone-hover-message {
-  display: none;
-  color: black;
-}
 
 @media screen and (min-width: 650px){
   nav {
@@ -307,18 +274,25 @@ footer a:active {
     justify-content: center;
   }
   
+
   .item-two-paragraph {
     flex: .7;
   }
   
+
   .item-three {
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: center;
+   
   }
   
   .item-three-paragraph {
-    flex: .7;
+    flex: 1;
+    align-items: center;
+    /* margin-bottom: 3px; */
+   
+
   }
  
 
