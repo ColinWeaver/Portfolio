@@ -25,7 +25,7 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
 
 
         function TitleOne(){
-            return <h3 style={{ color: null, textAlign: 'center'}}>Background</h3>
+            return <h3 style={{ color: null, textAlign: 'left'}}>Background</h3>
         }
         
         function BodyOne(){
@@ -38,14 +38,15 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
              <p style={{color: null}}> 
              Creative fields are my comfort zone. 
              I grew up composing music (I was a classically trained pianist from ages 6 to 18), 
-             making films, and later creatively collaborating with others throughout film school and after. 
+             making films, and later creatively collaborating with others throughout college 
+             (where I studied Video and Film Production) and after.
              My interpersonal skills have been refined over my years working in these endeavors as well as through years
              of providing customer service as a driver. My analytical skills have been developed through years of 
              classical music training, editing film projects, studying as a math major for 1 to 2 years in college, 
-             and building software applications. 
-             I’m a very tireless worker as well, having spent years working long shifts in a fast paced distribution warehouse.
+             and building software applications. I’m a very tireless worker as well, having spent years working long shifts
+              in a fast paced distribution warehouse.</p>
              {/* I've also spent countless hours working to increase my knowledge in subjects such as Psychology, Mathematics, Economics, and Finance.   */}
-            </p>
+            
             </div>
             </>
                  )
