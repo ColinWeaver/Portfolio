@@ -52,9 +52,6 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
                  )
         }
 
-        // function TitleTwo(){
-        //     return <h3 style={{ color: null, textAlign: 'center' }}>Development Experience</h3>
-        // }
         
         function BodyTwo(){
             return (
@@ -63,10 +60,6 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
                  Over the last year I've been in the process of transitioning into the tech industry. I spent 9 months in a 
                  tech program called Thinkful where I was trained extensively in full stack web development techniques and had private mentor sessions multiple 
                  times a week with a 15+ year software developer. 
-                 {/* I had some experience prior to the program using some front-end languages and using Python. The tech
-                 program is where I acquired the majority of my experience using frameworks such as React, Bootstrap, and Express, 
-                 as well as how to setup and query PostgreSQL databases using the Knex library. */}
-                 
             </p>
             </>
                  )
