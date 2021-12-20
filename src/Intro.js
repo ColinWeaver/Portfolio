@@ -4,7 +4,50 @@ import { Link, useNavigate}  from 'react-router-dom'
 
 function Intro({opacity, setOpacity, width, setWidth, display, setDisplay, nextPageHandler }){
     window.scrollTo(0,0);
+    const [arrowColor, setArrowColor] = useState('white');
     
+
+useEffect(() => {
+  if (arrowColor === 'white'){
+  const timer = setTimeout(() => {
+  async function arrowColorSet(){
+  await setArrowColor('#EDEDED');
+}
+  arrowColorSet();
+}, 200)
+return () => clearTimeout(timer);
+  }
+
+  if (arrowColor === '#EDEDED'){
+    const timer = setTimeout(() => {
+    async function arrowColorSet(){
+    await setArrowColor('#C8C8C8');
+  }
+    arrowColorSet();
+  }, 200)
+  return () => clearTimeout(timer);
+    }
+
+    if (arrowColor === '#C8C8C8'){
+        const timer = setTimeout(() => {
+        async function arrowColorSet(){
+        await setArrowColor('#494949');
+      }
+        arrowColorSet();
+      }, 200)
+      return () => clearTimeout(timer);
+        }
+
+        if (arrowColor === '#494949'){
+          const timer = setTimeout(() => {
+          async function arrowColorSet(){
+          await setArrowColor('white');
+        }
+          arrowColorSet();
+        }, 200)
+        return () => clearTimeout(timer);
+          }
+}, [arrowColor, display])
 
 
 //------------------------------------------------------------Slide in page-----------------------------
@@ -39,18 +82,13 @@ return (
     <div style={{textAlign: "left", width: '100%'}}>
     <h3>Hi, I'm Colin.</h3>
     <p><span> I'm a web developer </span><span>living in the greater Nashville area.</span></p>
-
-    <p><span>I'm well trained </span> <span> and experienced </span></p>
-
-    <p><span>in using industry standard practices </span> <span>for full stack web development.</span></p>
-  
-
-    <p>Lets work together.</p>
+    <p>Click arrow on right to read more.</p>
+   
     </div>
 
             <Link to={'/about'} style={{ textDecoration: 'none' }}>
                 <div className="arrow-container-right">
-                    <div className='arrow'>{'>'}</div>
+                    <div style={{color: `${arrowColor}`}}className='arrow'>{'>'}</div>
                 </div>
             </Link>
 

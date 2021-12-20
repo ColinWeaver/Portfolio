@@ -12,8 +12,6 @@ a {
 }
 body {
   min-height: 100vh;
-  /* display: block; */
-  /* background-size: cover; */
   margin: auto;
   padding-left: 0px;
   position: static;
@@ -46,9 +44,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 5%;
-  /* height: 800px; */
   position: static;
-
 }
 
 header {
@@ -72,14 +68,10 @@ main {
   margin-top: 125px;
   margin-bottom: 250px;
   display: static;
-
 }
 footer {
   position: fixed;
   margin-top: 2000px;
-  
-
-
 }
 
 /*----------------------------------------COLORS----------------------------------------------------------------*/
@@ -99,7 +91,7 @@ header h3:hover {
 }
 
 header {
-  background-color: #E0E0E0;
+  background-color: #DBDBDB;
 }
 
 nav ul li a {
@@ -147,9 +139,14 @@ nav ul a:hover {
 .about {
   display: flex;
   flex-direction: row;
-  text-align: center;
+  /* text-align: center; */
   width: 100%;
   position: static;
+
+}
+
+.about img {
+ width: 100%;
 
 }
 /*----------------------------------------ABOUT ITEMS------------------------------------------------------------*/
@@ -207,21 +204,20 @@ footer a:active {
 
 .arrow-container-right {
   position: fixed;
-  width: 50px;
-  text-align: center;
+  width: 120px;
+  text-align: right;
   padding-left: 0px;
   right: 0px;
   height: 100%;
   top: 115px;
-  
 }
 
 .arrow-container-left {
   position: fixed;
-  width: 50px;
+  width: 120px;
   left: 0px;
-  text-align: center;
-  padding-right: 0px;
+  text-align: left;
+  margin-left: 0px;
   height: 100%;
   top: 115px;
 }
@@ -230,12 +226,14 @@ footer a:active {
   display: flex;
   flex-direction: row;
   margin-bottom: 200px;
-
 }
 
   /*------------------------------------------------------------------------*/
 .contact-href-container a {
   color: #393a44;
+}
+.contact-href-container a:hover {
+  color: black;
 }
 .contact-href-container {
   flex: 1;
@@ -290,9 +288,10 @@ footer a:active {
   .item-three-paragraph {
     flex: 1;
     align-items: center;
-    /* margin-bottom: 3px; */
-   
+  }
 
+  .arrow-container-right, .arrow-container-left{
+    text-align: center;
   }
  
 

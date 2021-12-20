@@ -32,9 +32,9 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
             return (
                 <>
                 <div>
-             <div style={{width: '10px'}}>
+            
              <img src={image} style={{width: '250px', float: 'left', marginRight: '10px'}}/>
-             </div>
+         
              <p style={{color: null}}> 
              Creative fields are my comfort zone. 
              I grew up composing music (I was a classically trained pianist from ages 6 to 18), 
@@ -44,16 +44,16 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
              classical music training, editing film projects, studying as a math major for 1 to 2 years in college, 
              and building software applications. 
              I’m a very tireless worker as well, having spent years working long shifts in a fast paced distribution warehouse.
-             I've also spent countless hours working to increase my knowledge in subjects such as Psychology, Mathematics, Economics, and Finance.  
+             {/* I've also spent countless hours working to increase my knowledge in subjects such as Psychology, Mathematics, Economics, and Finance.   */}
             </p>
             </div>
             </>
                  )
         }
 
-        function TitleTwo(){
-            return <h3 style={{ color: null, textAlign: 'center' }}>Development Experience</h3>
-        }
+        // function TitleTwo(){
+        //     return <h3 style={{ color: null, textAlign: 'center' }}>Development Experience</h3>
+        // }
         
         function BodyTwo(){
             return (
@@ -71,35 +71,7 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
                  )
         }
 
-        // function TitleThree(){
-        //     return <h3 style={{ color: null, textAlign: 'center'}}>Skills</h3>
-        // }
-
-        
-        // function BodyThree(){
-        //     return (
-        //         <>
-        //    <div className="skills-container">
-             
-        //         <ul>
-                   
-        //         <li>Relational Databases</li>
-        //         <li>Relational Databases</li>
-        //         <li>Relational Databases</li>
-                    
-        //         </ul>
-        //         {/* <ul>
-        //             <li>item</li>
-                  
-        //         </ul> */}
-        //         </div>
-        //         </>
-
-            
-        //          )
-        // }
-
-
+    
         return (
             <>
            <h2 style={{textAlign: 'center', color: null}}>About Me</h2>
@@ -107,66 +79,34 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
             <div style={{ width: `${100}%`, display: null, opacity: 100}} className="about">
             
                     <Link to={'/'} style={{ textDecoration: 'none' }}>
-
                     <div className="arrow-container-left">
                        <div className='arrow'>{'<'}</div>
                     </div>
                     </Link> 
              
-
-
                <div className="paragraphs-container">
                 <div className="item-one">
                     <div className="item-one-paragraph">
                     <TitleOne/>
                     <BodyOne/>
+                    <BodyTwo/>
                     </div>
                 </div>
                
-
-
-                <div className="item-two">
-                <div className="item-two-paragraph">
-                <TitleTwo/>
-                <BodyTwo/>
-                </div>
-                </div>
-
-                
-            <div className="item-three">
-            <div className="item-three-paragraph">
-                <h3>Skills</h3>
-                <div className="skills-list-container">
-                <ul>
-               {skills.slice(0, 4).map((skill) => {
-                  return <li>{skill}</li>
-               })}
-               </ul>
-               <ul>
-                {skills.slice(4, 8).map((skill) => {
-                  return <li>{skill}</li>
-               })}
-                </ul>
-                <ul>
-                {skills.slice(8, 12).map((skill) => {
-                  return <li>{skill}</li>
-               })}
-                </ul>
-                <ul>
-               {skills.slice(12).map((skill) => {
-                  return <li>{skill}</li>
-               })}
-               </ul>
-                </div>
-                   
             
+                <h3>Skills</h3>
+               <div style={{width: '100%', height: '500px'}}>{skills.map((skill) => {
+                   if (skill === skills[skills.length - 1]){
+                       return <> {skill}{'.'}</>
+                   }
+                return <>{skill}{',   '}</>
+            }
+               )}
+               </div>
+
             </div>
 
-
-            </div>
-            </div>
-
-
+            
            
             <Link to={'/projects'} style={{ textDecoration: 'none' }}>
                 
