@@ -82,7 +82,7 @@ return (
     <div style={{textAlign: "left", width: '100%'}}>
     <h3>Hi, I'm Colin.</h3>
     <p><span> I'm a web developer </span><span>living in the greater Nashville area.</span></p>
-    <p>Click arrow on right to read more.</p>
+    <p>Click the arrow on the right to read more.</p>
    
     </div>
 

@@ -234,15 +234,39 @@ footer a:active {
 }
 .contact-href-container a:hover {
   color: black;
+ 
 }
 .contact-href-container {
-  flex: 1;
-  line-height: 10px;
+  line-height: 25px;
   margin-top: 25px;
   margin-bottom: 50px;
-  text-align: left;
-  margin-left: 28px;
+  text-align: center;
 }
+
+.hidden {
+  display: none;
+  font-size: 14px;
+}
+
+.contact-href-container a:hover .hidden{
+display: inline;
+color: black;
+}
+
+.contact-href-container a:hover .contact-type{
+  display: none;
+  color: black;
+  }
+
+
+.href-container-container {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
 
 
 
@@ -304,3 +328,14 @@ footer a:active {
     margin-right: 12px;
   }
 }
+
+
+@media screen and (min-width: 415px){
+img, .container-for-image {
+  float: left;
+ 
+}
+
+
+}
+

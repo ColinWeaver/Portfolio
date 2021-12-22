@@ -31,10 +31,10 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
         function BodyOne(){
             return (
                 <>
-                <div>
-            
-             <img src={image} style={{width: '250px', float: 'left', marginRight: '10px'}}/>
-         
+                <div className='img-container'>
+           
+             <img src={image} style={{width: '250px', marginRight: '10px'}}/>
+      
              <p style={{color: null}}> 
              Creative fields are my comfort zone. 
              I grew up composing music (I was a classically trained pianist from ages 6 to 18), 
@@ -79,7 +79,7 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
                     </Link> 
              
                <div className="paragraphs-container">
-                <div className="item-one">
+                <div className="item-one" >
                     <div className="item-one-paragraph">
                     <TitleOne/>
                     <BodyOne/>
@@ -89,13 +89,18 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
                
             
                 <h3>Skills</h3>
-               <div style={{width: '100%', height: '500px'}}>{skills.map((skill) => {
+               <div style={{width: '100%', height: '500px'}}>
+                   {skills.map((skill) => {
                    if (skill === skills[skills.length - 1]){
                        return <> {skill}{'.'}</>
                    }
                 return <>{skill}{',   '}</>
             }
                )}
+
+<p>
+            Click <a style={{color: 'black'}} href=''>here</a> to view my resume.
+            </p>
                </div>
 
             </div>

@@ -9,13 +9,18 @@ function Projects(){
 function BodyOne(){
     return (
         <div style={{marginBottom: '300px'}}>
-   <a href='http://reservations-front-end.herokuapp.com/dashboard'>  <img src={image} style={{width: '250px', float: 'left', marginRight: '10px'}}/></a>
-        <div>
 
+<a href='http://reservations-front-end.herokuapp.com/dashboard'> 
+<div className="container-for-image" style={{color: 'black', width: '250px', height: '500px', marginRight: '10px', backgroundImage: `url(${image})`, backgroundSize: 'cover'}}>
+    <p style={{textAlign: 'center', marginTop: '100px', fontWeight: '900', textShadow: '1px 1px 0px grey'}}>Click to View App </p>
+</div></a>
+
+
+
+ <div>
 <p>
-Summary:
 This application is used to create restaurant reservations and assign/track tables for them. 
-The apps functionality includes the ability to:
+The app's functionality includes the ability to:
 create reservations,
 edit reservations,
 create tables,
@@ -25,23 +30,20 @@ cancel a reservation, and search through reservations by phone number.
 </p>
 
 <p>
-Frontend:
-I developed the frontend using various React libraries and features and styled it using CSS
-
-
-
-For the backend I used Express to develop the API. I developed the routes using JavaScript and used 
-the Knex library to query the PostgreSQL database. I also used the Knex library to develop 
-the seed and migration files.
-
-Used Express to develop the API and the Knex library to 
-develop the seed and migration files and to query the PostgreSQL database. 
+I developed the frontend using various React libraries and features and styled it using CSS.
+For backend I used: Express to develop the API and the Knex library to 
+develop the seed and migration files as well as query the PostgreSQL database. 
 I used ElephantSQL to host the Database. 
 </p>
 
-<p>To read more about the app such as the pages rendered and the API check out the 
- <a style={{color: 'black'}}href="https://github.com/ColinWeaver/Reservations#readme">README</a>.
- </p>
+<p>To read more about the app such as the pages rendered and the API check out the  
+ <a style={{color: 'black'}} href="https://github.com/ColinWeaver/Reservations#readme"> README</a>.
+</p>
+
+<p>
+Click <a style={{color: 'black'}} href='http://reservations-front-end.herokuapp.com/dashboard'>here</a> to view Reservations (or click the image).
+</p>
+ 
    
     </div>
     </div>
@@ -64,7 +66,7 @@ return (
             </Link> 
     
 
-       {/* <div className="paragraphs-container"> */}
+
         <div className="item-one">
             
             <div className="item-one-paragraph">
@@ -75,7 +77,7 @@ return (
             </div>
         </div>
     
-    {/* </div> */}
+ 
 
     <Link to={'/contact'} style={{ textDecoration: 'none' }}>
     <div className="arrow-container-right">
