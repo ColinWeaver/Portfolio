@@ -1,8 +1,29 @@
-import React, {useState} from "react";
-import { Link, useNavigate}  from 'react-router-dom';
+import React, {useEffect, useState} from "react";
+import { Link }  from 'react-router-dom';
 import image from "./media/profilePhoto.jpg";
-function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width, setWidth}){
+import resumeImage from "./media/Colin-Weaver-resume-png.png";
+
+function About(){
+useEffect(() => {
     window.scrollTo(0,0);
+}, [])   
+
+const [showResume, setShowResume] = useState(false);
+const [resumeArrow, setResumeArrow] = useState("Click to show resume");
+
+
+function resumeArrowHandler(){
+setShowResume((value) => !value);
+setResumeArrow((arrow) => {
+    if (arrow === "Click to show resume"){
+        return "Click to hide resume"
+    }
+    else return "Click to show resume"
+}); 
+}
+
+//url where i found up down arrows:
+// https://www.zesolution.com/en/technology/internet/how-to-make-the-arrows-%E2%86%91-%E2%86%93-%E2%86%92-%E2%86%90-on-your-keyboard.html
 
 
 //------------------------------------------------------------Slide in page-----------------------------
@@ -21,8 +42,7 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
              'Heroku',
              'Node Package Manager',
              'ElephantSQL'
-            ]
-
+            ];
 
         function TitleOne(){
             return <h3 style={{ color: null, textAlign: 'left'}}>Background</h3>
@@ -65,6 +85,19 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
                  )
         }
 
+
+        function Resume(){
+            if (showResume){
+                return (
+                <>
+                <img src={resumeImage}></img>
+                </>
+                )
+                
+            }
+            else return null;
+        }
+
     
         return (
             <>
@@ -92,23 +125,29 @@ function About({opacity, setOpacity, nextPageHandler, display, setDisplay, width
                <div style={{width: '100%', height: '500px'}}>
                    {skills.map((skill) => {
                    if (skill === skills[skills.length - 1]){
-                       return <> {skill}{'.'}</>
+                       return <> {skill}{'.'}
+                       <span className="resume-link" style={{ fontSize: null, fontWeight: 'bold'}} onClick={resumeArrowHandler}> {resumeArrow}</span>{'.'}
+                       
+                       </>
                    }
                 return <>{skill}{',   '}</>
             }
                )}
 
-<p>
-            Click <a style={{color: 'black'}} href=''>here</a> to view my resume.
-            </p>
-               </div>
+           {/* <h3>Resume</h3>
+            <div>
+             <p style={{ fontSize: '20px', textAlign: 'center'}} onClick={resumeArrowHandler}> {resumeArrow}</p>
+            <Resume/>
+            </div> */}
+            <Resume/>
+           
 
             </div>
 
-            
-           
+            </div>
+
+        
             <Link to={'/projects'} style={{ textDecoration: 'none' }}>
-                
             <div className="arrow-container-right">
                     <div className='arrow'>{'>'}</div>
             </div>

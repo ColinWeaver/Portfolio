@@ -10,6 +10,7 @@ html {
 a {
   text-decoration: none;
 }
+
 body {
   min-height: 100vh;
   margin: auto;
@@ -139,7 +140,6 @@ nav ul a:hover {
 .about {
   display: flex;
   flex-direction: row;
-  /* text-align: center; */
   width: 100%;
   position: static;
 
@@ -149,6 +149,13 @@ nav ul a:hover {
  width: 100%;
 
 }
+
+
+
+
+.resume-link:hover {
+  color: 'black';
+  }
 /*----------------------------------------ABOUT ITEMS------------------------------------------------------------*/
 .item-one, .item-two, .item-three{
 display: inline;
@@ -198,9 +205,9 @@ footer a:active {
 .item-one, .item-two {
   margin-bottom: 20px;
 }
-.item-one {
+/* .item-one {
   margin-left: 20px;
-}
+} */
 
 .arrow-container-right {
   position: fixed;
@@ -233,7 +240,7 @@ footer a:active {
   color: #393a44;
 }
 .contact-href-container a:hover {
-  color: black;
+  color: grey;
  
 }
 .contact-href-container {
@@ -250,7 +257,7 @@ footer a:active {
 
 .contact-href-container a:hover .hidden{
 display: inline;
-color: black;
+color: grey;
 }
 
 .contact-href-container a:hover .contact-type{
@@ -319,7 +326,14 @@ color: black;
   }
  
 
+  .about {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
 } 
+
+
+
 
 @media screen and (min-width: 300px){
 

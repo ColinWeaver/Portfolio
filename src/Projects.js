@@ -11,12 +11,9 @@ function BodyOne(){
         <div style={{marginBottom: '300px'}}>
 
 <a href='http://reservations-front-end.herokuapp.com/dashboard'> 
-<div className="container-for-image" style={{color: 'black', width: '250px', height: '500px', marginRight: '10px', backgroundImage: `url(${image})`, backgroundSize: 'cover'}}>
-    <p style={{textAlign: 'center', marginTop: '100px', fontWeight: '900', textShadow: '1px 1px 0px grey'}}>Click to View App </p>
+<div className="container-for-image" style={{paddingTop: '100px', color: '#393a44', width: '250px', height: '150px', marginRight: '10px', backgroundImage: `url(${image})`, backgroundSize: '250px 250px', backgroundRepeat: 'no-repeat'}}>
+    <p style={{textAlign: 'center', marginTop: '0px', fontSize: '25px', fontWeight: '900', textShadow: '2px 2px 2px grey'}}>Click to View App </p>
 </div></a>
-
-
-
  <div>
 <p>
 This application is used to create restaurant reservations and assign/track tables for them. 
@@ -36,14 +33,11 @@ develop the seed and migration files as well as query the PostgreSQL database.
 I used ElephantSQL to host the Database. 
 </p>
 
-<p>To read more about the app such as the pages rendered and the API check out the  
- <a style={{color: 'black'}} href="https://github.com/ColinWeaver/Reservations#readme"> README</a>.
+<p>To read more about the app check out the  
+ <a style={{color: 'black', fontWeight: 'bold'}} href="https://github.com/ColinWeaver/Reservations#readme"> README </a> file. To view the app click <a style={{color: 'black', fontWeight: 'bold'}} href='http://reservations-front-end.herokuapp.com/dashboard'>here</a> (or click the image).
 </p>
 
-<p>
-Click <a style={{color: 'black'}} href='http://reservations-front-end.herokuapp.com/dashboard'>here</a> to view Reservations (or click the image).
-</p>
- 
+
    
     </div>
     </div>
