@@ -49,7 +49,7 @@ setResumeArrow((arrow) => {
                 <>
                 <div className='img-container'>
            
-             <img alt={'profile-photo'}src={image} style={{width: '250px', marginRight: '10px'}}/>
+             <img src={image} style={{width: '250px', marginRight: '10px'}}/>
       
              <p style={{color: null}}> 
              Creative fields are my comfort zone. 
