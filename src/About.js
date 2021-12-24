@@ -22,10 +22,6 @@ setResumeArrow((arrow) => {
 }); 
 }
 
-//url where i found up down arrows:
-// https://www.zesolution.com/en/technology/internet/how-to-make-the-arrows-%E2%86%91-%E2%86%93-%E2%86%92-%E2%86%90-on-your-keyboard.html
-
-
 //------------------------------------------------------------Slide in page-----------------------------
        const skills = [
            'Relational Databases',
@@ -53,7 +49,7 @@ setResumeArrow((arrow) => {
                 <>
                 <div className='img-container'>
            
-             <img src={image} style={{width: '250px', marginRight: '10px'}}/>
+             <img alt={'profile-photo'}src={image} style={{width: '250px', marginRight: '10px'}}/>
       
              <p style={{color: null}}> 
              Creative fields are my comfort zone. 
@@ -90,13 +86,14 @@ setResumeArrow((arrow) => {
             if (showResume){
                 return (
                 <>
-                <img src={resumeImage}></img>
+                <img alt="resume-image" src={resumeImage}></img>
                 </>
                 )
                 
             }
             else return null;
         }
+        
 
     
         return (
@@ -126,7 +123,7 @@ setResumeArrow((arrow) => {
                    {skills.map((skill) => {
                    if (skill === skills[skills.length - 1]){
                        return <> {skill}{'.'}
-                       <span className="resume-link" style={{ fontSize: null, fontWeight: 'bold'}} onClick={resumeArrowHandler}> {resumeArrow}</span>{'.'}
+                       <span className="resume-link" style={{ fontSize: null, fontWeight: 'bold', fontFamily: 'helvetica'}} onClick={resumeArrowHandler}><i> {resumeArrow}</i></span>{"."}
                        
                        </>
                    }
@@ -134,12 +131,12 @@ setResumeArrow((arrow) => {
             }
                )}
 
-           {/* <h3>Resume</h3>
+{/*             
             <div>
              <p style={{ fontSize: '20px', textAlign: 'center'}} onClick={resumeArrowHandler}> {resumeArrow}</p>
             <Resume/>
-            </div> */}
-            <Resume/>
+            </div>  */}
+           <Resume/>
            
 
             </div>

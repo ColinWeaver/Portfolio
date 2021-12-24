@@ -265,6 +265,16 @@ color: grey;
   color: black;
   }
 
+  .contact-href-container a:active .hidden{
+    display: inline;
+    color: grey;
+    }
+    
+    .contact-href-container a:active .contact-type{
+      display: none;
+      color: black;
+      }
+
 
 .href-container-container {
   text-align: center;
