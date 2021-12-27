@@ -1,9 +1,13 @@
 import React, {useState, useEffect} from "react"
-import { Link, useNavigate}  from 'react-router-dom'
+import { Link }  from 'react-router-dom'
 
 
 function Intro({opacity, setOpacity, width, setWidth, display, setDisplay, nextPageHandler }){
+  
+  useEffect(() => {
     window.scrollTo(0,0);
+}, []) 
+
     const [arrowColor, setArrowColor] = useState('white');
     
 
@@ -78,8 +82,8 @@ return () => clearTimeout(timer);
 return (
     
     <>
-    <div style={{ opacity: null, width: `${100}%`, display: `${display}`}} className="about">
-    <div style={{textAlign: "left", width: '100%'}}>
+    <div style={{ width: `90%`}} className="about">
+    <div style={{textAlign: "left", width: '100%', opacity: null}}>
     <h3>Hi, I'm Colin.</h3>
     <p><span> I'm a web developer </span><span>living in the greater Nashville area.</span></p>
     <p>Click the arrow on the right to read more.</p>

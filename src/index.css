@@ -142,11 +142,12 @@ nav ul a:hover {
   flex-direction: column;
   position: static;
   align-items: center;
+  width: 100%;
 }
 
-.about img {
+/* .about img {
  width: 100%;
-}
+} */
 
 .resume-link:hover {
   color: 'black';
@@ -194,7 +195,7 @@ footer a:active {
 
 .arrow-container-right {
   position: fixed;
-  width: 120px;
+  width: 70px;
   text-align: right;
   padding-left: 0px;
   right: 0px;
@@ -204,7 +205,7 @@ footer a:active {
 
 .arrow-container-left {
   position: fixed;
-  width: 120px;
+  width: 70px;
   left: 0px;
   text-align: left;
   margin-left: 0px;
@@ -306,8 +307,9 @@ img, .container-for-image {
 }
 
 .about {
-  display: flex;
-  flex: 1;
+  /* display: flex; */
+  width: 100%;
+  min-width: 100vh;
 }
 
 

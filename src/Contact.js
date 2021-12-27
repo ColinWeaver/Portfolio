@@ -1,14 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link}  from 'react-router-dom'
 
 function Contact(){
 
   
     /* TODO: add "Link" around other links so mouse treats text like a link and route back to this page */
-    //TODO: add useeffect around window scroll
-    //Add comments around text
+  
 
-    window.scrollTo(0,0);
+    useEffect(() => {
+      window.scrollTo(0,0);
+  }, []) 
 
 
 
@@ -36,7 +37,7 @@ function Contact(){
         <div style={{textAlign: 'center', width: '100%', color: null}}>
         <h2>Contact Me</h2>
         <hr style={{width: '400px'}}/>
-       </div>
+        </div>
      
 
         <Link to={'/projects'} style={{ textDecoration: 'none' }}>

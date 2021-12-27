@@ -61,17 +61,20 @@ setResumeArrow((arrow) => {
         return (
             <>
            <h2 style={{textAlign: 'center', color: null}}>About Me</h2>
-           <div style={{ width: `${100}%`, display: null, opacity: 100}} className="about">
+           <hr style={{height: '1px', color: '#808080', backgroundColor: 'black'}}/>
+           <div style={{ width: `${90}%`, display: null, opacity: 100}} className="about">
+               {/* Note: When width is 100 above it has extra room left to right */}
                 <Link to={'/'} style={{ textDecoration: 'none' }}>
                     <div className="arrow-container-left">
                        <div className='arrow'>{'<'}</div>
                     </div>
                 </Link> 
 
+
              
-<hr style={{color: 'black', backgroundColor: 'pink'}}/>
+
            {/* ------------------------------------------------------------- */}
-                    <div style={{display: 'flex', width: '90%', flexDirection: 'column', boxShadow: '10px 10px 10px grey', borderRadius: '9px' , padding: '20px', paddingBottom: '50px'}}>
+                    <div style={{display: 'flex', width: '90%', flexDirection: 'column', boxShadow: '10px 10px 10px grey', borderRadius: '9px' , padding: '0px', paddingBottom: '50px'}}>
                     <hr/>
                         <h3 style={{ color: null, textAlign: 'left'}}>Background</h3>
                         <hr/>

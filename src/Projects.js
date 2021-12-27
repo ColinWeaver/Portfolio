@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link }  from 'react-router-dom'
 import image from "./media/reservations-screenshot.PNG";
 
 function Projects(){
-    window.scrollTo(0,0);
+    useEffect(() => {
+        window.scrollTo(0,0);
+    }, []) 
 
 //------------------------------------------------------------Slide in page----------------------------------
 
@@ -12,7 +14,7 @@ return (
     <div className="highest-page-container">
     <h2 style={{textAlign: 'center', color: null}}>Projects</h2>
      <hr style={{width: '250px'}}/>
-    <div style={{ width: `${100}%`, display: null, opacity: 100, bottom: '100px'}} className="about">
+    <div style={{ width: `${90}%`, display: null, opacity: 100, bottom: '100px'}} className="about">
 
 {/* -------------------------------------------------------ARROW LEFT-------------------------------------------------------------------------------- */}
             <Link to={'/about'} style={{ textDecoration: 'none' }}>
@@ -34,7 +36,7 @@ return (
                     </div>
                 </a>
 
-                <div style={{boxShadow: '10px 10px 10px grey', borderRadius: '9px' , padding: '20px', paddingBottom: '50px'}}>
+                <div style={{boxShadow: '10px 10px 10px grey', borderRadius: '9px' , padding: '0px', paddingBottom: '50px'}}>
                     <hr/>
 
                     <p>
