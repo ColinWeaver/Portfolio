@@ -13,8 +13,9 @@ function Layout() {
         <header>
           <div className='header-title'>
           <Link to="/">
-          <h3 style={{ color: null}}>Colin Weaver <span style={{fontWeight: '500'}}>- Web Developer</span></h3>
+          <h3 style={{ color: null}}>Colin Weaver <span style={{fontWeight: '500', boxShadow: '5px 5px 5px black', padding: '5px', borderRadius: '5px'}}>- Web Developer</span></h3>
           </Link>
+          <hr style={{width:'40%', height: '1px', backgroundColor: 'black', marginTop: "0px", textAlign: 'center'}}/>
           </div>
           <Navigation/>
         

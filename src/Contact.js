@@ -2,6 +2,12 @@ import React from "react";
 import { Link}  from 'react-router-dom'
 
 function Contact(){
+
+  
+    /* TODO: add "Link" around other links so mouse treats text like a link and route back to this page */
+    //TODO: add useeffect around window scroll
+    //Add comments around text
+
     window.scrollTo(0,0);
 
 
@@ -29,8 +35,9 @@ function Contact(){
 
         <div style={{textAlign: 'center', width: '100%', color: null}}>
         <h2>Contact Me</h2>
+        <hr style={{width: '400px'}}/>
        </div>
-
+     
 
         <Link to={'/projects'} style={{ textDecoration: 'none' }}>
         <div className="arrow-container-left">
@@ -38,26 +45,18 @@ function Contact(){
           </div>
         </Link> 
 
-
-         
-      
-                {/* <div className="href-container-container">
-               <div className="contact-href-container">
-                    <p><a href="https://github.com/ColinWeaver"> <span className="contact-type">GitHub </span><span className="hidden"> https://github.com/ColinWeaver </span></a></p>
-                    <p><a href="https://www.linkedin.com/in/colin-james-weaver/"> <span className="contact-type">LinkedIn</span> <span className="hidden"> www.linkedin.com/in/colin-james-weaver</span></a></p>
-                    <p><a href="mailto:composerman11@gmail.com"> <span className="contact-type">Email </span><span className="hidden"> composerman11@gmail.com </span></a></p>
-                    <p><a href="tel:6154385452"><span className="contact-type">Phone </span><span className="hidden">6154385452 </span></a></p>
-                    
-
-               </div>
-               </div> */}
-
                <div className="href-container-container">
                <div className="contact-href-container">
-               <p id="GitHub" onClick={contactHandler}>GitHub</p>
-               <p id="LinkedIn" onClick={contactHandler}>LinkedIn</p>
-                    <p id="Email" onClick={contactHandler}>Email</p>
-                    <p id="Phone" onClick={contactHandler}>Phone</p>
+               <Link to="/contact">
+               <p style={{marginLeft: '0px'}}id="GitHub" onClick={contactHandler}><i>GitHub</i></p>
+               </Link>
+
+              
+               <p style={{marginLeft: '50px'}}id="LinkedIn" onClick={contactHandler}><i>LinkedIn</i></p>
+               <p style={{marginLeft: '100px'}}id="Email" onClick={contactHandler}><i>Email</i></p>
+               <p style={{marginLeft: '150px'}}id="Phone" onClick={contactHandler}><i>Phone</i></p>
+                    
+
                </div>
                </div>
          

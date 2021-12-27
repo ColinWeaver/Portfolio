@@ -82,7 +82,7 @@ body {
   color: #393a44;
 }
 footer p a {
-  color: #393a44;
+  color: #000000;
 }
 header h3 {
   color: #393a44;
@@ -139,28 +139,19 @@ nav ul a:hover {
 /*----------------------------------------PAGE CONTAINERS------------------------------------------------------------*/
 .about {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  flex-direction: column;
   position: static;
-
+  align-items: center;
 }
 
 .about img {
  width: 100%;
-
 }
-
-
-
 
 .resume-link:hover {
   color: 'black';
   }
-/*----------------------------------------ABOUT ITEMS------------------------------------------------------------*/
-.item-one, .item-two, .item-three{
-display: inline;
-align-items: center;
-}
+
 
 /*----------------------------------------FOOTER------------------------------------------------------------*/
 footer {
@@ -175,16 +166,15 @@ footer {
 }
 footer a {
   text-decoration: none;
-  color: white;
   margin: 5px;
 }
 footer a:hover {
   color: grey;
+ 
 }
 footer a:active {
   color: grey;
 }
-
 
 /*----------------------------------------ARROWS------------------------------------------------------------*/
 .arrow {
@@ -201,13 +191,6 @@ footer a:active {
 .arrow-container-right:hover .arrow{
   color: grey;
 }
-
-.item-one, .item-two {
-  margin-bottom: 20px;
-}
-/* .item-one {
-  margin-left: 20px;
-} */
 
 .arrow-container-right {
   position: fixed;
@@ -229,6 +212,7 @@ footer a:active {
   top: 115px;
 }
 
+
 .skills-list-container {
   display: flex;
   flex-direction: row;
@@ -236,54 +220,45 @@ footer a:active {
 }
 
   /*------------------------------------------------------------------------*/
-.contact-href-container a {
-  color: #393a44;
-}
+
 .contact-href-container a:hover {
-  color: grey;
- 
+  color: #B6B6B6;
 }
+
+.contact-href-container a {
+  color: white;
+}
+
 .contact-href-container {
   line-height: 25px;
   margin-top: 25px;
   margin-bottom: 50px;
-  text-align: center;
+  text-align: left;
+  background-color: #393a44;
+  color: white;
+  box-shadow: 8px 8px 8px #494949;
+  border-radius: 15px;
+  padding: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-weight: 280;
 }
-
-.hidden {
-  display: none;
-  font-size: 14px;
-}
-
-.contact-href-container a:hover .hidden{
-display: inline;
-color: grey;
-}
-
-.contact-href-container a:hover .contact-type{
-  display: none;
-  color: black;
-  }
-
-  .contact-href-container a:active .hidden{
-    display: inline;
-    color: grey;
-    }
-    
-    .contact-href-container a:active .contact-type{
-      display: none;
-      color: black;
-      }
 
 
 .href-container-container {
+  /* DBDBDB */
+  background-color: #C8C8C8; 
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
-}
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 5px;
+  box-shadow: 8px 8px 8px #808080;
 
+}
 
 
 
@@ -296,41 +271,9 @@ color: grey;
   }
 
   main {
-    height: 450px;
-  }
-  .item-one {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-  }
-  .item-one-paragraph {
-    flex: .7;
+    height: 800px;
   }
   
-  .item-two {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-
-  .item-two-paragraph {
-    flex: .7;
-  }
-  
-
-  .item-three {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   
-  }
-  
-  .item-three-paragraph {
-    flex: 1;
-    align-items: center;
-  }
-
   .arrow-container-right, .arrow-container-left{
     text-align: center;
   }
@@ -339,11 +282,12 @@ color: grey;
   .about {
     margin-left: 25px;
     margin-right: 25px;
+    padding: 25px;
   }
+
+
+
 } 
-
-
-
 
 @media screen and (min-width: 300px){
 
@@ -357,9 +301,26 @@ color: grey;
 @media screen and (min-width: 415px){
 img, .container-for-image {
   float: left;
- 
+}
+
+}
+
+.about {
+  display: flex;
+  flex: 1;
 }
 
 
-}
+/* COLORS */
+/* EDEDED 
+DBDBDB
+C8C8C8
+B6B6B6
+A4A4A4
+929292
+808080
+6D6D6D
+5B5B5B
+494949
+373737  */
 
