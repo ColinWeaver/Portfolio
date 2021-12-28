@@ -47,7 +47,7 @@ setResumeArrow((arrow) => {
             if (showResume){
                 return (
                 <>
-                <img alt="resume-image" src={resumeImage}></img>
+                <img style={{width: '75%'}}alt="resume-image" src={resumeImage}></img>
                 </>
                 )
                 
@@ -61,9 +61,9 @@ setResumeArrow((arrow) => {
         return (
             <>
            <h2 style={{textAlign: 'center', color: null}}>About Me</h2>
-           <hr style={{height: '1px', color: '#808080', backgroundColor: 'black'}}/>
+          
            <div style={{ width: `${90}%`, display: null, opacity: 100}} className="about">
-               {/* Note: When width is 100 above it has extra room left to right */}
+              
                 <Link to={'/'} style={{ textDecoration: 'none' }}>
                     <div className="arrow-container-left">
                        <div className='arrow'>{'<'}</div>
@@ -74,14 +74,14 @@ setResumeArrow((arrow) => {
              
 
            {/* ------------------------------------------------------------- */}
-                    <div style={{display: 'flex', width: '90%', flexDirection: 'column', boxShadow: '10px 10px 10px grey', borderRadius: '9px' , padding: '0px', paddingBottom: '50px'}}>
-                    <hr/>
-                        <h3 style={{ color: null, textAlign: 'left'}}>Background</h3>
-                        <hr/>
+                    <div className="box-shadow" style={{display: 'flex', width: '90%', flexDirection: 'column', borderRadius: '9px' , padding: '10px', paddingBottom: '20px'}}>
+                 
+                        <h3 className="page-sub-title">Background</h3>
+                      
 
            
-                        <div className='img-container'>
-                          <img src={image} style={{width: '250px', marginRight: '10px'}}/>
+                        <div className="container-for-image">
+                          <img src={image} style={{marginRight: '10px'}}/>
                                 <p style={{color: null}}> 
                                     Creative fields are my comfort zone. 
                                     I grew up composing music (I was a classically trained pianist from ages 6 to 18), 
@@ -105,8 +105,9 @@ setResumeArrow((arrow) => {
 
                
             {/* ------------------------------------------------------------- */}
-                    <h3>Skills</h3>
-                    <div style={{width: '100%', height: '500px'}}>
+                    
+                    <div style={{ width: '90%', height: null}}>
+                    <h3 className="page-sub-title">Skills</h3>
                         {skills.map((skill) => {
                             if (skill === skills[skills.length - 1]){
                                 return <> {skill}{'.'}
@@ -118,9 +119,9 @@ setResumeArrow((arrow) => {
                             return <>{skill}{',   '}</>
                             }
                         )}
-
-                    <Resume/>
+                   
                 </div>
+              
 
 
             {/* ------------------------------------------------------------- */}
@@ -132,6 +133,9 @@ setResumeArrow((arrow) => {
                     <div className='arrow'>{'>'}</div>
             </div>
             </Link>
+    </div>
+    <div style={{width: '100%', display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
+                    <Resume/>
     </div>
  </>
         )

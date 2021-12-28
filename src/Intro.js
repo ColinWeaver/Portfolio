@@ -83,10 +83,10 @@ return (
     
     <>
     <div style={{ width: `90%`}} className="about">
-    <div style={{textAlign: "left", width: '100%', opacity: null}}>
+    <div className="box-shadow" style={{textAlign: "left", width: '100%', opacity: null, paddingLeft: '40px', borderRadius: '5px'}}>
     <h3>Hi, I'm Colin.</h3>
     <p><span> I'm a web developer </span><span>living in the greater Nashville area.</span></p>
-    <p>Click the arrow on the right to read more.</p>
+    <p>Click the arrow on the right to read more..</p>
    
     </div>
 

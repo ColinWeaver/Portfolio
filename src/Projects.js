@@ -26,17 +26,21 @@ return (
 
 {/* -------------------------------------------------------COLUMN-------------------------------------------------------------------------------- */}
 
-            <div style={{display: 'flex', width: '90%', flexDirection: 'column'}}>
-                <h3>Reservations</h3> 
-                    <div style={{marginBottom: '300px'}}>
+            <div style={{display: 'flex', flexDirection: 'column'}}>
+               
+                <h3 className="page-sub-title" style={{marginLeft: '10px'}}>Reservations <h5 style={{display: 'inline'}}>- <i>App that allows a restaurant to manage reservations</i></h5></h3>
+              
+                    <div style={{marginBottom: null}}>
 
-                <a href='http://reservations-front-end.herokuapp.com/dashboard'> 
-                    <div className="container-for-image" style={{border: "4px solid #494949", borderRadius: '10px', boxShadow: '5px 5px 5px grey', paddingTop: '100px', color: '#393a44', width: '220px', height: '250px', marginRight: '10px', backgroundImage: `url(${image})`, backgroundSize: '220px 350px', backgroundRepeat: 'no-repeat'}}>
-                        <p style={{textAlign: 'center', marginTop: '0px', fontSize: '22px', fontWeight: '900', textShadow: '3px 3px 3px grey'}}><i>Click to View App </i></p>
-                    </div>
-                </a>
+               
+                        <div className="container-for-reservations">
+                            <a style={{width: '100%'}} href='http://reservations-front-end.herokuapp.com/dashboard'> 
+                            <img src={image} style={{ borderRadius: '9px', boxShadow: '8px 8px 8px grey', margin: '10px' }}/>
+                            </a>
+                        </div>
+            
 
-                <div style={{boxShadow: '10px 10px 10px grey', borderRadius: '9px' , padding: '0px', paddingBottom: '50px'}}>
+                <div className="box-shadow" style={{borderRadius: '9px' , padding: '10px', paddingBottom: '50px'}}>
                     <hr/>
 
                     <p>

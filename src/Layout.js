@@ -27,7 +27,7 @@ function Layout() {
      
          </main>
        
-         <footer style={{color: null}}>
+         <footer>
            <p>
            <a href="https://github.com/ColinWeaver"> GitHub </a>
            </p>

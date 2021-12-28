@@ -36,7 +36,7 @@ function Contact(){
 
         <div style={{textAlign: 'center', width: '100%', color: null}}>
         <h2>Contact Me</h2>
-        <hr style={{width: '400px'}}/>
+        <hr style={{width: '250px'}}/>
         </div>
      
 
