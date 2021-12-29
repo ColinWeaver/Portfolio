@@ -122,31 +122,31 @@ useEffect(() => {
 
 }, [shadow, opacityOne])
 
-//opacityTwo
-// useEffect(() => {
-//   if (opacityOne >= 1){
-//     if (opacityTwo < .2){
-//     const timer = setTimeout(() => {
-//       async function opacitySet(){
-//       await setOpacityTwo((opacity) => opacity + .2)
-//        }
-//       opacitySet();
-//     }, 1500)
-//       return () => clearTimeout(timer);
-//     }
+opacityTwo
+useEffect(() => {
+  if (opacityOne >= 1){
+    if (opacityTwo < .2){
+    const timer = setTimeout(() => {
+      async function opacitySet(){
+      await setOpacityTwo((opacity) => opacity + .2)
+       }
+      opacitySet();
+    }, 1500)
+      return () => clearTimeout(timer);
+    }
 
-//     if (opacityTwo >= .2){
-//       const timer = setTimeout(() => {
-//         async function opacitySet(){
-//         await setOpacityTwo((opacity) => opacity + .08)
-//          }
-//         opacitySet();
-//       }, 5)
-//         return () => clearTimeout(timer);
+    if (opacityTwo >= .2){
+      const timer = setTimeout(() => {
+        async function opacitySet(){
+        await setOpacityTwo((opacity) => opacity + .08)
+         }
+        opacitySet();
+      }, 5)
+        return () => clearTimeout(timer);
   
-//       }    
-//   }
-// }, [opacityOne, opacityTwo])
+      }    
+  }
+}, [opacityOne, opacityTwo])
 
 
 // //opacityThree
