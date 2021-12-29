@@ -213,7 +213,7 @@ if ((opacityFour >= 1) && arrowContainerWidth > 0){
     await setArrowContainerWidth((width) => width - 1)
      }
     arrowContainerWidthSet();
-  }, 10)//PAUSE BEFORE DISPLAYING
+  }, 10)
     return () => clearTimeout(timer);
   }
 }, [arrowContainerWidth, opacityFour])
