@@ -4,12 +4,15 @@ import image from "./media/profilePhoto.jpg";
 import resumeImage from "./media/Colin-Weaver-resume-png.png";
 
 function About(){
+
+const [showResume, setShowResume] = useState(false);
+const [resumeArrow, setResumeArrow] = useState("Click to show resume");
+
+//-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
 useEffect(() => {
     window.scrollTo(0,0);
 }, [])   
 
-const [showResume, setShowResume] = useState(false);
-const [resumeArrow, setResumeArrow] = useState("Click to show resume");
 
 //----------------------------------------------------------------ARROW HANDLER------------------------------------------------------------------------------
 function resumeArrowHandler(){
