@@ -122,7 +122,7 @@ useEffect(() => {
 
 }, [shadow, opacityOne])
 
-opacityTwo
+// opacityTwo
 useEffect(() => {
   if (opacityOne >= 1){
     if (opacityTwo < .2){
