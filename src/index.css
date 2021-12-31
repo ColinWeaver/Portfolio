@@ -138,7 +138,6 @@ nav ul a:hover {
   flex-direction: column;
   position: static;
   align-items: center;
-  /* width: 100%; */
 }
 
 .resume-link:hover {
@@ -209,7 +208,6 @@ footer a:active {
 .skills-list-container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 100px;
 }
 
   /*------------------------------------------------------------------------*/
@@ -267,8 +265,6 @@ main {
 .container-for-reservations {
  width: 100%; 
  text-align: center;
- 
-
 }
 
 
@@ -276,20 +272,9 @@ main {
   text-align: center;
 }
 
-
-
 .box-shadow {
   box-shadow: 10px 10px 10px grey;
 }
-
-
-
-
-
-
-/* nav {
-  margin-bottom: 500px;
-} */
 
 img {
   text-align: center;
