@@ -83,9 +83,9 @@ setResumeArrow((arrow) => {
                       
 
            
-                        <div className="container-for-image">
-                          <img src={image} style={{marginRight: '10px'}}/>
-                                <p style={{color: null}}> 
+                        <div className="container-for-image" style={{textAlign: 'center'}} >
+                          <img src={image} style={{margin: '10px', width: '200px'}}/>
+                                <p style={{color: null, textAlign: 'left'}}> 
                                     Creative fields are my comfort zone. 
                                     I grew up composing music (I was a classically trained pianist from ages 6 to 18), 
                                     making films, and later creatively collaborating with others throughout college 
@@ -109,7 +109,7 @@ setResumeArrow((arrow) => {
                
             {/* ------------------------------------------------------------- */}
                     
-                    <div style={{ width: '90%', height: null}}>
+                    <div style={{ width: '90%', height: null, marginTop: '20px'}}>
                     <h3 className="page-sub-title">Skills</h3>
                         {skills.map((skill) => {
                             if (skill === skills[skills.length - 1]){

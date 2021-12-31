@@ -30,17 +30,17 @@ return (
                
                 <h3 className="page-sub-title" style={{marginLeft: '10px'}}>Reservations <h5 style={{display: 'inline'}}>- <i>App that allows a restaurant to manage reservations</i></h5></h3>
               
-                    <div style={{marginBottom: null}}>
+                    <div>
 
                
                         <div className="container-for-reservations">
-                            <a style={{width: '100%'}} href='http://reservations-front-end.herokuapp.com/dashboard'> 
-                            <img src={image} style={{ borderRadius: '9px', boxShadow: '8px 8px 8px grey', margin: '10px' }}/>
+                            <a style={{width: '200px'}} href='http://reservations-front-end.herokuapp.com/dashboard'> 
+                            <img src={image} style={{ borderRadius: '9px', boxShadow: '8px 8px 8px grey', margin: '10px', width: '200px'}}/>
                             </a>
                         </div>
             
 
-                <div className="box-shadow" style={{borderRadius: '9px' , padding: '10px', paddingBottom: '50px'}}>
+                <div className="box-shadow" style={{borderRadius: '9px' , padding: '10px', paddingBottom: '150px', marginBottom: '150px'}}>
                     <hr/>
 
                     <p>

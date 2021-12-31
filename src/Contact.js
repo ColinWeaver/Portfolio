@@ -32,11 +32,11 @@ function Contact(){
 
     return (
         <>
-          <div style={{ width: `${100}%`, opacity: 100, display: null}} >
+          <div style={{ width: `${100}%`, opacity: 100, display: null, marginBottom: '300px'}} >
 
-        <div style={{textAlign: 'center', width: '100%', color: null}}>
+        <div style={{textAlign: 'center', width: '100%', color: null, top: '118px', marginTop: '5%', marginBottom: '10%', backgroundColor: '#E0E0E0', paddingBottom: '0px', paddingTop: '1px'}}>
         <h2>Contact Me</h2>
-        <hr style={{width: '250px'}}/>
+        <hr style={{width: '250px', height: '0px', border: '1px solid grey', backgroundColor: 'grey'}}/>
         </div>
      
 
