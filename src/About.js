@@ -71,7 +71,7 @@ setResumeArrow((arrow) => {
             if (showResume){
                 return (
                 <>
-                <img style={{width: '75%'}}alt="resume-image" src={resumeImage}></img>
+                <img style={{width: '75%'}} alt="resume-image" src={resumeImage}></img>
                 </>
                 )
                 
@@ -106,24 +106,34 @@ setResumeArrow((arrow) => {
            
                         <div className="container-for-image" style={{textAlign: 'center'}} >
                           <img src={image} style={{margin: '10px', width: '200px'}}/>
-                                <p style={{color: null, textAlign: 'left'}}> 
+                                <p style={{textAlign: 'left'}}> 
                                     Creative fields are my comfort zone. 
                                     I grew up composing music (I was a classically trained pianist from ages 6 to 18), 
                                     making films, and later creatively collaborating with others throughout college 
                                     (where I studied Video and Film Production) and after.
-                                    My interpersonal skills have been refined over my years working in these endeavors as well as through years
-                                    of providing customer service as a driver. My analytical skills have been developed through years of 
+                                    My analytical skills have been developed through years of 
                                     classical music training, editing film projects, studying as a math major for 1 to 2 years in college, 
-                                    and building software applications. I’m a very tireless worker as well, having spent years working long shifts
-                                    in a fast paced distribution warehouse.
+                                    and building software applications. 
+                                    
                                 </p>
+                                <p style={{textAlign: 'left'}}> 
+                                Over the last year I've been in the process of transitioning into the tech industry. I spent 9 months in a 
+                                tech program called Thinkful where I was trained extensively in full stack web development techniques and had 
+                                private mentor sessions multiple times a week with a 15+ year software developer. 
+                                 </p> 
+                                 <p style={{textAlign: 'left'}}>
+                                During the program I completed many smaller projects that required me to use tools like Express, Knex, PostgreSQL 
+                                 React, HTML, CSS, and Bootstrap to gain extensive practice using mainstream tools for front and backend development. 
+                                
+                                 I also completed some larger projects including: an API with a number of complex routes navigating through 5 or 6 different tables,
+                                 a frontend React app that used various CRUD requests to manage decks of study cards, and 
+                                a fullstack app that allows restaurants to manage reservations (linked in my projects page to the right).
+                                </p>
+
                         </div>
 
-                         <p style={{color: null }}> 
-                                Over the last year I've been in the process of transitioning into the tech industry. I spent 9 months in a 
-                                tech program called Thinkful where I was trained extensively in full stack web development techniques and had private mentor sessions multiple 
-                                times a week with a 15+ year software developer. 
-                         </p>
+
+                
                        </div>
 
 
