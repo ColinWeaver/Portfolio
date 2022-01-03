@@ -122,7 +122,7 @@ setResumeArrow((arrow) => {
                                  <p style={{textAlign: 'left'}}>
                                  During the program I completed multiple projects including: an API with a number of complex routes navigating 
                                  through 5 or 6 different tables, a frontend React app that used various CRUD requests to manage decks of study cards, 
-                                 and a fullstack app that allows restaurants to manage reservations (linked in my projects page to the right).
+                                 and a full stack app that allows restaurants to manage reservations (linked in my projects page to the right).
                                  I completed a number of smaller assignments of varying complexity throughout as well where I gained experience using tools 
                                  such as Express, Knex, PostgreSQL, React, HTML, CSS, and Bootstrap. Throughout the program I also had private mentor sessions 
                                  multiple times a week with a 15+ year software developer and was required to pass multiple mock coding interviews.
