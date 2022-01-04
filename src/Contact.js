@@ -30,33 +30,40 @@ function Contact({externalLinkHandler}){
                <div className="href-container-container">
                <div className="contact-href-container" >
                
-               <p style={{marginLeft: '0px'}} id="GitHub" onClick={externalLinkHandler}>
-               <a href="#external-link"><i>GitHub</i>
-              </a></p>
-
-              
-            
-               <p style={{marginLeft: '0px'}} id="LinkedIn" onClick={externalLinkHandler}>
-                  <a href="#external-link">
-                     <i>LinkedIn</i>
+               <p style={{marginLeft: '0px'}}>
+                <i>
+                  <a href="#external-link" id="GitHub" onClick={externalLinkHandler}>
+                    GitHub
                  </a>
+                </i>
+               </p>
+
+  
+               <p style={{marginLeft: '0px'}}>
+                <i>
+                 <a href="#external-link" id="LinkedIn" onClick={externalLinkHandler}>
+                  LinkedIn
+                 </a>
+               </i>
               </p>
                 
-         
-
-              
+        
                <p style={{marginLeft: '0px'}}>
+                 <i>
                  <a href="tel:6154385452">
-                 <i>615-438-5452</i>
+                  615-438-5452
                  </a>
+                 </i>
               </p>
               
 
              
                <p style={{marginLeft: '0px'}}>
+                 <i>
                <a href="mailto:composerman11@gmail.com">
-                 <i>Composerman11@gmail.com</i>
+                 Composerman11@gmail.com
                </a>
+               </i>
                </p>
 
              

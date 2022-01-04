@@ -26,7 +26,7 @@ function Layout() {
           <Link to="/">
           <h3 style={{ color: null}}>Colin Weaver <span style={{fontWeight: '500', boxShadow: '5px 5px 5px black', padding: '5px', borderRadius: '5px'}}>- Web Developer</span></h3>
           </Link>
-          <hr style={{width: '25%', borderTop: '1px solid #393a44', borderBottom: '0px'}}/>
+          <hr style={{width: '25%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
           </div>
           <Navigation/>
           
