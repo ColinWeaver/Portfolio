@@ -1,21 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Main from "./Main";
 import Navigation from "./Navigation";
-import {Link, Routes, Route} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
 function Layout() {
 
+  function externalLinkHandler(event){
+    if (event.target.id === 'GitHub') {
+      window.open("https://github.com/ColinWeaver", 'blank');
+    }
+    else if (event.target.id === 'LinkedIn'){
+     window.open("https://www.linkedin.com/in/colin-james-weaver/", 'blank');
+    }
+  }
+
+
+
    return  (
     <div className="image">
-      <div className="layout">
+      <div className="layout" id="external-link">
         
         <header>
           <div className='header-title'>
           <Link to="/">
           <h3 style={{ color: null}}>Colin Weaver <span style={{fontWeight: '500', boxShadow: '5px 5px 5px black', padding: '5px', borderRadius: '5px'}}>- Web Developer</span></h3>
           </Link>
-          <hr style={{width:'40%', height: '1px', backgroundColor: 'black', marginTop: "0px", marginBottom: "0px", textAlign: 'center'}}/>
+          <hr style={{width: '25%', borderTop: '1px solid #393a44', borderBottom: '0px'}}/>
           </div>
           <Navigation/>
           
@@ -23,23 +34,27 @@ function Layout() {
 
          <main>
          
-         <Main/>
-     
+         <Main externalLinkHandler={externalLinkHandler}/>
+         <hr style={{width: '300px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
          </main>
        
          <footer>
            <p>
-           <a href="https://github.com/ColinWeaver"> GitHub </a>
+           <a href="#external-link" onClick={externalLinkHandler} id="GitHub"> GitHub </a>
            </p>
+          
+           <p>
+           <a href="#external-Link" onClick={externalLinkHandler} id="LinkedIn"> LinkedIn</a>
+           </p>
+
+           <p>
+            <a href="tel:6154385452">Phone</a>
+           </p>
+
            <p>
            <a href="mailto:composerman11@gmail.com"> Email </a>
            </p>
-           <p>
-           <a href="https://www.linkedin.com/in/colin-weaver-969505217/"> LinkedIn</a>
-           </p>
-           <p>
-            <a href="tel:6154385452">Mobile</a>
-           </p>
+          
          </footer>
         
       </div>

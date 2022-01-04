@@ -13,7 +13,7 @@ function Projects(){
 return (
     <div className="highest-page-container">
     <h2 style={{textAlign: 'center', color: null}}>Projects</h2>
-     <hr style={{width: '250px'}}/>
+     <hr style={{width: '250px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
     <div style={{ width: `${90}%`, display: null, opacity: 100, bottom: '100px'}} className="about">
 
 {/* -------------------------------------------------------ARROW LEFT-------------------------------------------------------------------------------- */}
@@ -32,7 +32,6 @@ return (
               
                     <div>
 
-               
                         <div className="container-for-reservations">
                             <a style={{width: '200px'}} href='http://reservations-front-end.herokuapp.com/dashboard'> 
                             <img src={image} style={{ borderRadius: '9px', boxShadow: '8px 8px 8px grey', margin: '10px', width: '200px'}}/>
@@ -41,7 +40,7 @@ return (
             
 
                 <div className="box-shadow" style={{borderRadius: '9px' , padding: '10px', paddingBottom: '150px', marginBottom: '150px'}}>
-                    <hr/>
+                <hr style={{width: '75%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
 
                     <p>
                     This application is used to create restaurant reservations and assign/track tables for them. 
@@ -78,6 +77,8 @@ return (
 
 
     </div>
+
+   
     </div>
    
 )

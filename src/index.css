@@ -191,7 +191,10 @@ footer a:active {
   padding-left: 0px;
   right: 0px;
   height: 100%;
-  top: 115px;
+  top: 25vh;
+  padding-right: 5px;
+
+  
 }
 
 .arrow-container-left {
@@ -247,7 +250,10 @@ footer a:active {
   padding-left: 0px;
   border-radius: 5px;
   box-shadow: 8px 8px 8px #808080;
-  margin: 15px;
+  margin-top: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+
 }
 
 img {
