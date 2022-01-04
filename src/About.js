@@ -98,7 +98,7 @@ setResumeArrow((arrow) => {
                     <div className="box-shadow" style={{display: 'flex', width: '90%', flexDirection: 'column', borderRadius: '9px' , padding: '10px', paddingBottom: '20px'}}>
                    
                         <div className="container-for-image" style={{textAlign: 'center'}} >
-                          <img src={image} style={{margin: '10px', marginBottom: '0px', width: '200px'}}/>
+                          <img src={image} style={{margin: '10px', marginBottom: '0px', width: '200px', borderRadius: '2px'}}/>
                           <div>
                              <h3 className="page-sub-title">Background</h3>
                       
