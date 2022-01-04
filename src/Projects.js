@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import { Link }  from 'react-router-dom'
 import image from "./media/reservations-screenshot.PNG";
 
-function Projects(){
+function Projects({externalLinkHandler}){
     useEffect(() => {
         window.scrollTo(0,0);
     }, []) 
@@ -11,8 +11,8 @@ function Projects(){
 
 
 return (
-    <div className="highest-page-container">
-    <h2 style={{textAlign: 'center', color: null}}>Projects</h2>
+    <div className="highest-page-container" >
+    <h2 id="external-link" style={{textAlign: 'center', color: null}}>Projects</h2>
      <hr style={{width: '250px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
     <div style={{ width: `${90}%`, display: null, opacity: 100, bottom: '100px'}} className="about">
 
@@ -33,8 +33,8 @@ return (
                     <div>
 
                         <div className="container-for-reservations">
-                            <a style={{width: '200px'}} href='http://reservations-front-end.herokuapp.com/dashboard'> 
-                            <img src={image} style={{ borderRadius: '9px', boxShadow: '8px 8px 8px grey', margin: '10px', width: '200px'}}/>
+                            <a style={{width: '200px'}} href="#external-link" > 
+                            <img src={image} style={{ borderRadius: '9px', boxShadow: '8px 8px 8px grey', margin: '10px', width: '200px'}} id='reservations' onClick={externalLinkHandler}/>
                             </a>
                         </div>
             
@@ -58,8 +58,13 @@ return (
                     develop the seed and migration files as well as query the PostgreSQL database. 
                     I used ElephantSQL to host the Database. 
                     </p>
-                    <p>To read more about the app check out the  
-                    <a style={{color: '#494949', fontWeight: 'bold'}} href="https://github.com/ColinWeaver/Reservations#readme"> <i>README</i> </a> file. To view the app click <a style={{color: '#494949', fontWeight: 'bold'}} href='http://reservations-front-end.herokuapp.com/dashboard'><i>here</i></a> (or click the image).
+                    <p>To read more about the app check out the 
+                     <i> 
+                        <a style={{color: '#494949', fontWeight: 'bold'}} id="README" onClick={externalLinkHandler} href="#external-link"> README </a> </i>file. 
+                        To view the app click 
+                        <i><a style={{color: '#494949', fontWeight: 'bold'}} id="reservations" onClick={externalLinkHandler} href='#external-link'> here </a></i>
+                         (or click the image).
+                     
                     </p>
 
                 </div>

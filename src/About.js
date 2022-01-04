@@ -99,10 +99,10 @@ setResumeArrow((arrow) => {
                    
                         <div className="container-for-image" style={{textAlign: 'center'}} >
                           <img src={image} style={{margin: '10px', marginBottom: '0px', width: '200px'}}/>
-                       <div>
-                         <h3 className="page-sub-title">Background</h3>
+                          <div>
+                             <h3 className="page-sub-title">Background</h3>
                       
-                                <p style={{textAlign: 'left'}}> 
+                             <p style={{textAlign: 'left'}}> 
                                     Creative fields are my comfort zone. 
                                     I grew up composing music (I was a classically trained pianist from ages 6 to 18), 
                                     making films, and later creatively collaborating with others throughout college 
@@ -110,8 +110,8 @@ setResumeArrow((arrow) => {
                                     My analytical skills have been developed through years of 
                                     classical music training, editing film projects, studying as a math major for 1 to 2 years in college, 
                                     and building software applications and programs.
-                                </p>
-                        </div>
+                            </p>
+                          </div>
                         </div>
                             
                                

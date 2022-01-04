@@ -13,6 +13,12 @@ function Layout() {
     else if (event.target.id === 'LinkedIn'){
      window.open("https://www.linkedin.com/in/colin-james-weaver/", 'blank');
     }
+    else if (event.target.id === 'reservations'){
+      window.open("http://reservations-front-end.herokuapp.com/dashboard", 'blank')
+    }
+    else if (event.target.id === 'README'){
+      window.open("https://github.com/ColinWeaver/Reservations#readme", 'blank')
+    }
   }
 
 
