@@ -117,7 +117,6 @@ nav ul a:hover {
 .clicked-menu-nav a {
   color: grey;
 }
-
 /*----------------------------------------PAGE CONTAINERS------------------------------------------------------------*/
 .about {
   display: flex;
@@ -125,12 +124,9 @@ nav ul a:hover {
   position: static;
   align-items: center;
 }
-
 .resume-link:hover {
   color: 'black';
   }
-
-
 /*----------------------------------------FOOTER------------------------------------------------------------*/
 footer {
   display: flex;
@@ -139,7 +135,7 @@ footer {
   width: 100%;
   bottom: 0px;
   text-align: center;
-  padding-top: 15px; 
+  /* padding-top: 15px;  */
   padding-left: 0px;
 }
 footer a {
@@ -260,7 +256,7 @@ img {
 }
 /*margin bottom for all pages----------------------------------------------------------------------------------------*/
 main {
-  margin-bottom: 150px;
+  /* margin-bottom: 150px; */
 }
 .container-for-reservations {
  width: 100%; 

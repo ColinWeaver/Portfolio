@@ -1,11 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import Main from "./Main";
 import Navigation from "./Navigation";
 import {Link} from "react-router-dom"
 
 
 function Layout() {
-
+const [position, setPosition] = useState('absolute');
   //--------------------------------------------------------------EXTERNAL LINK HANDLER--------------------------------------------------------------------
   function externalLinkHandler(event){
     if (event.target.id === 'GitHub') {
@@ -21,13 +21,13 @@ function Layout() {
       window.open("https://github.com/ColinWeaver/Reservations#readme", 'blank')
     }
   }
-
+console.log('position test', position)
 //--------------------------------------------------------------COMPONENT MAIN RENDER RETURN--------------------------------------------------------------------
    return  (
     <div className="image">
       <div className="layout" id="external-link">
         
-        <header>
+        <header style={{position: `${position}`}}>
           <div className='header-title'>
           <Link to="/">
           <h3 style={{ color: null}}>Colin Weaver <span style={{fontWeight: '500', boxShadow: '5px 5px 5px black', padding: '5px', borderRadius: '5px'}}>- Web Developer</span></h3>
@@ -38,12 +38,14 @@ function Layout() {
           
           </header>
 
-         <main>
+         <main style={{paddingBottom: null}}>
          
-         <Main externalLinkHandler={externalLinkHandler}/>
-         <hr style={{width: '300px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
+         <Main externalLinkHandler={externalLinkHandler} setPosition={setPosition}/>
+         <div style={{marginBottom: '80px', marginTop: '150px'}}>
+         <hr style={{width: '250px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
+         </div>
          </main>
-       
+
          <footer>
            <p>
            <a href="#external-link" onClick={externalLinkHandler} id="GitHub"> GitHub </a>

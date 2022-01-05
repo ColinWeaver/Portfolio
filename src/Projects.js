@@ -2,11 +2,12 @@ import React, {useEffect} from "react";
 import { Link }  from 'react-router-dom'
 import image from "./media/reservations-screenshot.PNG";
 
-function Projects({externalLinkHandler}){
+function Projects({externalLinkHandler, setPosition}){
     useEffect(() => {
         window.scrollTo(0,0);
     }, []) 
 
+    setPosition('fixed');
 //------------------------------------------------------------Slide in page----------------------------------
 
 
@@ -39,7 +40,7 @@ return (
                         </div>
             
 
-                <div className="box-shadow" style={{borderRadius: '9px' , padding: '10px', paddingBottom: '150px', marginBottom: '150px'}}>
+                <div className="box-shadow" style={{borderRadius: '9px' , padding: '10px', paddingBottom: '25px'}}>
                 <hr style={{width: '75%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
 
                     <p>

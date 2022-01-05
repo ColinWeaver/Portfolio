@@ -1,10 +1,12 @@
 import React, {useEffect} from "react";
 import { Link}  from 'react-router-dom'
 
-function Contact({externalLinkHandler}){
+function Contact({externalLinkHandler, setPosition}){
     useEffect(() => {
       window.scrollTo(0,0);
   }, []) 
+
+  setPosition('fixed');
 
 
  //---------------------------------------------------------------------------MAIN COMPONENT RENDER RETURN--------------------------------------------------------------------------------

@@ -1,11 +1,31 @@
 import React, {useEffect, useState} from "react";
-import { Link }  from 'react-router-dom';
+import { Link, useLocation }  from 'react-router-dom';
 import image from "./media/profilePhoto.jpg";
 import resumeImage from "./media/Colin-Weaver-resume-png.png";
 
-function About(){
+function About({setPosition}){
 const [showResume, setShowResume] = useState(false);
 const [resumeArrow, setResumeArrow] = useState("Click to show resume");
+const [width, setWidth] = useState(0)
+const [containerOpacity, setContainerOpacity] = useState(.2);
+const [shadow, setShadow] = useState(0);
+const [paddingLeft, setPaddingLeft] = useState(0);
+const [paddingRight, setPaddingRight] = useState(0)
+setPosition('fixed');
+
+const location = useLocation();
+console.log(location.state)
+useEffect(() => {
+  if (location.state){
+    if (location.state.origin === 'left'){
+        setPaddingLeft(80);
+    }
+  }
+    else {
+        setPaddingRight(100);
+    }
+  
+}, [location.state])
 
 
 
@@ -58,12 +78,69 @@ setResumeArrow((arrow) => {
             }
             else return null;
         }
-//----------------------------------------------------------------MAIN COMPONENT RENDER RETURN------------------------------------------------------------------------------ 
-        
+//----------------------------------------------------------------PAGE SLIDE------------------------------------------------------------------------------ 
+//page slide from left
+useEffect(() => {
+    if (paddingLeft > 0){
+    const timer = setTimeout(() => {
+    async function paddingSet(){
+    //increment opacity
+    if ((paddingLeft > 0) && containerOpacity < 100){
+    await setContainerOpacity((containerOpacity) => containerOpacity + 5)
+    }
+    await setPaddingLeft((padding) => padding - 1);
+  }
+    paddingSet();
+  }, 1)
+  return () => clearTimeout(timer);
+    }
+  }, [paddingLeft])
 
+  useEffect(() => {
+    if (paddingRight > 0){
+    const timer = setTimeout(() => {
+    async function paddingSet(){
+    //increment opacity
+    if ((paddingRight > 0) && containerOpacity < 100){
+    await setContainerOpacity((containerOpacity) => containerOpacity + 5)
+    }
+    await setPaddingRight((padding) => padding - 1);
+  }
+    paddingSet();
+  }, 1)
+  return () => clearTimeout(timer);
+    }
+  }, [paddingRight])
+
+
+  //for shadow
+  useEffect(() => {
+    if ((paddingLeft === 0) && paddingRight === 0){
+
+    const timer = setTimeout(() => {
+    async function shadowSet(){
+    // increment shadow
+    if (shadow < 50 )
+    await setShadow((shadow) => shadow + .2);
+  }
+    shadowSet();
+  }, 5)
+  return () => clearTimeout(timer);
+    }
+  }, [paddingRight, paddingLeft, shadow])
+  
+  useEffect(() => {
+    if (shadow === 50){
+      location.state.origin = null;
+    }
+  }, [shadow])
     
+
+  //----------------------------------------------------------------MAIN COMPONENT RENDER RETURN------------------------------------------------------------------------------ 
         return (
             <>
+            
+            <div style={{opacity: `${containerOpacity}%`, paddingLeft: `${paddingLeft}%`, paddingRight: `${paddingRight}%`}}>
            <h2 style={{textAlign: 'center', color: null}}>About Me</h2>
            <hr style={{width: '250px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
            <div style={{ width: `${90}%`, display: null, opacity: 100}} className="about">
@@ -77,7 +154,7 @@ setResumeArrow((arrow) => {
            {/* ------------------------------------------------------------- */}
           
            
-                    <div className="box-shadow" style={{display: 'flex', width: '90%', flexDirection: 'column', borderRadius: '9px' , padding: '10px', paddingBottom: '20px'}}>
+                    <div style={{alignItems: 'right', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, display: 'flex', width: '90%', flexDirection: 'column', borderRadius: '9px' , padding: '10px', paddingBottom: '20px'}}>
                    
                         <div className="container-for-image" style={{textAlign: 'center'}} >
                           <img src={image} style={{margin: '10px', marginBottom: '0px', width: '200px', borderRadius: '2px'}}/>
@@ -155,6 +232,8 @@ setResumeArrow((arrow) => {
     <div style={{width: '100%', display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
       <Resume/>
     </div>
+    </div>
+   
 
 
  </>

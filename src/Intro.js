@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import { Link }  from 'react-router-dom'
 
 
-function Intro(){
+function Intro({setPosition}){
  
 //-----------------------------------------------------------------STATE VARIABLES--------------------------------------------------------------------------------------------------
   //arrow 
@@ -20,6 +20,14 @@ function Intro(){
   const [containerOpacity, setContainerOpacity] = useState(.25);
   const [width, setWidth] = useState(0);
   const [shadow, setShadow] = useState(2);
+
+
+
+  useEffect(() => {
+    if (opacityFour >= 1){
+      setPosition('fixed');
+    }
+  }, [opacityFour])
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
   useEffect(() => {
     window.scrollTo(0,0);
@@ -230,7 +238,7 @@ return (
     <>
     <div style={{width: '90%'}}>
     <div style={{width: `${width}%`, height: '280px', opacity: `${containerOpacity}`, boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, borderRadius: '10px'}} className="about">
-    <div style={{textAlign: "left", width: '100%', opacity: "1", paddingLeft: '40px', paddingBottom: '150px'}}>
+    <div style={{textAlign: "left", width: '100%', opacity: "1", paddingLeft: '40px'}}>
     
     <h3> 
        <span style={{opacity: `${opacityOne}`}}>Hi, </span>
@@ -240,7 +248,7 @@ return (
     <p style={{opacity: `${opacityFour}`}}>Click the arrow to read more. </p>
     </div>
 
-            <Link to={'/about'} style={{ textDecoration: 'none' }}>
+            <Link to={'/about'} state={{origin: 'left'}} style={{ textDecoration: 'none' }}>
                 <div className="arrow-container-right" style={{paddingRight: `${arrowContainerWidth}%`}}>
                   
                 <i className="arrow-right" style={{color: `${arrowColor}`, display: `${display}`}}></i>
