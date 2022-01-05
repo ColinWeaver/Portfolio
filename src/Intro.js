@@ -237,6 +237,7 @@ return (
 
             <Link to={'/about'} style={{ textDecoration: 'none' }}>
                 <div className="arrow-container-right" style={{paddingRight: `${arrowContainerWidth}%`}}>
+                  
                 <i className="arrow-right"></i>
                 </div>
             </Link>
