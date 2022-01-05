@@ -58,12 +58,11 @@ return (
                     develop the seed and migration files as well as query the PostgreSQL database. 
                     I used ElephantSQL to host the Database. 
                     </p>
-                    <p>To read more about the app check out the 
+                    <p>Check out the
                      <i> 
-                        <a style={{color: '#494949', fontWeight: 'bold'}} id="README" onClick={externalLinkHandler} href="#external-link"> README </a> </i>file. 
-                        To view the app click 
-                        <i><a style={{color: '#494949', fontWeight: 'bold'}} id="reservations" onClick={externalLinkHandler} href='#external-link'> here </a></i>
-                         (or click the image).
+                        <a style={{color: '#494949', fontWeight: 'bold'}} id="README" onClick={externalLinkHandler} href="#external-link"> README </a> 
+                    </i>file to read more about the app and click the image to view the app.
+                        
                      
                     </p>
 

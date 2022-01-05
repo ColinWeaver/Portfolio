@@ -186,25 +186,27 @@ footer a:active {
 
 .arrow-container-right {
   position: fixed;
-  width: 70px;
+  width: 50px;
   text-align: right;
   padding-left: 0px;
   right: 0px;
   height: 100%;
-  top: 25vh;
+  top: 115px;
   padding-right: 5px;
+  background-color: blue;
 
   
 }
 
 .arrow-container-left {
   position: fixed;
-  width: 70px;
+  width: 50px;
   left: 0px;
   text-align: left;
   margin-left: 0px;
   height: 100%;
   top: 115px;
+  background-color: blue;
 }
 
 
