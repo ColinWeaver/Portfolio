@@ -4,12 +4,11 @@ import { Link }  from 'react-router-dom'
 
 function Intro(){
  
-  
 //-----------------------------------------------------------------STATE VARIABLES--------------------------------------------------------------------------------------------------
   //arrow 
   const [arrowColor, setArrowColor] = useState('#E6E6E6');
   const [arrowContainerWidth, setArrowContainerWidth] = useState(100);
-
+  const [display, setDisplay] = useState('none');
   //STYLE FOR LETTERS
   const [opacityOne, setOpacityOne] = useState(0);
   const [opacityTwo, setOpacityTwo] = useState(0);
@@ -161,7 +160,7 @@ useEffect(() => {
       await setOpacityThree((opacity) => opacity + .2)
        }
       opacityThreeSet();
-    }, 2500)
+    }, 1500)
       return () => clearTimeout(timer);
     }
    
@@ -188,7 +187,7 @@ useEffect(() => {
       await setOpacityFour((opacity) => opacity + .2)
        }
       opacitySet();
-    }, 1800)//PAUSE BEFORE DISPLAYING
+    }, 1200)//PAUSE BEFORE DISPLAYING
       return () => clearTimeout(timer);
     }
 
@@ -204,10 +203,9 @@ useEffect(() => {
   }
 }, [opacityThree, opacityFour])
 
-//----------------------------------------------------------PADDING RIGHT FOR ARROW CONTAINER--------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------ARROW SLIDE ACROSS SCREEN--------------------------------------------------------------------------------------------------------
 useEffect(() => {
-
-if ((opacityFour >= 1) && arrowContainerWidth > 0){
+if ((opacityFour >= 1) && arrowContainerWidth > 2){
   const timer = setTimeout(() => {
     async function arrowContainerWidthSet(){
     await setArrowContainerWidth((width) => width - 1)
@@ -218,8 +216,15 @@ if ((opacityFour >= 1) && arrowContainerWidth > 0){
   }
 }, [arrowContainerWidth, opacityFour])
 
-//----------------------------------------------------------MAIN COMPONENT RENDER RETURN--------------------------------------------------------------------------------------------------------
+useEffect(() => {
+  if (opacityFour >= 1){
+    setDisplay('inline-block');
+  }
+}, [opacityFour])
 
+
+
+//----------------------------------------------------------MAIN COMPONENT RENDER RETURN--------------------------------------------------------------------------------------------------------
 return (
     
     <>
@@ -238,7 +243,7 @@ return (
             <Link to={'/about'} style={{ textDecoration: 'none' }}>
                 <div className="arrow-container-right" style={{paddingRight: `${arrowContainerWidth}%`}}>
                   
-                <i className="arrow-right"></i>
+                <i className="arrow-right" style={{color: `${arrowColor}`, display: `${display}`}}></i>
                 </div>
             </Link>
 

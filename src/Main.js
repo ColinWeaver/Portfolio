@@ -9,7 +9,7 @@ import NotFound from "./NotFound"
 
 
 function Main({externalLinkHandler}){
-  
+
    return (
 <>
 

@@ -6,6 +6,7 @@ import {Link} from "react-router-dom"
 
 function Layout() {
 
+  //--------------------------------------------------------------EXTERNAL LINK HANDLER--------------------------------------------------------------------
   function externalLinkHandler(event){
     if (event.target.id === 'GitHub') {
       window.open("https://github.com/ColinWeaver", 'blank');
@@ -21,8 +22,7 @@ function Layout() {
     }
   }
 
-
-
+//--------------------------------------------------------------COMPONENT MAIN RENDER RETURN--------------------------------------------------------------------
    return  (
     <div className="image">
       <div className="layout" id="external-link">
