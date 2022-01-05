@@ -8,24 +8,6 @@ const [showResume, setShowResume] = useState(false);
 const [resumeArrow, setResumeArrow] = useState("Click to show resume");
 
 
-//arrow class from w3-------------------------------------------------------AROW---------------------------------------------------------------------------------
-// https://www.w3schools.com/howto/howto_css_arrows.asp
-function arrowRight(){
-return (
-<i className="arrow" style={{
-  color: 'white',
-  border: 'solid',
-  borderWidth: '0 5px 5px 0',
-  display: 'inline-block',
-  padding: '3px',
-  height: '12px',
-  width: '12px',
-  boxShadow: '3px 3px 3px grey',
-  webkitTransform: 'rotate(-45deg)'
-}}> </i>
-)
-}
-
 
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
 useEffect(() => {
@@ -88,7 +70,7 @@ setResumeArrow((arrow) => {
               
                 <Link to={'/'} style={{ textDecoration: 'none' }}>
                     <div className="arrow-container-left">
-                       <div className='arrow'>{'<'}</div>
+                    <i className="arrow-left"></i>
                     </div>
                 </Link> 
 
@@ -165,11 +147,8 @@ setResumeArrow((arrow) => {
 
             <Link to={'/projects'} style={{ textDecoration: 'none' }}>
             <div className="arrow-container-right">
-            {/* <div className='arrow'>{arrowRight()}</div> */}
-            <i className="arrow-right">
-
-            </i>
-             {arrowRight()}
+            <i className="arrow-right"> </i>
+            
             </div>
             </Link>
     </div>

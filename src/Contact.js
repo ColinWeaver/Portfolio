@@ -22,7 +22,7 @@ function Contact({externalLinkHandler}){
 
         <Link to={'/projects'} style={{ textDecoration: 'none' }}>
         <div className="arrow-container-left">
-             <div className='arrow'>{'<'}</div>
+        <i className="arrow-left"></i>
           </div>
         </Link> 
 

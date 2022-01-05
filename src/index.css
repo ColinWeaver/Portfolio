@@ -35,7 +35,6 @@ body {
   flex-direction: column;
   width: 100%;
   height: auto;
-  /* height: 100%; */
   padding-left: 0px;
   position: static;
 }
@@ -64,47 +63,36 @@ header {
 header {
   position: fixed;
 }
-
 main {
   margin-top: 125px;
-  /* margin-bottom: 250px; */
   display: static;
 }
 footer {
   position: fixed;
-  /* margin-top: 250px; */
 }
-
 /*----------------------------------------COLORS----------------------------------------------------------------*/
-
 body {
   background-color: #E0E0E0;
   color: #393a44;
 }
-
 header h3 {
   color: #393a44;
 }
 header h3:hover {
   color: black;
 }
-
 header {
   background-color: #DBDBDB;
 }
-
 nav ul li a {
   color: #393a44;
 }
-
 footer {
   background-color: #E0E0E0;
 }
 footer p a {
   color: #373737;
 }
-
-
 /*----------------------------------------HEADER ITEMS------------------------------------------------------------*/
 nav {
   display: flex;
@@ -112,8 +100,6 @@ nav {
   margin-left: 20px;
   margin-right: 20px;
 }
-
-
 /*----------------------------------------NAV ITEMS------------------------------------------------------------*/
 nav ul {
   display: flex;
@@ -167,23 +153,7 @@ footer a:hover {
 footer a:active {
   color: grey;
 }
-
-/*----------------------------------------ARROWS------------------------------------------------------------*/
-.arrow {
-  font-size: 50px;
-  font-weight: 0;
-  color: white;
-  margin-top: 140px; 
-  text-shadow: 0 0 5px grey;
-}
-.arrow-container-left:hover .arrow{
-  color: grey;
-}
-
-.arrow-container-right:hover .arrow{
-  color: grey;
-}
-
+/*----------------------------------------ARROW CONTAINERS------------------------------------------------------------*/
 .arrow-container-right {
   position: fixed;
   width: 50px;
@@ -193,11 +163,7 @@ footer a:active {
   height: 100%;
   top: 115px;
   padding-right: 5px;
-  background-color: blue;
-
-  
 }
-
 .arrow-container-left {
   position: fixed;
   width: 50px;
@@ -206,25 +172,58 @@ footer a:active {
   margin-left: 0px;
   height: 100%;
   top: 115px;
-  background-color: blue;
 }
 
+/*----------------------------------------ARROWS------------------------------------------------------------*/
+/* https://www.w3schools.com/howto/howto_css_arrows.asp*/
 
+.arrow-container-left:hover .arrow-left{
+  color: grey;
+}
+.arrow-container-right:hover .arrow-right{
+  color: grey;
+}
+.arrow-right {
+  color:white;
+  border: solid;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+  height: 12px;
+  width: 12px;
+  box-shadow: 3px 3px 3px grey;
+  transform: rotate(-45deg);
+}
+.arrow-left {
+  color:white;
+  border: solid;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+  height: 12px;
+  width: 12px;
+  box-shadow: 3px 3px 3px grey;
+  transform: rotate(135deg);
+}
+ .arrow-right, .arrow-left{
+  font-size: 50px;
+  font-weight: 0;
+  color: white;
+  margin-top: 140px; 
+  text-shadow: 0 0 5px grey;
+}
+/*-------------------------------------------------------------------------------------------------------------------*/
 .skills-list-container {
   display: flex;
   flex-direction: row;
 }
-
-  /*------------------------------------------------------------------------*/
-
+  /*-------------------------------------------CONTACT----------------------------------------------------------------*/
 .contact-href-container a:hover {
   color: #B6B6B6;
 }
-
 .contact-href-container a {
   color: white;
 }
-
 .contact-href-container {
   line-height: 25px;
   margin-top: 25px;
@@ -240,8 +239,6 @@ footer a:active {
   margin-left: auto;
   margin-right: auto;
 }
-
-
 .href-container-container {
   background-color: #C8C8C8; 
   text-align: center;
@@ -255,60 +252,45 @@ footer a:active {
   margin-top: 15px;
   margin-left: 10%;
   margin-right: 10%;
-
 }
-
+/*-------------------------------------------------------------------------------------------------------------------*/
 img {
   width: 100%;
   height: 100%;
+  text-align: center;
 }
-
-
-/*margin bottom for all pages*/
+/*margin bottom for all pages----------------------------------------------------------------------------------------*/
 main {
   margin-bottom: 150px;
 }
-
-
 .container-for-reservations {
  width: 100%; 
  text-align: center;
 }
-
-
 .page-sub-title {
   text-align: center;
 }
-
 .box-shadow {
   box-shadow: 10px 10px 10px grey;
 }
-
-img {
-  text-align: center;
-}
-
-
+/*-------------------------------------------------------MEDIA------------------------------------------------------------*/
 @media screen and (min-width: 300px){
   nav ul li{
     margin-left: 12px;
     margin-right: 12px;
   }
 }
-
 @media screen and (min-width: 460px){
 img, .container-for-image {
   float: left;
   }
 img {
-  /* width: 250px; */
   height: auto;
 }
 .page-sub-title {
   text-align: left;
   }
 }
-
 @media screen and (min-width: 650px){
   nav {
     justify-content: left;
@@ -316,16 +298,14 @@ img {
   nav ul {
     padding-left: 40px;
   }
-
   .arrow-container-right, .arrow-container-left{
     text-align: center;
   }
   .about {
     margin-left: 25px; 
   }
-
 } 
-
+/*-------------------------------------------------------------------------------------------------------------------*/
 
 
 /* COLORS */

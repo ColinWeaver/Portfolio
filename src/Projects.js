@@ -19,7 +19,7 @@ return (
 {/* -------------------------------------------------------ARROW LEFT-------------------------------------------------------------------------------- */}
             <Link to={'/about'} style={{ textDecoration: 'none' }}>
                 <div className="arrow-container-left">
-                        <div className='arrow'>{'<'}</div>
+                <i className="arrow-left"></i>
                 </div>
             </Link> 
     
@@ -74,7 +74,7 @@ return (
     
     <Link to={'/contact'} style={{ textDecoration: 'none' }}>
     <div className="arrow-container-right">
-      <div className='arrow'>{'>'}</div>
+    <i className="arrow-right"></i>
     </div>
     </Link>
   {/* --------------------------------------------------------------------------------------------------------------------------------------- */}
