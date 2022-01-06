@@ -114,7 +114,7 @@ return (
 
                         <div className="container-for-reservations">
                             <a style={{width: '200px'}} href="#external-link" > 
-                            <img src={image} style={{ borderRadius: '9px', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, margin: '10px', width: '200px', display: null}} id='reservations' onClick={externalLinkHandler}/>
+                            <img src={image} style={{ borderRadius: '9px', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, margin: '10px', width: '200px', display: `${display}`}} id='reservations' onClick={externalLinkHandler}/>
                             </a>
                         </div>
             
