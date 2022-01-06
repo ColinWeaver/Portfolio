@@ -170,7 +170,6 @@ footer a:active {
 }
 /*----------------------------------------ARROWS------------------------------------------------------------*/
 /* https://www.w3schools.com/howto/howto_css_arrows.asp*/
-
 .arrow-container-left:hover .arrow-left{
   color: grey;
 }
@@ -284,7 +283,6 @@ img {
 .page-sub-title {
   text-align: left;
   }
-
   main {
     padding: 5%;
   }
