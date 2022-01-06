@@ -202,7 +202,8 @@ footer a:active {
   font-size: 50px;
   font-weight: 0;
   color: white;
-  margin-top: 140px; 
+  /* margin-top: 140px;  */
+  
   text-shadow: 0 0 5px grey;
 }
 /*-------------------------------------------------------------------------------------------------------------------*/

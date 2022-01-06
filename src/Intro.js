@@ -26,6 +26,8 @@ function Intro({setPosition}){
   useEffect(() => {
     if (opacityFour >= 1){
       setPosition('fixed');
+      //re-trigger arrow color loop here
+     
     }
   }, [opacityFour])
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
