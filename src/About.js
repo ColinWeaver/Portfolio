@@ -6,15 +6,15 @@ import resumeImage from "./media/Colin-Weaver-resume-png.png";
 function About({setPosition}){
 const [showResume, setShowResume] = useState(false);
 const [resumeArrow, setResumeArrow] = useState("Click to show resume");
-const [width, setWidth] = useState(0)
 const [containerOpacity, setContainerOpacity] = useState(.2);
 const [shadow, setShadow] = useState(0);
 const [paddingLeft, setPaddingLeft] = useState(0);
-const [paddingRight, setPaddingRight] = useState(0)
+const [paddingRight, setPaddingRight] = useState(0);
+const [display, setDisplay] = useState('none');
+const location = useLocation();
 setPosition('fixed');
 
-const location = useLocation();
-console.log(location.state)
+
 useEffect(() => {
   if (location.state){
     if (location.state.origin === 'left'){
@@ -24,10 +24,14 @@ useEffect(() => {
     else {
         setPaddingRight(100);
     }
-  
 }, [location.state])
 
 
+useEffect(() => {
+  if ((paddingLeft === 0) && paddingRight === 0){
+    setDisplay('inline');
+  }
+}, [paddingLeft, paddingRight])
 
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
 useEffect(() => {
@@ -74,7 +78,6 @@ setResumeArrow((arrow) => {
                 <img style={{width: '75%'}} alt="resume-image" src={resumeImage}></img>
                 </>
                 )
-                
             }
             else return null;
         }
@@ -84,7 +87,6 @@ useEffect(() => {
     if (paddingLeft > 0){
     const timer = setTimeout(() => {
     async function paddingSet(){
-    //increment opacity
     if ((paddingLeft > 0) && containerOpacity < 100){
     await setContainerOpacity((containerOpacity) => containerOpacity + 5)
     }
@@ -96,13 +98,13 @@ useEffect(() => {
     }
   }, [paddingLeft])
 
+  //page slide from right
   useEffect(() => {
     if (paddingRight > 0){
     const timer = setTimeout(() => {
     async function paddingSet(){
-    //increment opacity
     if ((paddingRight > 0) && containerOpacity < 100){
-    await setContainerOpacity((containerOpacity) => containerOpacity + 5)
+    await setContainerOpacity((containerOpacity) => containerOpacity + 4)
     }
     await setPaddingRight((padding) => padding - 1);
   }
@@ -116,11 +118,9 @@ useEffect(() => {
   //for shadow
   useEffect(() => {
     if ((paddingLeft === 0) && paddingRight === 0){
-
     const timer = setTimeout(() => {
     async function shadowSet(){
-    // increment shadow
-    if (shadow < 50 )
+    if (shadow < 15 )
     await setShadow((shadow) => shadow + .2);
   }
     shadowSet();
@@ -130,7 +130,7 @@ useEffect(() => {
   }, [paddingRight, paddingLeft, shadow])
   
   useEffect(() => {
-    if (shadow === 50){
+    if (shadow === 15){
       location.state.origin = null;
     }
   }, [shadow])
@@ -157,7 +157,7 @@ useEffect(() => {
                     <div style={{alignItems: 'right', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, display: 'flex', width: '90%', flexDirection: 'column', borderRadius: '9px' , padding: '10px', paddingBottom: '20px'}}>
                    
                         <div className="container-for-image" style={{textAlign: 'center'}} >
-                          <img src={image} style={{margin: '10px', marginBottom: '0px', width: '200px', borderRadius: '2px'}}/>
+                          <img src={image} style={{margin: '10px', marginBottom: '0px', width: '200px', borderRadius: '2px', display: `${display}`}}/>
                           <div>
                              <h3 className="page-sub-title">Background</h3>
                       
@@ -218,11 +218,9 @@ useEffect(() => {
                    
                 </div>
               
-
-
             {/* ------------------------------------------------------------- */}
 
-            <Link to={'/projects'} style={{ textDecoration: 'none' }}>
+            <Link to={'/projects'} state={{origin: 'left'}} style={{ textDecoration: 'none' }}>
             <div className="arrow-container-right">
             <i className="arrow-right"> </i>
             
