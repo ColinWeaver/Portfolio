@@ -222,7 +222,7 @@ useEffect(() => {
 
             <Link to={'/projects'} state={{origin: 'left'}} style={{ textDecoration: 'none' }}>
             <div className="arrow-container-right">
-            <p className="arrow-right"> </p>
+            <p className="arrow-right" style={{borderColor: 'white'}}> </p>
             
             </div>
             </Link>

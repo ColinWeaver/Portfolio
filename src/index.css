@@ -171,10 +171,10 @@ footer a:active {
 /*----------------------------------------ARROWS------------------------------------------------------------*/
 /* https://www.w3schools.com/howto/howto_css_arrows.asp*/
 .arrow-container-left:hover .arrow-left{
-  color: grey;
+  border-color: grey;
 }
 .arrow-container-right:hover .arrow-right{
-  color: grey;
+  border-color: grey;
 }
 .arrow-right {
   border: solid;
@@ -200,6 +200,7 @@ footer a:active {
   color: white;
   display: inline-block;
   /* margin-top: 140px;  */
+  
   
   text-shadow: 0 0 5px grey;
 }
