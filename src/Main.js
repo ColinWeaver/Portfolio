@@ -8,13 +8,13 @@ import NotFound from "./NotFound"
 
 
 
-function Main({externalLinkHandler, setPosition}){
+function Main({externalLinkHandler, setPosition, position}){
 
    return (
 <>
 
 <Routes>
-<Route path="/" element={<Intro setPosition={setPosition}/>}/>
+<Route path="/" element={<Intro setPosition={setPosition} position={position} />}/>
 <Route path="/about" element={<About setPosition={setPosition}/>}/>
 <Route path="/projects" element={<Projects setPosition={setPosition} externalLinkHandler={externalLinkHandler}/>}/>
 <Route path="/contact" element={<Contact setPosition={setPosition} externalLinkHandler={externalLinkHandler}/>}/>

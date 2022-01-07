@@ -2,11 +2,11 @@ import React, {useState, useEffect} from "react"
 import { Link }  from 'react-router-dom'
 
 
-function Intro({setPosition}){
+function Intro({setPosition, position}){
  
 //-----------------------------------------------------------------STATE VARIABLES--------------------------------------------------------------------------------------------------
   //arrow 
-  const [arrowColor, setArrowColor] = useState('#E6E6E6');
+  const [arrowColor, setArrowColor] = useState('#EOEOEO');
   const [arrowContainerWidth, setArrowContainerWidth] = useState(100);
   const [display, setDisplay] = useState('none');
   //STYLE FOR LETTERS
@@ -26,7 +26,6 @@ function Intro({setPosition}){
   useEffect(() => {
     if (opacityFour >= 1){
       setPosition('fixed');
-      //re-trigger arrow color loop here
      
     }
   }, [opacityFour])
@@ -36,7 +35,7 @@ function Intro({setPosition}){
 }, []) 
 //-----------------------------------------------------------------SET ARROW COLOR TO WHITE-----------------------------------------------------------------------------------
 useEffect(() => {
-if (arrowContainerWidth === 100){
+if ((arrowContainerWidth === 2) && position === 'fixed'){
   setArrowColor('white');
 }
 }, [arrowContainerWidth])

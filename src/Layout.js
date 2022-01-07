@@ -40,7 +40,7 @@ console.log('position test', position)
 
          <main style={{paddingBottom: null}}>
          
-         <Main externalLinkHandler={externalLinkHandler} setPosition={setPosition}/>
+         <Main externalLinkHandler={externalLinkHandler} setPosition={setPosition} position={position}/>
          <div style={{marginBottom: '80px', marginTop: '150px'}}>
          <hr style={{width: '250px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
          </div>
