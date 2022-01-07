@@ -180,7 +180,7 @@ footer a:active {
   /* color:white; */
   border: solid;
   border-width: 0 5px 5px 0;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 3px;
   height: 12px;
   width: 12px;
@@ -188,10 +188,10 @@ footer a:active {
   transform: rotate(-45deg);
 }
 .arrow-left {
-  color:white;
+  /* color:white; */
   border: solid;
   border-width: 0 5px 5px 0;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 3px;
   height: 12px;
   width: 12px;
@@ -202,7 +202,7 @@ footer a:active {
   font-size: 50px;
   font-weight: 0;
   color: white;
-  
+  display: inline-block;
   /* margin-top: 140px;  */
   
   text-shadow: 0 0 5px grey;
