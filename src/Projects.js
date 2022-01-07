@@ -99,7 +99,7 @@ return (
 {/* -------------------------------------------------------ARROW LEFT-------------------------------------------------------------------------------- */}
             <Link to={'/about'} style={{ textDecoration: 'none' }}>
                 <div className="arrow-container-left">
-                <i className="arrow-left"></i>
+                <p className="arrow-left"></p>
                 </div>
             </Link> 
     
@@ -154,7 +154,7 @@ return (
     
     <Link to={'/contact'} state={{origin: 'left'}} style={{ textDecoration: 'none' }}>
     <div className="arrow-container-right">
-    <i className="arrow-right"></i>
+    <p className="arrow-right"></p>
     </div>
     </Link>
   {/* --------------------------------------------------------------------------------------------------------------------------------------- */}

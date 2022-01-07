@@ -98,8 +98,8 @@ useEffect(() => {
 
         <Link to={'/projects'} style={{ textDecoration: 'none' }}>
         <div className="arrow-container-left">
-        <i className="arrow-left"></i>
-          </div>
+            <p className="arrow-left"></p>
+        </div>
         </Link> 
 
 
