@@ -177,7 +177,7 @@ footer a:active {
   color: grey;
 }
 .arrow-right {
-  color:white;
+  /* color:white; */
   border: solid;
   border-width: 0 5px 5px 0;
   display: inline-block;
@@ -201,6 +201,7 @@ footer a:active {
  .arrow-right, .arrow-left, .arrow{
   font-size: 50px;
   font-weight: 0;
+  color: white;
   
   /* margin-top: 140px;  */
   
