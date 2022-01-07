@@ -252,11 +252,8 @@ return (
 
             <Link to={'/about'} state={{origin: 'left'}} style={{ textDecoration: 'none' }}>
                 <div className="arrow-container-right" style={{paddingRight: `${arrowContainerWidth}%`}}>
-                {/* <p className="arrow" style={{color: `${arrowColor}`, display: `${display}`}} >{'>'}</p> */}
+                <p className="arrow-right" style={{borderColor: `${arrowColor}`, display: `${display}`, color: `${arrowColor}`}}></p>
                 <p className="arrow-right" style={{borderColor: `${arrowColor}`, display: `${display}`, color: `${arrowColor}`}}><p style={{}}>{' '}</p></p>
-                {/* <p className="arrow-right" style={{borderColor: `${arrowColor}`, display: `${display}`, color: `${arrowColor}`}}><i style={{backgroundColor: 'blue'}}>{'text'}</i></p>
-                <p className="arrow-right" style={{borderColor: `${arrowColor}`, display: `${display}`, color: `${arrowColor}`}}><i style={{backgroundColor: `${arrowColor}`}}>{'text'}</i></p>
-                <div className="arrow-right" style={{borderColor: `${arrowColor}`, display: `${display}`, color: `${arrowColor}`}}><i style={{display: 'none'}}>{'text'}</i></div> */}
                 </div>
             </Link>
 
