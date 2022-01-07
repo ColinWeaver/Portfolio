@@ -35,7 +35,7 @@ function Intro({setPosition, position}){
 }, []) 
 //-----------------------------------------------------------------SET ARROW COLOR TO WHITE-----------------------------------------------------------------------------------
 useEffect(() => {
-if ((arrowContainerWidth === 2) && position === 'fixed'){
+if ((arrowContainerWidth === 8) && position === 'fixed'){
   setArrowColor('white');
 }
 }, [arrowContainerWidth])
@@ -214,7 +214,7 @@ useEffect(() => {
 
 //----------------------------------------------------------ARROW SLIDE ACROSS SCREEN--------------------------------------------------------------------------------------------------------
 useEffect(() => {
-if ((opacityFour >= 1) && arrowContainerWidth > 2){
+if ((opacityFour >= 1) && arrowContainerWidth > 8){
   const timer = setTimeout(() => {
     async function arrowContainerWidthSet(){
     await setArrowContainerWidth((width) => width - 1)
@@ -252,7 +252,8 @@ return (
             <Link to={'/about'} state={{origin: 'left'}} style={{ textDecoration: 'none' }}>
                 <div className="arrow-container-right" style={{paddingRight: `${arrowContainerWidth}%`}}>
                   
-                <i className="arrow-right" style={{color: `${arrowColor}`, display: `${display}`}}></i>
+                <p className="arrow-right" style={{color: `${arrowColor}`, display: `${display}`}}></p>
+                
                 </div>
             </Link>
 
