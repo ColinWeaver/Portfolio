@@ -26,7 +26,6 @@ function Intro({setPosition, position}){
   useEffect(() => {
     if (opacityFour >= 1){
       setPosition('fixed');
-     
     }
   }, [opacityFour])
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
@@ -35,10 +34,12 @@ function Intro({setPosition, position}){
 }, []) 
 //-----------------------------------------------------------------SET ARROW COLOR TO WHITE-----------------------------------------------------------------------------------
 useEffect(() => {
-if ((arrowContainerWidth === 8) && position === 'fixed'){
+if ((arrowContainerWidth <= 2) && arrowColor === '#EOEOEO'){
   setArrowColor('white');
 }
-}, [arrowContainerWidth])
+}, [arrowContainerWidth, arrowColor])
+
+
 //-----------------------------------------------------------------ARROW COLOR LOOP-------------------------------------------------------------------------------------------------
 useEffect(() => {
   if (arrowColor === 'white'){
@@ -214,7 +215,7 @@ useEffect(() => {
 
 //----------------------------------------------------------ARROW SLIDE ACROSS SCREEN--------------------------------------------------------------------------------------------------------
 useEffect(() => {
-if ((opacityFour >= 1) && arrowContainerWidth > 8){
+if ((opacityFour >= 1) && arrowContainerWidth > 2){
   const timer = setTimeout(() => {
     async function arrowContainerWidthSet(){
     await setArrowContainerWidth((width) => width - 1)
@@ -253,7 +254,7 @@ return (
                 <div className="arrow-container-right" style={{paddingRight: `${arrowContainerWidth}%`}}>
                   
                 <p className="arrow-right" style={{color: `${arrowColor}`, display: `${display}`}}></p>
-                
+                <p className="arrow" style={{color: `${arrowColor}`, display: `${display}`}} >{'>'}</p>
                 </div>
             </Link>
 
