@@ -201,7 +201,7 @@ footer a:active {
  .arrow-right, .arrow-left{
   font-size: 50px;
   font-weight: 0;
-  color: white;
+  
   /* margin-top: 140px;  */
   
   text-shadow: 0 0 5px grey;
@@ -285,7 +285,7 @@ img {
   text-align: left;
   }
   main {
-    padding: 5%;
+    padding: 0% 5% 5% 5%;
   }
 }
 @media screen and (min-width: 650px){
