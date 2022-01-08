@@ -15,6 +15,8 @@ const location = useLocation();
 setPosition('fixed');
 
 
+
+console.log('cursor test', window.navigator, window.mousemove )
 useEffect(() => {
   if (location.state){
     if (location.state.origin === 'left'){
@@ -33,9 +35,13 @@ useEffect(() => {
   }
 }, [paddingLeft, paddingRight])
 
+
+
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
 useEffect(() => {
     window.scrollTo(0,0);
+    
+    
 }, [])   
 
 
@@ -222,7 +228,7 @@ useEffect(() => {
 
             <Link to={'/projects'} state={{origin: 'left'}} style={{ textDecoration: 'none' }}>
             <div className="arrow-container-right">
-            <p className="arrow-right" style={{borderColor: 'white'}}> </p>
+            <p className="arrow-right"> </p>
             
             </div>
             </Link>
