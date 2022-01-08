@@ -7,14 +7,20 @@ const [containerOpacity, setContainerOpacity] = useState(.2);
 const [shadow, setShadow] = useState(0);
 const [paddingLeft, setPaddingLeft] = useState(0);
 const [paddingRight, setPaddingRight] = useState(0);
-const [display, setDisplay] = useState('none');
+// const [display, setDisplay] = useState('none');
+const [opacity, setOpacity] = useState(0);
 const location = useLocation();
 setPosition('fixed');
 
+{/* -------------------------------------------------------CONFIG DEPENDING ON WHICH PAGE YOU'RE COMING FROM-------------------------------------------------------------------------------- */}
 useEffect(() => {
   if (location.state){
     if (location.state.origin === 'left'){
-        setPaddingLeft(80);
+      async function preSet(){
+        await setPaddingLeft(80);
+        await setOpacity(100);
+      }
+      preSet();
     }
   }
     else {
@@ -29,15 +35,25 @@ useEffect(() => {
 
 
     useEffect(() => {
-      if ((paddingLeft === 0) && paddingRight === 0){
-        setDisplay('inline');
+      if ((containerOpacity > 99) && opacity < 100){
+        setOpacity(1);
       }
-    }, [paddingLeft, paddingRight])
-    
-   
+    }, [containerOpacity])
 
-//----------------------------------------------------------------PAGE SLIDE------------------------------------------------------------------------------ 
-//page slide from left
+
+    //----------------------------------------------------OPACITY FADE IN AFTER SLIDE--------------------------------------------------------------------
+    useEffect(() => {
+      if ((opacity > 0) && opacity < 100){
+        const timer = setTimeout(() => {
+          async function opacitySet(){
+          await setOpacity((opacity) => opacity + 25)
+        }
+          opacitySet();
+        }, 125)
+        return () => clearTimeout(timer);
+      }
+    }, [opacity])
+//----------------------------------------------------------------PAGE SLIDE FROM RIGHT----------------------------------------------------------------------------- 
 useEffect(() => {
     if (paddingLeft > 0){
     const timer = setTimeout(() => {
@@ -53,7 +69,7 @@ useEffect(() => {
     }
   }, [paddingLeft])
 
-  //page slide from right
+  {/* -------------------------------------------------------PAGE SLIDE FROM LEFT-------------------------------------------------------------------------------- */}
   useEffect(() => {
     if (paddingRight > 0){
     const timer = setTimeout(() => {
@@ -70,7 +86,7 @@ useEffect(() => {
   }, [paddingRight])
 
 
-  //for shadow
+  {/* ------------------------------------------------------SHADOW-------------------------------------------------------------------------------- */}
   useEffect(() => {
     if ((paddingLeft === 0) && paddingRight === 0){
     const timer = setTimeout(() => {
@@ -90,6 +106,9 @@ useEffect(() => {
     }
   }, [shadow])
 
+
+{/* -------------------------------------------------------MAIN COMPONENT RENDER RETURN-------------------------------------------------------------------------------- */}
+
 return (
     <div className="highest-page-container" style={{opacity: `${containerOpacity}%`, paddingLeft: `${paddingLeft}%`, paddingRight: `${paddingRight}%`}} >
     <h2 id="external-link" style={{textAlign: 'center', color: null}}>Projects</h2>
@@ -108,19 +127,20 @@ return (
 
             <div style={{display: 'flex', flexDirection: 'column'}}>
                
-                <h3 className="page-sub-title" style={{marginLeft: '10px'}}>Reservations <h5 style={{display: 'inline'}}>- <i>App that allows a restaurant to manage reservations</i></h5></h3>
+                <h3 className="page-sub-title" style={{marginLeft: '10px', opacity: `${opacity}`}}>Reservations <h5 style={{display: 'inline'}}>- <i>App that allows a restaurant to manage reservations</i></h5></h3>
               
-                    <div>
+                    <div style={{borderRadius: '9px' , padding: '10px', paddingBottom: '25px', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`}}>
 
-                        <div className="container-for-reservations">
+                        <div className="container-for-image" style={{textAlign: 'center'}}>
                             <a style={{width: '200px'}} href="#external-link" > 
-                            <img src={image} style={{ borderRadius: '9px', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, margin: '10px', width: '200px', display: `${display}`}} id='reservations' onClick={externalLinkHandler}/>
+                            <img src={image} style={{opacity: `${opacity}%`, borderRadius: '9px', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, margin: '10px', width: '200px'}} id='reservations' onClick={externalLinkHandler}/>
                             </a>
                         </div>
             
 
-                <div  style={{borderRadius: '9px' , padding: '10px', paddingBottom: '25px', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`}}>
-                <hr style={{width: '75%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
+
+                <div  >
+                
 
                     <p>
                     This application is used to create restaurant reservations and assign/track tables for them. 
@@ -132,6 +152,7 @@ return (
                     finish a reservation's seating at a table,
                     cancel a reservation, and search through reservations by phone number.
                     </p>
+                     <hr style={{width: '75%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
                     <p>
                     I developed the frontend using various React libraries and features and styled it using CSS.
                     For backend I used: Express to develop the API and the Knex library to 

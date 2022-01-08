@@ -40,8 +40,6 @@ useEffect(() => {
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
 useEffect(() => {
     window.scrollTo(0,0);
-    
-    
 }, [])   
 
 
@@ -163,7 +161,7 @@ useEffect(() => {
                     <div style={{alignItems: 'right', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, display: 'flex', width: '90%', flexDirection: 'column', borderRadius: '9px' , padding: '10px', paddingBottom: '20px'}}>
                    
                         <div className="container-for-image" style={{textAlign: 'center'}} >
-                          <img src={image} style={{margin: '10px', marginBottom: '0px', width: '200px', borderRadius: '2px', display: `${display}`}}/>
+                          <img src={image} style={{margin: '10px', marginBottom: '0px', width: '200px', borderRadius: '2px'}}/>
                           <div>
                              <h3 className="page-sub-title">Background</h3>
                       
@@ -210,15 +208,15 @@ useEffect(() => {
                     
                     <div style={{ width: '90%', height: null, marginTop: '20px'}}>
                     <h3 className="page-sub-title">Skills</h3>
-                        {skills.map((skill) => {
+                        {skills.map((skill, index) => {
                             if (skill === skills[skills.length - 1]){
-                                return <> {skill}{'.'}
+                                return <span key={index}> {skill}{'.'}
                                         <Link to="/about">
                                         <span className="resume-link" style={{ fontSize: null, fontWeight: 'bold', fontFamily: 'helvetica', color: '#494949'}} onClick={resumeArrowHandler}><i> {resumeArrow}</i></span>{"."}
                                         </Link>
-                                       </>
+                                       </span>
                                  }
-                            return <>{skill}{',   '}</>
+                            return <span key={index}>{skill}{',   '}</span>
                             }
                         )}
                    
