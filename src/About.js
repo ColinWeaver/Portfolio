@@ -104,9 +104,9 @@ useEffect(() => {
             <>
             <div style={{opacity: `${containerOpacity}%`, paddingLeft: `${paddingLeft}%`}}>
            <h2 style={{textAlign: 'center', color: null}}>About Me</h2>
-           <hr style={{width: '55%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
+           
            <div style={{ width: `${90}%`, display: null, opacity: 100}} className="about">
-              
+           <hr style={{width: '60%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
                 <Link to={'/'} style={{ textDecoration: 'none' }}>
                     <div className="arrow-container-left">
                     <p className="arrow-left"></p>
