@@ -71,7 +71,7 @@ useEffect(() => {
 return (
     <div className="highest-page-container" style={{opacity: `${containerOpacity}%`, paddingLeft: `${paddingLeft}%`, paddingRight: `0%`}} >
     <h2 id="external-link" style={{textAlign: 'center', color: null}}>Projects</h2>
-     <hr style={{width: '250px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
+     <hr style={{width: '55%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
     <div style={{ width: `${90}%`, display: null, opacity: 100, bottom: '100px'}} className="about">
 
 {/* -------------------------------------------------------ARROW LEFT-------------------------------------------------------------------------------- */}
@@ -109,13 +109,9 @@ return (
                               finish a reservation's seating at a table,
                               cancel a reservation, and search through reservations by phone number.
                               </p>
-                              
-                       
-                    
+                            
 
-
-
-                       <hr style={{width: '60%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
+                       <hr style={{width: '55%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
                        
                             <p className="reservations-bottom-half">
                             I developed the frontend using various React libraries and features and styled it using CSS.

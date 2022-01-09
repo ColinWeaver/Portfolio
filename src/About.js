@@ -104,7 +104,7 @@ useEffect(() => {
             <>
             <div style={{opacity: `${containerOpacity}%`, paddingLeft: `${paddingLeft}%`}}>
            <h2 style={{textAlign: 'center', color: null}}>About Me</h2>
-           <hr style={{width: '250px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
+           <hr style={{width: '55%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
            <div style={{ width: `${90}%`, display: null, opacity: 100}} className="about">
               
                 <Link to={'/'} style={{ textDecoration: 'none' }}>
@@ -114,9 +114,11 @@ useEffect(() => {
                 </Link> 
 
            {/* ------------------------------------------------------------- */}
-                    <div style={{alignItems: 'right', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, display: 'flex', width: '90%', flexDirection: 'column', borderRadius: '9px' , padding: '10px', paddingBottom: '20px'}}>
-                        <div className="container-for-image" style={{textAlign: 'center'}} >
+                    <div style={{alignItems: 'center', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, display: 'flex', width: '90%', flexDirection: 'column', borderRadius: '9px' , padding: '10px', paddingBottom: '20px'}}>
+                        <div style={{textAlign: 'center'}} >
+                          <br/>
                           <img src={image} style={{margin: '10px', marginBottom: '0px', width: '200px', borderRadius: '2px'}}/>
+                          <br/>
                           <div>
                              <h3 className="page-sub-title">Background</h3>
                       
@@ -133,7 +135,7 @@ useEffect(() => {
                           </div>
                         </div>
                             
-                                {/* <br/> */}
+                              
                                 <div>
                                 
                                <h3 className="page-sub-title">Training and Experience</h3>
