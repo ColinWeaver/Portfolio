@@ -8,40 +8,14 @@ const [showResume, setShowResume] = useState(false);
 const [resumeArrow, setResumeArrow] = useState("Click to show resume");
 const [containerOpacity, setContainerOpacity] = useState(.2);
 const [shadow, setShadow] = useState(0);
-const [paddingLeft, setPaddingLeft] = useState(0);
-const [paddingRight, setPaddingRight] = useState(0);
-const [display, setDisplay] = useState('none');
+const [paddingLeft, setPaddingLeft] = useState(80);
 const location = useLocation();
 setPosition('fixed');
-
-
-
-console.log('cursor test', window.navigator, window.mousemove )
-useEffect(() => {
-  if (location.state){
-    if (location.state.origin === 'left'){
-        setPaddingLeft(80);
-    }
-  }
-    else {
-        setPaddingRight(100);
-    }
-}, [location.state])
-
-
-useEffect(() => {
-  if ((paddingLeft === 0) && paddingRight === 0){
-    setDisplay('inline');
-  }
-}, [paddingLeft, paddingRight])
-
-
 
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
 useEffect(() => {
     window.scrollTo(0,0);
 }, [])   
-
 
 //----------------------------------------------------------------ARROW HANDLER------------------------------------------------------------------------------
 function resumeArrowHandler(){
@@ -102,26 +76,11 @@ useEffect(() => {
     }
   }, [paddingLeft])
 
-  //page slide from right
-  useEffect(() => {
-    if (paddingRight > 0){
-    const timer = setTimeout(() => {
-    async function paddingSet(){
-    if ((paddingRight > 0) && containerOpacity < 100){
-    await setContainerOpacity((containerOpacity) => containerOpacity + 4)
-    }
-    await setPaddingRight((padding) => padding - 1);
-  }
-    paddingSet();
-  }, 1)
-  return () => clearTimeout(timer);
-    }
-  }, [paddingRight])
-
+  
 
   //for shadow
   useEffect(() => {
-    if ((paddingLeft === 0) && paddingRight === 0){
+    if ((paddingLeft === 0)){
     const timer = setTimeout(() => {
     async function shadowSet(){
     if (shadow < 15 )
@@ -131,7 +90,7 @@ useEffect(() => {
   }, 5)
   return () => clearTimeout(timer);
     }
-  }, [paddingRight, paddingLeft, shadow])
+  }, [paddingLeft, shadow])
   
   useEffect(() => {
     if (shadow === 15){
@@ -143,8 +102,7 @@ useEffect(() => {
   //----------------------------------------------------------------MAIN COMPONENT RENDER RETURN------------------------------------------------------------------------------ 
         return (
             <>
-            
-            <div style={{opacity: `${containerOpacity}%`, paddingLeft: `${paddingLeft}%`, paddingRight: `${paddingRight}%`}}>
+            <div style={{opacity: `${containerOpacity}%`, paddingLeft: `${paddingLeft}%`}}>
            <h2 style={{textAlign: 'center', color: null}}>About Me</h2>
            <hr style={{width: '250px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
            <div style={{ width: `${90}%`, display: null, opacity: 100}} className="about">
@@ -156,10 +114,7 @@ useEffect(() => {
                 </Link> 
 
            {/* ------------------------------------------------------------- */}
-          
-           
                     <div style={{alignItems: 'right', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, display: 'flex', width: '90%', flexDirection: 'column', borderRadius: '9px' , padding: '10px', paddingBottom: '20px'}}>
-                   
                         <div className="container-for-image" style={{textAlign: 'center'}} >
                           <img src={image} style={{margin: '10px', marginBottom: '0px', width: '200px', borderRadius: '2px'}}/>
                           <div>
@@ -172,13 +127,13 @@ useEffect(() => {
                                     (where I studied Video and Film Production) and after.
                                     My analytical skills have been developed through years of 
                                     classical music training, editing film projects, studying as a math major for 1 to 2 years in college, 
-                                    and building software applications and programs.
+                                    and building software applications and programs. I've also spent a great amount of my free time researching and learning about
+                                    topics in fields such as math, economics, finance, and psychology. 
                             </p>
                           </div>
                         </div>
                             
-                               
-                                <br/>
+                                {/* <br/> */}
                                 <div>
                                 
                                <h3 className="page-sub-title">Training and Experience</h3>
@@ -186,7 +141,7 @@ useEffect(() => {
                                 Over the last year I've been in the process of transitioning into the tech industry. I found myself in a line of work 
                                 where I wasn't able to utilize my creative and analytical skills professionally and decided to pursue work in a field I would be better suited for. 
                                 I spent 9 months in a tech program called Thinkful where I was trained extensively in full stack web development techniques.
-                                Although I had some coding experience prior, I acquired the majority of my tech experience over those 9 months. 
+                                I had some experience with coding prior to the program but acquired the majority of my tech experience over those 9 months. 
                                  </p> 
 
                                  <p style={{textAlign: 'left'}}>
@@ -199,14 +154,10 @@ useEffect(() => {
                                 </p>
                                 </div>
 
-                                </div>
-
-                    
-                    
-
+                              </div>
             {/* ------------------------------------------------------------- */}
                     
-                    <div style={{ width: '90%', height: null, marginTop: '20px'}}>
+                    <div style={{ width: '90%', marginTop: '20px'}}>
                     <h3 className="page-sub-title">Skills</h3>
                         {skills.map((skill, index) => {
                             if (skill === skills[skills.length - 1]){
@@ -221,13 +172,10 @@ useEffect(() => {
                         )}
                    
                 </div>
-              
             {/* ------------------------------------------------------------- */}
-
             <Link to={'/projects'} state={{origin: 'left'}} style={{ textDecoration: 'none' }}>
             <div className="arrow-container-right">
             <p className="arrow-right"> </p>
-            
             </div>
             </Link>
     </div>
@@ -235,9 +183,6 @@ useEffect(() => {
       <Resume/>
     </div>
     </div>
-   
-
-
  </>
         )
         

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import { Link }  from 'react-router-dom'
 
 
-function Intro({setPosition, position}){
+function Intro({setPosition}){
  
 //-----------------------------------------------------------------STATE VARIABLES--------------------------------------------------------------------------------------------------
   //arrow 
@@ -15,19 +15,18 @@ function Intro({setPosition, position}){
   const [opacityThree, setOpacityThree] = useState(0);
   const [opacityFour, setOpacityFour] = useState(0);
 
-
   //container
   const [containerOpacity, setContainerOpacity] = useState(.25);
   const [width, setWidth] = useState(0);
   const [shadow, setShadow] = useState(2);
 
+  if (opacityFour < 1) {
+    setPosition('absolute');
+  }
+  else {
+    setPosition('fixed');
+  }
 
-
-  useEffect(() => {
-    if (opacityFour >= 1){
-      setPosition('fixed');
-    }
-  }, [opacityFour])
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
   useEffect(() => {
     window.scrollTo(0,0);
@@ -38,8 +37,6 @@ if ((arrowContainerWidth <= 2) && arrowColor === '#EOEOEO'){
   setArrowColor('white');
 }
 }, [arrowContainerWidth, arrowColor])
-
-
 //-----------------------------------------------------------------ARROW COLOR LOOP-------------------------------------------------------------------------------------------------
 useEffect(() => {
   if (arrowColor === 'white'){
