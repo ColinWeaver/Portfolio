@@ -71,7 +71,7 @@ useEffect(() => {
     await setPaddingLeft((padding) => padding - 1);
   }
     paddingSet();
-  }, 2)
+  }, 1)
   return () => clearTimeout(timer);
     }
   }, [paddingLeft])
