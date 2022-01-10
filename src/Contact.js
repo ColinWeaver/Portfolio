@@ -59,9 +59,10 @@ useEffect(() => {
 
         <div id="external-link" style={{textAlign: 'center', width: '100%', color: null, backgroundColor: '#E0E0E0', paddingBottom: '0px', paddingTop: '1px'}}>
         <h2>Contact Me</h2>
-        <hr style={{width: '250px', borderTop: '1px solid grey', borderBottom: '0px'}}/>
+        <hr style={{width: '60%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
         </div>
      
+
 
         <Link to={'/projects'} style={{ textDecoration: 'none' }}>
         <div className="arrow-container-left">
