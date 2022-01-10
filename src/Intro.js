@@ -114,7 +114,7 @@ return () => clearTimeout(timer);
   }
 }, [width, shadow])
 
-//----------------------------------------------------------USEEFFECTS FOR TEXT OPACITY-------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------TEXT OPACITY-------------------------------------------------------------------------------------------------------
 
 
 useEffect(() => {
@@ -140,7 +140,7 @@ useEffect(() => {
       await setOpacityTwo((opacity) => opacity + .2)
        }
       opacitySet();
-    }, 1500)
+    }, 1000)
       return () => clearTimeout(timer);
     }
 
@@ -150,7 +150,7 @@ useEffect(() => {
         await setOpacityTwo((opacity) => opacity + .08)
          }
         opacitySet();
-      }, 10)
+      }, 12)
         return () => clearTimeout(timer);
   
       }    
@@ -158,7 +158,7 @@ useEffect(() => {
 }, [opacityOne, opacityTwo])
 
 
-// //opacityThree
+//opacityThree
 useEffect(() => {
   if (opacityTwo >= 1){
     if (opacityThree < .2){
@@ -177,7 +177,7 @@ useEffect(() => {
         await setOpacityThree((opacity) => opacity + .08)
          }
         opacityThreeSet();
-      }, 10)
+      }, 12)
         return () => clearTimeout(timer);
   
       }    
@@ -194,7 +194,7 @@ useEffect(() => {
       await setOpacityFour((opacity) => opacity + .2)
        }
       opacitySet();
-    }, 1200)//PAUSE BEFORE DISPLAYING
+    }, 1500)//PAUSE BEFORE DISPLAYING
       return () => clearTimeout(timer);
     }
 
@@ -204,7 +204,7 @@ useEffect(() => {
         await setOpacityFour((opacity) => opacity + .08)
          }
         opacitySet();
-      }, 10)
+      }, 12)
         return () => clearTimeout(timer);
       }    
   }
@@ -237,14 +237,14 @@ return (
     <>
     <div style={{width: '90%'}}>
     <div style={{width: `${width}%`, height: '280px', opacity: `${containerOpacity}`, boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, borderRadius: '10px'}} className="about">
-    <div style={{textAlign: "left", width: '100%', opacity: "1", paddingLeft: '40px'}}>
+    <div style={{textAlign: "left", width: '100%', opacity: "1", paddingLeft: '40px', marginRight: '10px'}}>
     
     <h3> 
        <span style={{opacity: `${opacityOne}`}}>Hi, </span>
-       <span style={{opacity: `${opacityTwo}`}}>my name is Colin.</span>
+       <span style={{opacity: `${opacityTwo}`}}>I'm Colin.</span>
    </h3>
-    <p style={{opacity: `${opacityThree}`, marginRight: '10px'}}>I'm a web developer living in the greater Nashville area.</p>
-    <p style={{opacity: `${opacityFour}`}}>Click the arrow to read more. </p>
+    <p style={{opacity: `${opacityThree}`, marginRight: '20px'}}>I'm a web developer living in the greater Nashville area.</p>
+    <p style={{opacity: `${opacityFour}`, marginRight: '20px'}}>Click the arrow to read more. </p>
     </div>
 
             <Link to={'/about'} state={{origin: 'left'}} style={{ textDecoration: 'none' }}>

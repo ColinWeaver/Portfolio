@@ -128,9 +128,9 @@ useEffect(() => {
                                     making films, and later creatively collaborating with others throughout college 
                                     (where I studied Video and Film Production) and after.
                                     My analytical skills have been developed through years of 
-                                    classical music training, editing film projects, studying as a math major for 1 to 2 years in college, 
-                                    and building software applications and programs. I've also spent a great amount of my free time researching and learning about
-                                    topics in fields such as math, economics, finance, and psychology. 
+                                    classical music training, editing film projects, taking several advanced math classes throughout college, 
+                                    and building software applications and programs. I've also spent a great amount of time researching and learning about
+                                    topics in math, economics, finance, and psychology. 
                             </p>
                           </div>
                         </div>
@@ -141,9 +141,10 @@ useEffect(() => {
                                <h3 className="page-sub-title">Training and Experience</h3>
                                 <p style={{textAlign: 'left'}}> 
                                 Over the last year I've been in the process of transitioning into the tech industry. I found myself in a line of work 
-                                where I wasn't able to utilize my creative and analytical skills professionally and decided to pursue work in a field I would be better suited for. 
-                                I spent 9 months in a tech program called Thinkful where I was trained extensively in full stack web development techniques.
-                                I had some experience with coding prior to the program but acquired the majority of my tech experience over those 9 months. 
+                                where I wasn't able to utilize my creative and analytical skills professionally and decided to pursue work in a field I
+                                would be better suited for. I spent 9 months in a tech program called Thinkful where I was trained extensively in full stack 
+                                web development techniques. I had some experience with coding prior to the program, but acquired the majority of my tech 
+                                experience over those 9 months. 
                                  </p> 
 
                                  <p style={{textAlign: 'left'}}>
@@ -151,7 +152,7 @@ useEffect(() => {
                                  through 5 or 6 different tables, a frontend app that used various CRUD requests to allow a user to manage decks of study cards, 
                                  and a full stack app that allows a restaurant to manage reservations (linked in my projects page to the right).
                                  I completed a number of smaller assignments of varying complexity throughout as well where I gained experience using tools 
-                                 such as Express, Knex, PostgreSQL, React, HTML, CSS, and Bootstrap. Throughout the program I also had private mentor sessions 
+                                 such as Express, Knex, PostgreSQL, React, HTML, CSS, and Bootstrap. Throughout the program, I also had private mentor sessions 
                                  multiple times a week with a 15+ year software developer and was required to pass multiple mock coding interviews.
                                 </p>
                                 </div>

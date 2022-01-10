@@ -115,7 +115,7 @@ return (
                        
                             <p className="reservations-bottom-half">
                             I developed the frontend using various React libraries and features and styled it using CSS.
-                            For backend I used Express to develop the API and the Knex library to 
+                            For backend, I used Express to develop the API and the Knex library to 
                             develop the seed and migration files as well as query the PostgreSQL database. 
                             I used ElephantSQL to host the Database. 
                             </p>
