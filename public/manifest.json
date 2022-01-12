@@ -3,17 +3,17 @@
   "name": "Developer Portfolio",
   "icons": [
     {
-      "src": "profilePhoto.jpg",
+      "src": "./profilePhoto.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "profilePhoto.jpg",
+      "src": "./profilePhoto.jpg",
       "type": "image/jpg",
       "sizes": "192x192"
     },
     {
-      "src": "profilePhoto.jpg",
+      "src": "./profilePhoto.jpg",
       "type": "image/jpg",
       "sizes": "512x512"
     }
