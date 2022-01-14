@@ -12,6 +12,7 @@ const [paddingLeft, setPaddingLeft] = useState(80);
 const location = useLocation();
 setPosition('fixed');
 
+console.log(image, 'test in about for image')
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
 useEffect(() => {
     window.scrollTo(0,0);
