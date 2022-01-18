@@ -1,20 +1,20 @@
 {
-  "short_name": "Developer Portfolio",
-  "name": "Developer Portfolio",
+  "short_name": "Portfolio",
+  "name": "Portfolio",
   "icons": [
     {
-      "src": "background-pic.jpg",
+      "src": "profile-picture.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/jpg"
       
     },
     {
-      "src": "background-pic.jpg",
+      "src": "profile-picture.jpg",
       "type": "image/jpg",
       "sizes": "192x192"
     },
     {
-      "src": "background-pic.jpg",
+      "src": "profile-picture.jpg",
       "type": "image/jpg",
       "sizes": "512x512"
     }
