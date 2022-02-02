@@ -164,13 +164,16 @@ useEffect(() => {
                     <div style={{ width: '90%', marginTop: '20px'}}>
                     <h3 className="page-sub-title">Skills</h3>
                         {skills.map((skill, index) => {
+                            // if (skill === skills[skills.length - 1]){
+                            //     return <span key={index}> {skill}{'.'}
+                            //             <Link to="/about">
+                            //             <span className="resume-link" style={{ fontSize: null, fontWeight: 'bold', fontFamily: 'helvetica', color: '#494949'}} onClick={resumeArrowHandler}><i> {resumeArrow}</i></span>{"."}
+                            //             </Link>
+                            //            </span>
+                            //      }
                             if (skill === skills[skills.length - 1]){
-                                return <span key={index}> {skill}{'.'}
-                                        <Link to="/about">
-                                        <span className="resume-link" style={{ fontSize: null, fontWeight: 'bold', fontFamily: 'helvetica', color: '#494949'}} onClick={resumeArrowHandler}><i> {resumeArrow}</i></span>{"."}
-                                        </Link>
-                                       </span>
-                                 }
+                             return <span key={index}>{skill}{'.'}</span>
+                            }
                             return <span key={index}>{skill}{',   '}</span>
                             }
                         )}
@@ -183,9 +186,9 @@ useEffect(() => {
             </div>
             </Link>
     </div>
-    <div style={{width: '100%', display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
+    {/* <div style={{width: '100%', display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
       <Resume/>
-    </div>
+    </div> */}
     </div>
  </>
         )
