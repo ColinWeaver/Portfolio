@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 import Main from "./Main";
-import Navigation from "./Navigation";
-import {Link} from "react-router-dom"
 import Header from "./Header";
 
 function Layout() {
@@ -21,22 +19,12 @@ const [position, setPosition] = useState('absolute');
       window.open("https://github.com/ColinWeaver/Reservations#readme", 'blank')
     }
   }
-console.log('position test', position)
+
 //--------------------------------------------------------------COMPONENT MAIN RENDER RETURN--------------------------------------------------------------------
    return  (
     <div className="image">
       <div className="layout" id="external-link">
         <Header position={position}/>
-        {/* <header style={{position: `${position}`}}>
-          <div className='header-title'>
-          <Link to="/">
-          <h3 style={{ color: null}}>Colin Weaver <span style={{fontWeight: '500', boxShadow: '5px 5px 5px black', padding: '5px', borderRadius: '5px'}}>- Web Developer</span></h3>
-          </Link>
-          <hr style={{width: '25%', borderTop: '1px solid grey', borderBottom: '0px'}}/>
-          </div>
-          <Navigation/>
-          
-          </header> */}
 
          <main style={{paddingBottom: null}}>
          
