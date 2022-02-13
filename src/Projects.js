@@ -122,7 +122,7 @@ return (
                             <p className="reservations-last-paragraph">Check out the
                             <i> 
                                 <a style={{color: '#494949', fontWeight: 'bold'}} id="README" onClick={externalLinkHandler} href="#external-link"> README </a> 
-                            </i>file to read more about the app and click the image to view the app.
+                            </i>file to read more about the app and click the image to go to the deployed app.
                             </p>
                         
             </div>
