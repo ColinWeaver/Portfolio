@@ -1,33 +1,20 @@
 import React, {useEffect, useState} from "react";
 import { Link, useLocation }  from 'react-router-dom';
 import image from "./media/profilePhoto.jpg";
-import resumeImage from "./media/Colin-Weaver-resume-png.png";
+
 
 function About({setPosition}){
-const [showResume, setShowResume] = useState(false);
-const [resumeArrow, setResumeArrow] = useState("Click to show resume");
 const [containerOpacity, setContainerOpacity] = useState(.2);
 const [shadow, setShadow] = useState(0);
 const [paddingLeft, setPaddingLeft] = useState(80);
 const location = useLocation();
 setPosition('fixed');
 
-console.log(image, 'test in about for image')
 //-----------------------------------------------------------------SCROLL RESET--------------------------------------------------------------------------------------------------
 useEffect(() => {
     window.scrollTo(0,0);
 }, [])   
 
-//----------------------------------------------------------------ARROW HANDLER------------------------------------------------------------------------------
-function resumeArrowHandler(){
-setShowResume((value) => !value);
-setResumeArrow((arrow) => {
-    if (arrow === "Click to show resume"){
-        return "Click to hide resume"
-    }
-    else return "Click to show resume"
-}); 
-}
 
 //----------------------------------------------------------------SKILLS LIST------------------------------------------------------------------------------
        const skills = [
@@ -46,22 +33,9 @@ setResumeArrow((arrow) => {
              'Node Package Manager',
              'ElephantSQL'
             ];
-
-    
-
-//----------------------------------------------------------------RESUME COMPONENT------------------------------------------------------------------------------
-        function Resume(){
-            if (showResume){
-                return (
-                <>
-                <img style={{width: '75%'}} alt="resume-image" src={resumeImage}></img>
-                </>
-                )
-            }
-            else return null;
-        }
+       
 //----------------------------------------------------------------PAGE SLIDE------------------------------------------------------------------------------ 
-//page slide from left
+
 useEffect(() => {
     if (paddingLeft > 0){
     const timer = setTimeout(() => {
@@ -79,7 +53,7 @@ useEffect(() => {
 
   
 
-  //for shadow
+ //----------------------------------------------------------------INCREMENTING SHADOW AFTER SLIDE IN FROM 0 TO 15----------------------------------------------------------------------------- 
   useEffect(() => {
     if ((paddingLeft === 0)){
     const timer = setTimeout(() => {
@@ -93,6 +67,7 @@ useEffect(() => {
     }
   }, [paddingLeft, shadow])
   
+  //----------------------------------------------------------------RESETS LINK STATE VARIABLE AFTER SHADOW IS LOADED------------------------------------------------------------------------------ 
   useEffect(() => {
     if (shadow === 15){
       location.state.origin = null;
@@ -114,7 +89,7 @@ useEffect(() => {
                     </div>
                 </Link> 
 
-           {/* ------------------------------------------------------------- */}
+   {/* ---------------------------------------------------------------------------------------------------------------------------------------------------- */}
                     <div style={{alignItems: 'center', boxShadow: `${shadow}px ${shadow}px ${shadow}px grey`, display: 'flex', width: '90%', flexDirection: 'column', borderRadius: '9px' , padding: '10px', paddingBottom: '20px'}}>
                         <div style={{textAlign: 'center'}} >
                           <br/>
@@ -159,18 +134,12 @@ useEffect(() => {
                                 </div>
 
                               </div>
-            {/* ------------------------------------------------------------- */}
+            {/* ---------------------------------------------------------------------------------------------------------------- */}
                     
                     <div style={{ width: '90%', marginTop: '20px'}}>
                     <h3 className="page-sub-title">Skills</h3>
                         {skills.map((skill, index) => {
-                            // if (skill === skills[skills.length - 1]){
-                            //     return <span key={index}> {skill}{'.'}
-                            //             <Link to="/about">
-                            //             <span className="resume-link" style={{ fontSize: null, fontWeight: 'bold', fontFamily: 'helvetica', color: '#494949'}} onClick={resumeArrowHandler}><i> {resumeArrow}</i></span>{"."}
-                            //             </Link>
-                            //            </span>
-                            //      }
+                           
                             if (skill === skills[skills.length - 1]){
                              return <span key={index}>{skill}{'.'}</span>
                             }
@@ -179,23 +148,17 @@ useEffect(() => {
                         )}
                    
                 </div>
-            {/* ------------------------------------------------------------- */}
+            {/* ---------------------------------------------------------------------------------------------------------------- */}
             <Link to={'/projects'} state={{origin: 'left'}} style={{ textDecoration: 'none' }}>
             <div className="arrow-container-right">
             <p className="arrow-right"> </p>
             </div>
             </Link>
     </div>
-    {/* <div style={{width: '100%', display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
-      <Resume/>
-    </div> */}
+   
     </div>
  </>
         )
-        
-        
-        
-
 
 }
 

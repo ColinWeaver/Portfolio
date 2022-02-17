@@ -9,10 +9,13 @@ const [paddingLeft, setPaddingLeft] = useState(80);
 const [opacity, setOpacity] = useState(100);
 const location = useLocation();
 setPosition('fixed');
+
+//----------------------------------------------------RESET PAGE POSITION EACH RENDER--------------------------------------------------------------------
     useEffect(() => {
         window.scrollTo(0,0);
     }, []) 
 
+//----------------------------------------------------SETS OPACITY TO 1 TRIGGERING OPACITY FADE IN--------------------------------------------------------------------
     useEffect(() => {
       if ((containerOpacity > 99) && opacity < 100){
         setOpacity(1);
@@ -117,7 +120,6 @@ return (
                             I developed the frontend using various React libraries and features and styled it using CSS.
                             For the backend, I used Express and the Knex library to develop the API. I used PostgreSQL to develop 
                             the database and used ElephantSQL for hosting.
-                            
                             </p>
                             <p className="reservations-last-paragraph">Check out the
                             <i> 
