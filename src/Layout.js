@@ -10,7 +10,7 @@ const [position, setPosition] = useState('absolute');
       window.open("https://github.com/ColinWeaver", 'blank');
     }
     else if (event.target.id === 'LinkedIn'){
-     window.open("https://www.linkedin.com/in/colin-james-weaver/", 'blank');
+     window.open("https://www.linkedin.com/in/colinweaverdeveloper/", 'blank');
     }
     else if (event.target.id === 'reservations'){
       window.open("http://reservations-front-end.herokuapp.com/dashboard", 'blank')
