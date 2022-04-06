@@ -14,7 +14,6 @@
 <html> -> <body> -> #root -> .app -> .image -> .layout -> <footer> 
  */
 
-
 /* 
 CSS Style Categories (Containers will be listed under each category):
 -container positioning
@@ -22,58 +21,17 @@ CSS Style Categories (Containers will be listed under each category):
 -text color
 -background color
 -text styling
-
  */
 
 
-
-
- a {
-  text-decoration: none;
-}
-
-
-html {
-  height: 100%;
-  font-family: Sans-serif;
-  line-height: 25px;
-  font-weight: 500;
-  font-size: 15px;
-  padding-left: -40px;
-}
-
+/* ----------------------------------CONTAINER POSITION (INCLUDING FLEXBOX)----------------------------- */
 
 body {
-  min-height: 100vh;
-  margin: auto;
-  padding-left: 0px;
   position: static;
 }
-
-
-#root {
-  min-height: 100vh;
-  padding-left: 0px;
+header {
+  position: fixed;
 }
-
-
-.app {
-  min-height: 100vh;
-  padding-left: 0px;
-}
-
-
-
-.layout {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  padding-left: 0px;
-  position: static;
-}
-
-
 main {
   display: flex;
   flex-direction: column;
@@ -82,31 +40,207 @@ main {
 header {
   width: 100%;
   height: 100px;
-  padding-left: 0px;
-  padding-bottom: 20px;
 }
-
-
-
-header {
-  position: fixed;
+.layout {
+  display: flex;
+  flex-direction: column;
+  position: static;
 }
 main {
-  margin-top: 125px;
   display: static;
 }
 footer {
   position: fixed;
 }
+nav {
+  display: flex;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  position: static;
+  align-items: center;
+}
+ nav {
+    justify-content: center;
+  }
+ footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    bottom: 0px;
+  }
+ .arrow-container-right {
+    position: fixed;
+    right: 0px;
+    top: 115px;
+  }
+  .arrow-container-left {
+    position: fixed;
+    top: 115px;
+    left: 0px;
+  }
+  .arrow-right, .arrow-left, .arrow{
+    display: inline-block;
+  }
+  .skills-list-container {
+    display: flex;
+    flex-direction: row;
+  }
+.href-container-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* ----------------------------------CONTAINER MARGIN/PADDING----------------------------- */
+body {
+  margin: auto;
+  padding-left: 0px;
+}
+#root {
+  padding-left: 0px;
+}
+.app {
+  padding-left: 0px;
+}
+header {
+  padding-left: 0px;
+  padding-bottom: 20px;
+}
+.layout {
+  padding-left: 0px;
+}
+main {
+  margin-top: 125px;
+}
 .header-title {
   margin-top: 20px;
-  text-align: center;
 }
-
-
-
+nav {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+nav ul {
+  padding-left: 0px;
+}
+footer {
+  padding-left: 0px;
+}
+footer a {
+  margin: 5px;
+}
+.arrow-container-right {
+  padding-left: 0px;
+  padding-right: 15px;
+}
+.arrow-container-left {
+  padding-left: 15px;
+  padding-right: 0px;
+}
+.arrow-right, .arrow-left, .arrow{
+  margin-top: 35vh;
+  margin-bottom: auto;
+}
+.contact-href-container {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  padding: 20px;
+  padding-right: 35px;
+  padding-left: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.href-container-container {
+  margin-top: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 0px;
+}
+.container-for-image {
+  margin-right: 0px;
+}
+.reservations-first-paragraph {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.reservations-bottom-half, .reservations-last-paragraph{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+/* ----------------------------------CONTAINER DIMENSIONS------------------------------------ */
+html {
+  height: 100%;
+  padding-left: -40px;
+}
+body {
+  min-height: 100vh;
+}
+#root {
+  min-height: 100vh;
+}
+.app {
+min-height: 100vh;
+}
+.layout {
+  width: 100%;
+  height: auto;
+}
+footer {
+  width: 100%;
+}
+.arrow-container-right {
+  height: 100%;
+  width: 35px;
+}
+.arrow-container-left {
+  width: 35px;
+  height: 100%;
+}
+img {
+  width: 100%;
+}
+.container-for-image {
+  width: 100%;
+}
+/* ----------------------------------BACKGROUND/BORDER COLOR---------------------------------- */
 body {
   background-color: #E0E0E0;
+}
+header {
+  background-color: #DBDBDB;
+}
+footer {
+  background-color: #E0E0E0;
+}
+.arrow-container-left:active .arrow-left{
+  border-color: grey;
+}
+.arrow-container-right:active .arrow-right{
+  border-color: grey;
+}
+.contact-href-container {
+  background-color: #393a44;
+}
+.href-container-container {
+  background-color: #C8C8C8; 
+}
+/* ----------------------------------TEXT STYLING/COLOR-------------------------------------- */
+html {
+  font-family: Sans-serif;
+  line-height: 25px;
+  font-weight: 500;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+}
+body {
   color: #393a44;
 }
 header h3 {
@@ -115,38 +249,14 @@ header h3 {
 header h3:hover {
   color: black;
 }
-header {
-  background-color: #DBDBDB;
-}
 nav ul li a {
   color: #393a44;
-}
-footer {
-  background-color: #E0E0E0;
 }
 footer p a {
   color: #373737;
 }
-
-
-
-
-
-
-nav {
-  display: flex;
-  justify-content: center;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-
-
 nav ul {
-  display: flex;
-  flex-direction: row;
   list-style: none;
-  padding-left: 0px;
 }
 nav ul a {
   color: white;
@@ -158,103 +268,24 @@ nav ul a:hover {
 .clicked-menu-nav a {
   color: grey;
 }
-/*----------------------------------------PAGE CONTAINERS------------------------------------------------------------*/
-.about {
-  display: flex;
-  flex-direction: column;
-  position: static;
-  align-items: center;
-}
 .resume-link:hover {
-  color: 'black';
-  }
-/*----------------------------------------FOOTER------------------------------------------------------------*/
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  bottom: 0px;
-  text-align: center;
-  padding-left: 0px;
+  color: black;
 }
-footer a {
-  text-decoration: none;
-  margin: 5px;
+ footer a:hover {
+    color: grey;
 }
-footer a:hover {
-  color: grey;
+ footer a:active {
+    color: grey;
 }
-footer a:active {
-  color: grey;
+ footer a {
+    text-decoration: none;
 }
-/*----------------------------------------ARROW CONTAINERS------------------------------------------------------------*/
-.arrow-container-right {
-  position: fixed;
-  width: 35px;
-  right: 0px;
-  text-align: right;
-  padding-left: 0px;
-  height: 100%;
-  top: 115px;
-  padding-right: 15px;
- 
- 
-  
+.arrow-right, .arrow-left, .arrow{
+    font-size: 50px;
+    font-weight: 0;
+    color: white;
+    text-shadow: 0 0 5px grey;
 }
-.arrow-container-left {
-  position: fixed;
-  width: 35px;
-  left: 0px;
-  text-align: left;
-  padding-right: 0px;
-  height: 100%;
-  top: 115px;
-  padding-left: 15px;
-
-
-}
-/*----------------------------------------ARROWS------------------------------------------------------------*/
-/* https://www.w3schools.com/howto/howto_css_arrows.asp*/
-.arrow-container-left:active .arrow-left{
-  border-color: grey;
-}
-.arrow-container-right:active .arrow-right{
-  border-color: grey;
-}
-.arrow-right {
-  border: solid;
-  border-width: 0 5px 5px 0;
-  padding: 3px;
-  height: 12px;
-  width: 12px;
-  box-shadow: 3px 3px 3px grey;
-  transform: rotate(-45deg);
-}
-.arrow-left {
-  border: solid;
-  border-width: 0 5px 5px 0;
-  padding: 3px;
-  height: 12px;
-  width: 12px;
-  box-shadow: 3px 3px 3px grey;
-  transform: rotate(135deg);
-}
- .arrow-right, .arrow-left, .arrow{
-  font-size: 50px;
-  font-weight: 0;
-  color: white;
-  display: inline-block;
-  margin-top: 35vh;
-  margin-bottom: auto;
-  text-shadow: 0 0 5px grey;
-}
-/*-------------------------------------------------------------------------------------------------------------------*/
-.skills-list-container {
-  display: flex;
-  flex-direction: row;
-}
-  /*-------------------------------------------CONTACT----------------------------------------------------------------*/
 .contact-href-container a:hover {
   color: #B6B6B6;
 }
@@ -262,66 +293,43 @@ footer a:active {
   color: white;
 }
 .contact-href-container {
-  line-height: 25px;
-  margin-top: 25px;
-  margin-bottom: 50px;
-  text-align: left;
-  background-color: #393a44;
   color: white;
-  box-shadow: 8px 8px 8px #494949;
-  border-radius: 15px;
-  padding: 20px;
-  padding-right: 35px;
-  padding-left: 35px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.href-container-container {
-  background-color: #C8C8C8; 
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-left: 0px;
-  border-radius: 5px;
-  box-shadow: 8px 8px 8px #808080;
-  margin-top: 15px;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
-/*-------------------------------------------------------------------------------------------------------------------*/
-img {
-  text-align: center;
-  width: 100%;
-}
-
+/* ----------------------------------TEXT/CHILD POSITIONING (maybe add justify content etc)--------------------------------- */
 .page-sub-title {
   text-align: center;
 }
-
-.box-shadow {
-  box-shadow: 10px 10px 10px grey;
-}
-
-.container-for-image {
-  width: 100%;
+.header-title {
   text-align: center;
-  margin-right: 0px;
 }
-.reservations-first-paragraph {
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+footer {
+  text-align: center;
+}
+.arrow-container-right {
+  text-align: right;
+}
+.arrow-container-left {
   text-align: left;
 }
-.reservations-bottom-half, .reservations-last-paragraph{
-  margin-right: 20px;
-  margin-left: 20px;
+.contact-href-container {
+  text-align: left;
 }
-
-/*-------------------------------------------------------MEDIA------------------------------------------------------------*/
+.href-container-container {
+  text-align: center;
+}
+img {
+  text-align: center;
+}
+.reservations-first-paragraph {
+  text-align: left;
+}
+.container-for-image {
+  text-align: center;
+}
+/* --------- *//* --------- *//* --------- *//* --------- *//* --------- *//* --------- */
+/* --------- *//* --------- *//* --------- *//* --------- *//* --------- *//* --------- */
+/* YET TO CONSOLIDATE BELOW */
 
 @media screen and (min-width: 300px){
   nav ul li{
@@ -341,11 +349,9 @@ img {
 .page-sub-title {
   text-align: left;
   }
-
   main {
     padding: 0% 5% 5% 5%;
   }
-
 .container-for-image {
   margin-right: 50px;
   margin-bottom: 50px;
@@ -353,10 +359,7 @@ img {
 }
 }
 
-
-
 @media screen and (min-width: 650px){
-
   .reservations-first-paragraph {
     display: flex;
     padding-top: 25px;
@@ -364,7 +367,6 @@ img {
     padding-bottom: auto;
     padding-left: auto;
   }
-
   .reservations-bottom-half {
     display: flex;
     padding-top: 10px;
@@ -372,13 +374,11 @@ img {
     padding-bottom: auto;
     padding-left: auto;
   }
-
   .reservations-last-paragraph{
     padding-top: 10px;
     padding-right: 25px;
     padding-bottom: 10px;
   }
-
   nav {
     justify-content: left;
   }
@@ -392,5 +392,38 @@ img {
     margin-left: 25px; 
   }
 } 
-/*-------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
 
+/* leave alone for now */
+.arrow-right {
+  border: solid;
+  border-width: 0 5px 5px 0;
+  padding: 3px;
+  height: 12px;
+  width: 12px;
+  box-shadow: 3px 3px 3px grey;
+  transform: rotate(-45deg);
+}
+.arrow-left {
+  border: solid;
+  border-width: 0 5px 5px 0;
+  padding: 3px;
+  height: 12px;
+  width: 12px;
+  box-shadow: 3px 3px 3px grey;
+  transform: rotate(135deg);
+}
+
+.contact-href-container {
+  line-height: 25px;
+  box-shadow: 8px 8px 8px #494949;
+  border-radius: 15px;
+}
+.box-shadow {
+  box-shadow: 10px 10px 10px grey;
+}
+
+.href-container-container {
+  border-radius: 5px;
+  box-shadow: 8px 8px 8px #808080;
+}
