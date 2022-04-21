@@ -25,78 +25,53 @@ CSS Style Categories (Containers will be listed under each category):
 
 
 /* ----------------------------------CONTAINER POSITION (INCLUDING FLEXBOX)----------------------------- */
-
-body {
+/* position */
+body, main, .layout, .about {
   position: static;
 }
-header {
+header, footer, .arrow-container-right, .arrow-container-left {
   position: fixed;
-}
-main {
-  display: flex;
-  flex-direction: column;
-  position: static;
-}
-header {
-  width: 100%;
-  height: 100px;
-}
-.layout {
-  display: flex;
-  flex-direction: column;
-  position: static;
 }
 main {
   display: static;
 }
-footer {
-  position: fixed;
-}
-nav {
+
+/* display */
+main, .layout, nav, nav ul, .about, footer, .skills-list-container, .href-container-container {
   display: flex;
 }
-nav ul {
-  display: flex;
+main, .layout, .about {
+  flex-direction: column;
+}
+nav ul, footer, .skills-list-container, .href-container-container {
   flex-direction: row;
 }
-.about {
-  display: flex;
-  flex-direction: column;
-  position: static;
+.arrow-right, .arrow-left, .arrow{
+  display: inline-block;
+}
+
+/* align-items/justify-content */
+.about, .href-container-container {
   align-items: center;
 }
- nav {
-    justify-content: center;
-  }
+nav, footer, .href-container-container {
+  justify-content: center;
+}
+
+/* positional depth */
  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     bottom: 0px;
   }
- .arrow-container-right {
-    position: fixed;
-    right: 0px;
+  .arrow-container-right, .arrow-container-left {
     top: 115px;
+  }
+ .arrow-container-right {
+    right: 0px;
   }
   .arrow-container-left {
-    position: fixed;
-    top: 115px;
     left: 0px;
   }
-  .arrow-right, .arrow-left, .arrow{
-    display: inline-block;
-  }
-  .skills-list-container {
-    display: flex;
-    flex-direction: row;
-  }
-.href-container-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+
 /* ----------------------------------CONTAINER MARGIN/PADDING----------------------------- */
 body {
   margin: auto;
@@ -207,6 +182,10 @@ img {
 }
 .container-for-image {
   width: 100%;
+}
+header {
+  width: 100%;
+  height: 100px;
 }
 /* ----------------------------------BACKGROUND/BORDER COLOR---------------------------------- */
 body {
